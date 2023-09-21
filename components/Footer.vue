@@ -26,19 +26,19 @@
             <div class="mr-[64px]">
                 <p class="text-[#5B95D4] text-xl font-medium mb-4 md:flex-col">Company & Support</p>
                 <ul>
-                    <li class="text-[#4D545B]">About us</li>
-                    <li class="text-[#4D545B]">Contact us</li>
-                    <li class="text-[#4D545B]">Privacy & Policy</li>
-                    <li class="text-[#4D545B]">Terms of conditions</li>
+                    <li class="text-primaryGrey">About us</li>
+                    <li class="text-primaryGrey">Contact us</li>
+                    <li class="text-primaryGrey">Privacy & Policy</li>
+                    <li class="text-primaryGrey">Terms of conditions</li>
                 </ul>
             </div>
             <div class="md:mt-8">
                 <p class="text-[#5B95D4] text-xl font-medium mb-4">Services</p>
                 <ul>
-                    <li class="text-[#4D545B]">Tours</li>
-                    <li class="text-[#4D545B]">Hotels</li>
-                    <li class="text-[#4D545B]">Transfer</li>
-                    <li class="text-[#4D545B]">Abroad</li>
+                    <li class="text-primaryGrey">Tours</li>
+                    <li class="text-primaryGrey">Hotels</li>
+                    <li class="text-primaryGrey">Transfer</li>
+                    <li class="text-primaryGrey">Abroad</li>
                 </ul>
             </div>
         </div>

@@ -14,7 +14,8 @@ module.exports = {
             primaryLight: "#A1C2E7",
             primaryDark: "#4385CE",
             primaryBlue: "#1467C2",
-            transparentCol: "rgba(0, 10, 21, 0.50)"
+            transparentCol: "rgba(0, 10, 21, 0.50)",
+            primaryGrey: "#4D545B"
         },
         screens: {
             "sm": { "max": "360px" },

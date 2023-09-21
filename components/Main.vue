@@ -2,7 +2,7 @@
     <div class="flex py-20  justify-center items-center xl1:px-8 lg:flex-col lg:justify-center lg:items-center lg:px-8">
         <div class="w-[558px] mr-[150px] lg:m-0 lg:w-full lg:flex lg:flex-col lg:text-center lg:mb-8 md:p-0 sm:p-0">
             <h1 class="font-extrabold text-[48px] lg:text-[32px]">{{ $t("mainText") }}</h1>
-            <p class="text-[#4D545B] font-normal text-base lg:my-4">{{ $t("mainBottom") }}</p>
+            <p class="text-primaryGrey font-normal text-base lg:my-4">{{ $t("mainBottom") }}</p>
             <button class="px-[32px] py-3 lg:px-8 lg:py-3 text-base font-bold mt-7 rounded-md bg-[#fff] text-primaryBlue border-2 border-primaryBlue">Discover our tours</button>
         </div>
         <div class="h-[530px] sm:px-1" v-for="(slide, index) in slides" :key="index" :class="{ 'hidden': index !== currentSlide }">
@@ -40,8 +40,7 @@
             </div>
             <div class="flex sm:flex-col max-w-[794px] sm:max-w-[310px] lg:max-w-[960px] min-h-[170px] rounded-b-2xl bg-[#D0E1F3] py-[20px] px-[21px]">
                 <div class="max-w-[586px]">
-                    <!-- <p class="text-[21px] font-bold leading-8 ">Gyumri (Urban life museum, Black Fortress, walking through the old streets), Harichavank</p> -->
-                    <p class="text-[21px] font-bold leading-8 ">{{ slide.caption }}</p>
+                    <p class="text-[21px] font-bold leading-8">{{ slide.caption }}</p>
                     <p class="text-[#333B44] text-[14px] mt-2 sm:mb-4">On this tour you will visit Gyumri, the second largest city in Armenia, one of the main cultural centers of the republic. The only Catholic…</p>
                 </div>
                 <div class="pl-8 min-w-[160px] sm:pl-0">
@@ -52,7 +51,7 @@
                             <path d="M29.392 18H28.512V9.504C28.512 9.19467 28.512 8.928 28.512 8.704C28.512 8.48 28.5173 8.272 28.528 8.08C28.5387 7.888 28.544 7.70667 28.544 7.536C28.3947 7.67467 28.256 7.80267 28.128 7.92C28 8.02667 27.8293 8.16 27.616 8.32L26.016 9.552L25.536 8.912L28.64 6.576H29.392V18Z" fill="#4D545B"/>
                         </svg>
                     </div>
-                    <button class="bg-primaryBlue text-[#FDFFFE] h-[48px] py-3 px-5 mt-[60px] rounded-lg sm:mt-4 sm:w-full">Order Now</button>
+                    <button class="bg-primaryBlue text-[#FDFFFE] h-[48px] py-3 px-5 mt-[60px] rounded-lg sm:mt-4 sm:w-full sm:px-0">Order Now</button>
                 </div>
             </div>
         </div>
@@ -67,9 +66,6 @@ const slides = [
 ]
 
 let currentSlide = ref(0);
-const currentCaption = computed(() => {
-    return slides[currentSlide.value].caption
-})
 
 function prevSlide() {
     currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length;

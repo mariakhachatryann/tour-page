@@ -5,11 +5,11 @@
         </div>
         <div class="mt-2 w-[470px] sm:hidden md:hidden" :class="{ 'lg:hidden md:hidden': !menu}">
             <ul class="flex justify-start sm:hidden">
-                <li class="text-[16px] text-[#4D545B] p-2 mr-2 cursor-pointer">Tours</li>
-                <li class="text-[16px] text-[#4D545B] p-2 mr-2 cursor-pointer">Hotels</li>
-                <li class="text-[16px] text-[#4D545B] p-2 mr-2 cursor-pointer">Transfer</li>
-                <li class="text-[16px] text-[#4D545B] p-2 mr-2 cursor-pointer">Outgoing tours</li>
-                <li class="text-[16px] text-[#4D545B] p-2 mr-2 cursor-pointer">Contact us</li>
+                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer">Tours</li>
+                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer">Hotels</li>
+                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer">Transfer</li>
+                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer">Outgoing tours</li>
+                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer">Contact us</li>
             </ul>
         </div>
         <div class="flex md:justify-between">
@@ -38,11 +38,11 @@
         <div>
             <ul>
                 <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 bg-[#E8F0F9] text-[#000A15]">Menu</li>
-                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-[#4D545B] cursor-pointer">Tours</li>
-                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-[#4D545B] cursor-pointer">Hotels</li>
-                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-[#4D545B] cursor-pointer">Transfer</li>
-                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-[#4D545B] cursor-pointer">Outgoing tours</li>
-                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-[#4D545B] cursor-pointer">Contact Us</li>
+                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Tours</li>
+                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Hotels</li>
+                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Transfer</li>
+                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Outgoing tours</li>
+                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Contact Us</li>
             </ul>
         </div>
     </div>
