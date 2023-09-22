@@ -1,6 +1,6 @@
 <template>
     <div class="splide flex gap-8 w-full xl:max-w-[1266px] lg:max-w-[1024px] overflow-hidden">
-        <div class="splide__track" >
+        <div class="splide__track">
             <div class="splide__list flex gap-8" >
                 <div v-for="instance in instances" :key="instance" class="splide__slide min-w-[440px] min-h-[432px] rounded-b-2xl sm:min-w-[320px]">
                     <div class="bg-[url('~/assets/img/frame.png')] p-[0.5px] rounded-t-2xl h-[278px] bg-cover bg-center bg-no-repeat">
@@ -34,48 +34,41 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
+            <div class="w-screen flex justify-center items-center">
+                <SliderArrows /> 
+            </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref, watch, onMounted } from 'vue';
-import Splide from '@splidejs/splide';
+import Splide from "@splidejs/splide";
 
 const instances = [1, 2, 3, 4, 5];
 let selected = ref("tours");
-let isActive = ref("tours");
-
-function changeTab(tab) {
-    selected.value = tab;
-    isActive.value = tab;
-}
 
 const splideOptions = {
-  type: 'loop',
-  drag: 'free',
-  perPage: 3,
+    type: "loop",
+    drag: "free",
+    perPage: 1,
+    arrows: true
 };
 
-let splide; // Declare the splide variable
+let splide;
 
 onMounted(() => {
-  if (process.client) {
-    // Only execute this code on the client-side
-    splide = new Splide('.splide', splideOptions);
-    splide.mount();
-  }
+    if (process.client) {
+        splide = new Splide(".splide", splideOptions);
+        splide.mount();
+    }
 });
 
-// Watch for changes in the selected variable and update the slider
 watch(selected, (newValue) => {
-  if (process.client && splide) {
-    // Only execute this code on the client-side and when splide is defined
-    splide.destroy();
-    splide.options = splideOptions;
-    splide.mount();
-  }
+    if (process.client && splide) {
+        splide.destroy();
+        splide.options = splideOptions;
+        splide.mount();
+    }
 });
-
 </script>

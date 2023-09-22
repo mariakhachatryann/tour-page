@@ -84,8 +84,6 @@
 </template>
 
 <script setup>
-import i18n from "~/plugins/i18n"
-
 const currencies = [
     { title: "USD" },
     { title: "EUR" },
@@ -105,9 +103,4 @@ const languages = [
 ]
 
 let selectedLanguage = ref("ENG")
-function selectLanguage(language) {
-    console.log(typeof(i18n));
-    console.log(this.$i18n);
-    selectedLanguage.value = language
-}
 </script>

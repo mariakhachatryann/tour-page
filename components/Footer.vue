@@ -45,7 +45,7 @@
     </div>
     <div class="max-w-[1856px] h-[1px] bg-[#D0E1F3] my-8 mx-8 "></div>
     <div class="flex justify-between items-center gap-8 px-[260px] pb-12 md:flex-col xl1:px-8">
-        <div class="w-[152px] h-[48px] bg-[#E8F0F9] mt-2 text-center items-center">
+        <div class="w-[152px] h-12 bg-[#E8F0F9] mt-2 text-center items-center">
             <p class="text-2xl text-[#01000E] font-bold p-1">LOGO</p>
         </div>
         <p class="tracking-[.28px] text-[#000A15] sm:text-center">© 2023 Unknown. All rights reserved </p>

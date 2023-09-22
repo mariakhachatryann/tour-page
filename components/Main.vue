@@ -6,7 +6,8 @@
             <button class="px-[32px] py-3 lg:px-8 lg:py-3 text-base font-bold mt-7 rounded-md bg-[#fff] text-primaryBlue border-2 border-primaryBlue">Discover our tours</button>
         </div>
         <div class="h-[530px] sm:px-1" v-for="(slide, index) in slides" :key="index" :class="{ 'hidden': index !== currentSlide }">
-            <div class="relative rounded-t-2xl sm:min-w-[310px] max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: 'url(' + 'http://localhost:3000/_nuxt/' + slide.image + ')' }">
+            <!-- <div class="relative rounded-t-2xl sm:min-w-[310px] max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: 'url(' + 'http://localhost:3000/_nuxt/' + slide.image + ')' }"> -->
+            <div class="relative rounded-t-2xl sm:min-w-[310px] max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: 'url(' + slide.image + ')' }">
                 <div class="flex gap-1 absolute right-[40%] top-4 py-2 px-4 rounded-2xl bg-transparentCol">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M2.3335 6.87852C2.3335 3.81194 4.89608 1.33334 7.99579 1.33334C11.1042 1.33334 13.6668 3.81194 13.6668 6.87852C13.6668 8.4238 13.1048 9.85843 12.1798 11.0744C11.1594 12.4157 9.9016 13.5843 8.48586 14.5016C8.16184 14.7136 7.86941 14.7296 7.5138 14.5016C6.08999 13.5843 4.83222 12.4157 3.8205 11.0744C2.89482 9.85843 2.3335 8.4238 2.3335 6.87852ZM6.12965 7.05118C6.12965 8.07848 6.96793 8.88646 7.99579 8.88646C9.02432 8.88646 9.87068 8.07848 9.87068 7.05118C9.87068 6.03187 9.02432 5.18456 7.99579 5.18456C6.96793 5.18456 6.12965 6.03187 6.12965 7.05118Z" fill="#FDFFFE"/>
@@ -60,9 +61,9 @@
 
 <script setup>
 const slides = [
-    {  image: "assets/img/frame.png", caption: "Sevan (Urban life museum, Black Fortress, walking through the old streets), Harichavank" },
-    {  image: "assets/img/frame1.png", caption: "Gyumri (Urban life museum, Black Fortress, walking through the old streets), Harichavank" },
-    {  image: "assets/img/frame.png", caption: "Ijevan (Urban life museum, Black Fortress, walking through the old streets), Harichavank" },
+    {  image: "https://s3-alpha-sig.figma.com/img/2376/8f16/d0ec930bbe4ee6aad7d64a0cbeadfc89?Expires=1696204800&Signature=dzgJoHs4~UBMt9L-bCStUItMLJfpU6zh9lidTrEh-P9nyLJDJ1TQrp-SXJYNcTXWyDj9hwgtWcPufo5zKRxZEawpmtGaZ6WwULmrxf6FA0WM9iHCcuxPeWk4vKLH-gKJMHgoS6dbFcctwiy9fHLYRMagRODmgA4zA-GoBvEpvtEpmQTG~JL0MbBGV~afe3novpSTt~3-c3CXw1i1XEiM-BbjFejZkNtv~7jENa~-N4EeJkcpym1U1rtv4lBNn0Y6S9H4arMSkxGPjq-x2TI2oY0PiCkw~89APdf7QJsnpk96LXA6Dl5012yYqlDOegT~1Wa9c7RMcmoaGW-w1lP5Qg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4", caption: "Sevan (Urban life museum, Black Fortress, walking through the old streets), Harichavank" },
+    {  image: "https://s3-alpha-sig.figma.com/img/6f65/9010/f8bd151a032c9206b6ba8b9efae41185?Expires=1696204800&Signature=K8Y-gO42hS55fbM9UjEpKEs-SfKdSkTiyOYWr3GsAYJ8PAdlzIbitZp~lWCrvnDxrCLNvQz0WFqonrCCXG66~xuedfdWmmXfeI3NJm8CwLWb85fCWoGDGjY8X567keDINLGFWmoZ~8-zebis8dVikU6G0gHzMaGSOX5rxRDJlNPGqKBnRYHbj~xQ6Sb37QwfJyW6g6ipCEcnyFe2ti-ReDm6NYVH-UDaQwSt4SkteIiZtiA4Yi-jPmvArHraiV3UuXaHmkmli-pJvSpWVAa0e~Zs8IN-T5pfxfdg-3W7rQt3oRoGVotlbSVEm1LvYhi~eQ6-WU1oalU8o~paduujpg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4", caption: "Gyumri (Urban life museum, Black Fortress, walking through the old streets), Harichavank" },
+    {  image: "https://s3-alpha-sig.figma.com/img/b6d9/e65e/a6d703aee3ea86c368d2d7d196d50b73?Expires=1696204800&Signature=mS0rD10d~9MIpptgIz-y3WiHJTocaE8UTg5QH78tPQGAPP6MqgfeJN5xAqBHScpi8DaUwPlE0dkVNLxTcuBsXD0B7KWFJ5gO5njKWkj4HniLvRQgfoHkaQpsJ8MI18IedaQiJ9GFa8xmRztURPkrMxY5C-SbeDJm~xwYUp~IytJaWcxNWNTGKcAZnlxqkaPziJYiapVlQ9ewLGBFKnl6oEgT0oQhpC7YLqTPdnKywE0wGXV~vA~GN6KrfC~F0o5n0m50qGvNubUj7EcItNjk6TdKpQcUg7WLYpELPOD-tOwG3lssRFSK4aznc6L4Am8Gd9U0k5EaG2Ju2zH8WTeqXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4", caption: "Ijevan (Urban life museum, Black Fortress, walking through the old streets), Harichavank" },
 ]
 
 let currentSlide = ref(0);

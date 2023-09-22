@@ -46,37 +46,40 @@
                     </div>
                 </div>
             </div>
+            <div class="w-screen flex justify-center items-center">
+                <SliderArrows /> 
+            </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref, watch, onMounted } from "vue";
 import Splide from "@splidejs/splide";
 
 const instances = [1, 2, 3, 4, 5];
 let selected = ref("tours");
 
 const splideOptions = {
-  type: "loop",
-  drag: "free",
-  perPage: 3,
+    type: "loop",
+    drag: "free",
+    perPage: 1,
+    arrows: true
 };
 
 let splide;
 
 onMounted(() => {
-  if (process.client) {
-    splide = new Splide(".splide", splideOptions);
-    splide.mount();
-  }
+    if (process.client) {
+        splide = new Splide(".splide", splideOptions);
+        splide.mount();
+    }
 });
 
 watch(selected, (newValue) => {
-  if (process.client && splide) {
-    splide.destroy();
-    splide.options = splideOptions;
-    splide.mount();
-  }
+    if (process.client && splide) {
+        splide.destroy();
+        splide.options = splideOptions;
+        splide.mount();
+    }
 });
 </script>
