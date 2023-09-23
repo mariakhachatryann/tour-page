@@ -1,15 +1,15 @@
 <template>
     <div class="flex justify-evenly gap-14 h-[80px] bg-white py-2 xl:justify-between px-8 sm:gap-2 sm:px-1 sm:justify-between">
-        <div class="w-[152px] h-[48px] bg-[#E8F0F9] mt-2 text-center items-center">
+        <NuxtLink to="/" class="w-[152px] h-[48px] bg-[#E8F0F9] mt-2 text-center items-center">
             <p class="text-2xl text-[#01000E] font-bold p-1">LOGO</p>
-        </div>
+        </NuxtLink>
         <div class="mt-2 w-[470px] sm:hidden md:hidden" :class="{ 'lg:hidden md:hidden': !menu}">
             <ul class="flex justify-start sm:hidden">
-                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer">Tours</li>
-                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer">Hotels</li>
-                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer">Transfer</li>
-                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer">Outgoing tours</li>
-                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer">Contact us</li>
+                <NuxtLink to="/tours" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Tours</NuxtLink>
+                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Hotels</li>
+                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Transfer</li>
+                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Outgoing tours</li>
+                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Contact us</li>
             </ul>
         </div>
         <div class="flex md:justify-between">
@@ -55,3 +55,9 @@ function toggleMenu() {
     menu.value = !menu.value
 }
 </script>
+
+<style>
+.router-link-active {
+    @apply text-primaryBlue;
+}
+</style>
