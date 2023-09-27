@@ -1,8 +1,8 @@
 <template>
-    <Main />
-    <TopPlaces /> 
-    <About /> 
-    <Achieved /> 
-    <Subscription /> 
+    <MainContentMain />
+    <MainTopPlaces /> 
+    <MainAbout /> 
+    <MainAchieved /> 
+    <MainSubscription /> 
     <Footer />
 </template>

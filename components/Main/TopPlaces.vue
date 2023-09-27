@@ -10,10 +10,10 @@
                 <button class="bg-[#E8F0F9] text-[#333B44] py-2 px-8 text-base" :class="{ 'bg-primaryBlue text-white rounded-lg': isActive === 'transfer'}" @click="changeTab('transfer')">Transfer</button>
             </div>
         </div>
-        <TopTours v-if="selected === 'tours'" />
-        <TopHotels v-if="selected === 'hotels'" />
-        <OutGoing v-if="selected === 'outgoing'" />
-        <Transfer v-if="selected === 'transfer'" />
+        <MainTopTours v-if="selected === 'tours'" />
+        <MainTopHotels v-if="selected === 'hotels'" />
+        <MainOutGoing v-if="selected === 'outgoing'" />
+        <MainTransfer v-if="selected === 'transfer'" />
     </div> 
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-evenly w-full gap-[26px] px-[260px] xl1:px-4 sm:flex-col md:px-2">
+    <div class="flex justify-evenly  w-full gap-[26px] px-[260px] xl1:px-4 sm:flex-col md:px-2">
         <div class="max-w-[55%]">
             <div class="border-l-[3px] border-primaryBlue pl-4 mb-6 sm:pl-2">
                 <p class="text-sm font-light text-primaryBlue mb-2">Tours</p>

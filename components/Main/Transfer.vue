@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="w-screen flex justify-center items-center">
-                <SliderArrows /> 
+                <MainSliderArrows /> 
             </div>
         </div>
     </div>

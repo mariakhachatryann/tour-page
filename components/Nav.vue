@@ -6,9 +6,9 @@
         <div class="mt-2 w-[470px] sm:hidden md:hidden" :class="{ 'lg:hidden md:hidden': !menu}">
             <ul class="flex justify-start sm:hidden">
                 <NuxtLink to="/tours" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Tours</NuxtLink>
-                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Hotels</li>
-                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Transfer</li>
-                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Outgoing tours</li>
+                <NuxtLink to="/hotels" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Hotels</NuxtLink>
+                <NuxtLink to="/transfer" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Transfer</NuxtLink>
+                <NuxtLink to="/outgoing"  class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Outgoing tours</NuxtLink>
                 <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Contact us</li>
             </ul>
         </div>
@@ -38,7 +38,7 @@
         <div>
             <ul>
                 <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 bg-[#E8F0F9] text-[#000A15]">Menu</li>
-                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Tours</li>
+                <NuxtLink to="/tours" class="w-full mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Tours</NuxtLink>
                 <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Hotels</li>
                 <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Transfer</li>
                 <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Outgoing tours</li>
