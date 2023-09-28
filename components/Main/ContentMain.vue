@@ -6,7 +6,6 @@
             <button class="px-8 py-3 lg:px-8 lg:py-3 text-base font-bold mt-7 rounded-lg bg-[#fff] border-solid text-primaryBlue border-[1px] border-primaryBlue">Discover our tours</button>
         </div>
         <div class="h-[530px] sm:px-1" v-for="(slide, index) in slides" :key="index" :class="{ 'hidden': index !== currentSlide }">
-            <!-- <div class="relative rounded-t-2xl sm:min-w-[310px] max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: 'url(' + 'http://localhost:3000/_nuxt/' + slide.image + ')' }"> -->
             <div class="relative rounded-t-2xl sm:min-w-[310px] max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: 'url(' + slide.image + ')' }">
                 <div class="flex gap-1 absolute right-[40%] top-4 py-2 px-4 rounded-2xl bg-transparentCol">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -55,7 +54,7 @@
                     <button class="bg-primaryBlue text-[#FDFFFE] h-[48px] py-3 px-5 mt-[60px] rounded-lg sm:mt-4 sm:w-full sm:px-0">Order Now</button>
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
 </template>
 

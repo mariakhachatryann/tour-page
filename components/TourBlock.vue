@@ -1,5 +1,4 @@
 <template>
-    <div class="min-w-[416px] min-h-[602px] rounded-b-2xl sm:min-w-[320px]">
         <div class="bg-[url('~/assets/img/frame.png')] p-[0.5px] rounded-t-2xl h-[278px] bg-cover bg-center bg-no-repeat">
             <svg class="rounded-t-2xl" width="99" height="34" viewBox="0 0 99 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0H83C91.8366 0 99 7.16344 99 16V18C99 26.8366 91.8366 34 83 34H0V0Z" fill="#000A15" fill-opacity="0.5" />
@@ -41,5 +40,4 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
