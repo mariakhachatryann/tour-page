@@ -135,6 +135,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="max-w-[406px] w-full mr-auto">
                 <p class="text-[#333B44]">Price range</p>
                 <div class="flex justify-between mt-2">
