@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-evenly  w-full gap-[26px] px-[260px] xl1:px-4 sm:flex-col md:px-2">
+    <div class="flex justify-evenly w-full gap-[26px] px-[260px] xl1:px-4 sm:flex-col md:px-2">
         <div class="max-w-[55%]">
             <div class="border-l-[3px] border-primaryBlue pl-4 mb-6 sm:pl-2">
                 <p class="text-sm font-light text-primaryBlue mb-2">Tours</p>
@@ -49,6 +49,6 @@
             <p class="text-2xl text-[#01000E] font-bold p-1">LOGO</p>
         </div>
         <p class="tracking-[.28px] text-[#000A15] sm:text-center">© 2023 Unknown. All rights reserved </p>
-        <p class="text-[#000A15]"><span class="text-[#80858A]">by</span> HS Rocket</p>
+        <p class="text-[#000A15]"><span class="text-[#80858A]">by</span><a href="https://www.hsrocket.com/en/" target="_blank"> HS Rocket</a></p>
     </div>
 </template>

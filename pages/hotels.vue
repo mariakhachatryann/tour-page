@@ -2,6 +2,9 @@
     <div>
         <ToursMain :title="compOptions.title" :text="compOptions.text" :src="compOptions.src" />
         <HotelsSelect />
+        <HotelsPopular />
+        <MainSubscription />
+        <Footer />  
     </div>
 </template>
 

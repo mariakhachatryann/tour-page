@@ -6,7 +6,7 @@
                 <p class="text-base text-[#4D545B] text-center">Select locations to view transfer options and make a booking in an instant.</p>
             </div>
             <div class="flex w-full md:flex-wrap gap-8 my-8 sm:flex-col">
-                <div class="w-2/5 sm:w-full">
+                <div class="w-2/5 md:w-full">
                     <p class="text-[#333B44]">Direction</p>
                     <div class="relative bg-white rounded-lg mt-1">
                         <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -15,7 +15,7 @@
                         <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 pl-10 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter your direction" type="text" />
                     </div>
                 </div>
-                <div class="w-2/5 md:w-1/2">
+                <div class="w-2/5 md:w-full">
                     <p class="text-[#333B44]">Start Date</p>
                     <div class="w-full flex border-none mt-1 bg-white rounded-lg">
                         <div class=" pl-4 py-3 mr-2">
@@ -27,7 +27,7 @@
                             v-model="tourOptions.date"
                             :full-month-name="true"
                             placeholder="Choose date"
-                            wrapper-class="p-0 min-w-[120px]"
+                            wrapper-class="sm:w-full p-0 min-w-[120px]"
                             input-class="bg-[#FFF] w-full pl-0 py-4  mr-0 border-none outline-none"
                             :typeable="false"
                             :hideInput="false"
@@ -36,7 +36,7 @@
                         </date-picker>
                     </div>
                 </div>
-                <div class="w-1/5 md:w-1/2">
+                <div class="w-1/5 md:w-full">
                     <p class="text-[#333B44]">Duration type</p>
                     <input v-model="tourOptions.type" class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-none outline-none" type="text" placeholder="Select type" />
                 </div>
