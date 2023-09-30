@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full justify-center items-center flex gap-1 sm:mt-14">
+    <div class="w-full justify-center items-center flex gap-1 sm:mt-14 mb-20">
         <div class="max-w-[1384px] w-full flex lg:flex-col mx-8">
             <div class="w-full rounded-tl-2xl rounded-bl-2xl lg:rounded-tr-2xl bg-gradient-to-r from-primaryBlue to-[#0C3D73] py-6 px-8">
                 <div class="flex flex-col justify-center items-center">
