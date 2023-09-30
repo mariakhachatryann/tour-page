@@ -42,7 +42,7 @@
                 <NuxtLink @click="closeMenu" to="/hotels" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Hotels</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/transfer" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Transfer</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/outgoing" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Outgoing tours</NuxtLink>
-                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Contact Us</li>
+                <NuxtLink @click="closeMenu" to="/contact" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Contact Us</NuxtLink>
             </ul>
         </div>
     </div>
