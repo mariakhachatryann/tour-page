@@ -9,7 +9,7 @@
                 <NuxtLink @click="closeMenu" to="/hotels" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Hotels</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/transfer" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Transfer</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/outgoing"  class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Outgoing tours</NuxtLink>
-                <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Contact us</li>
+                <NuxtLink @click="closeMenu" to="/contact" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Contact us</NuxtLink>
             </ul>
         </div>
         <div class="flex md:justify-between">

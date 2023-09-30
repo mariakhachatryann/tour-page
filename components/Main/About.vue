@@ -17,7 +17,7 @@
                 <div class="max-w-[392px] md:max-w-[184px] w-full rounded-lg mr-[68px]"> 
                     <img src="~/assets/img/frame.png" alt="" class="rounded-3xl" /> 
                 </div> 
-                <div class="max-w-[174px] w-full max-h-[174px] md:max-w-[84px] md:max-h-[84px] bg-blue-100 rounded-lg"> 
+                <div class="max-w-[174px] w-full max-h-[174px] md:max-w-[84px] md:max-h-[84px] shadow-md bg-white rounded-lg"> 
                     <div class="flex flex-col justify-center items-center rounded-xl md:rounded-sm mt-5">
                         <svg class="w-[60px] h-[60px] md:w-[30px] md:h-[30px]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1085_34284)">
