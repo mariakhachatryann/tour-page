@@ -5,13 +5,21 @@
             <p class="text-base xl:text-sm text-[#FDFFFE]">{{ props.text }}</p>
         </div>
         <div class="max-w-[708px] xl:max-w-[769px] sm:h-[240px]">
-            <!-- <img src="~/assets/img/frame3.png" class="w-full h-full" /> -->
-            <nuxt-img :src="props.src" class="w-full h-full" />
+            <img v-if="routeName === 'tours'" src="~/assets/img/frame3.png" class="w-full h-full" />
+            <img v-if="routeName === 'hotels'" src="~/assets/img/frame4.png" class="w-full h-full" />
+            <img v-if="routeName === 'transfer'" src="~/assets/img/frame5.png" class="w-full h-full" />
+            <img v-if="routeName === 'outgoing'" src="~/assets/img/frame6.png" class="w-full h-full" />
+            <!-- <nuxt-img :src="props.src" class="w-full h-full" /> -->
         </div>
     </div>
     <RoutePath />
 </template>
 
 <script setup>
+import { useRouter } from "vue-router";
 const props = defineProps(["title", "text", "src"])
+
+const router = useRouter();
+const routeName = router.currentRoute.value.name;
+console.log(routeName);
 </script>
