@@ -77,7 +77,6 @@
                                 </svg>
                             </div>
                             <date-picker
-                                v-model="tourOptions.date"
                                 :full-month-name="true"
                                 placeholder="Choose time"
                                 wrapper-class="p-0 min-w-[120px]"
@@ -100,7 +99,6 @@
                                 </svg>
                             </div>
                             <date-picker
-                                v-model="tourOptions.date"
                                 :full-month-name="true"
                                 placeholder="Choose day"
                                 wrapper-class="p-0 min-w-[120px]"
@@ -121,7 +119,6 @@
                                 </svg>
                             </div>
                             <date-picker
-                                v-model="tourOptions.date"
                                 :full-month-name="true"
                                 placeholder="Choose time"
                                 wrapper-class="p-0 min-w-[120px]"

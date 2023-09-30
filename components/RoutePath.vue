@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full justify-center items-center flex gap-1">
+    <div class="w-full justify-center items-center flex gap-1 sm:mt-14">
         <div class="w-[1384px] flex justify-start p-8  items-center mx-8">
             <p class="text-sm text-[#666C73]">Home</p>
             <svg class="mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">

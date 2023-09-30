@@ -1,6 +1,9 @@
 <template>
     <div>
         <ToursMain :title="compOptions.title" :text="compOptions.text" :src="compOptions.src" />
+        <TransferSelect />
+        <TransferPopular />
+        <Footer />
     </div>
 </template>
 

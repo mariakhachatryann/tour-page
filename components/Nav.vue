@@ -5,10 +5,10 @@
         </NuxtLink>
         <div class="mt-2 w-[470px] sm:hidden md:hidden" :class="{ 'lg:hidden md:hidden': !menu}">
             <ul class="flex justify-start sm:hidden">
-                <NuxtLink to="/tours" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Tours</NuxtLink>
-                <NuxtLink to="/hotels" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Hotels</NuxtLink>
-                <NuxtLink to="/transfer" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Transfer</NuxtLink>
-                <NuxtLink to="/outgoing"  class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Outgoing tours</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/tours" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Tours</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/hotels" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Hotels</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/transfer" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Transfer</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/outgoing"  class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Outgoing tours</NuxtLink>
                 <li class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Contact us</li>
             </ul>
         </div>
@@ -36,12 +36,12 @@
     </div>
     <div class="hidden z-10 bg-white absolute w-full pb-8" :class="{ 'sm:block md:block': menu}">
         <div>
-            <ul>
+            <ul class="flex justify-center items-center flex-col">
                 <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 bg-[#E8F0F9] text-[#000A15]">Menu</li>
-                <NuxtLink to="/tours" class="w-full mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Tours</NuxtLink>
-                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Hotels</li>
-                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Transfer</li>
-                <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Outgoing tours</li>
+                <NuxtLink @click="closeMenu" to="/tours" class="text-center w-full mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Tours</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/hotels" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Hotels</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/transfer" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Transfer</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/outgoing" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Outgoing tours</NuxtLink>
                 <li class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Contact Us</li>
             </ul>
         </div>
@@ -53,6 +53,10 @@ let menu = ref(false);
 
 function toggleMenu() {
     menu.value = !menu.value
+}
+
+function closeMenu() {
+    menu.value = false;
 }
 </script>
 

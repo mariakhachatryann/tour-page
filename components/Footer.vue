@@ -25,19 +25,19 @@
         <div class="w-1/2 flex justify-center md:flex-col sm:w-full">
             <div class="mr-[64px]">
                 <p class="text-[#5B95D4] text-xl font-medium mb-4 md:flex-col">Company & Support</p>
-                <ul>
-                    <li class="text-primaryGrey">About us</li>
-                    <li class="text-primaryGrey">Contact us</li>
-                    <li class="text-primaryGrey">Privacy & Policy</li>
-                    <li class="text-primaryGrey">Terms of conditions</li>
+                <ul class="flex flex-col">
+                    <li class="text-primaryGrey cursor-pointer">About us</li>
+                    <li class="text-primaryGrey cursor-pointer">Contact us</li>
+                    <NuxtLink to="/privacyPolicy" class="text-primaryGrey cursor-pointer">Privacy & Policy</NuxtLink>
+                    <NuxtLink to="/conditions" class="text-primaryGrey cursor-pointer">Terms of conditions</NuxtLink>
                 </ul>
             </div>
             <div class="md:mt-8">
                 <p class="text-[#5B95D4] text-xl font-medium mb-4">Services</p>
-                <ul>
-                    <li class="text-primaryGrey">Tours</li>
-                    <li class="text-primaryGrey">Hotels</li>
-                    <li class="text-primaryGrey">Transfer</li>
+                <ul class="flex flex-col">
+                    <NuxtLink to="/tours" class="text-primaryGrey">Tours</NuxtLink>
+                    <NuxtLink to="/hotels" class="text-primaryGrey">Hotels</NuxtLink>
+                    <NuxtLink to="/transfer" class="text-primaryGrey">Transfer</NuxtLink>
                     <li class="text-primaryGrey">Abroad</li>
                 </ul>
             </div>
