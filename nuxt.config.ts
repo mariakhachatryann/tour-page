@@ -14,6 +14,7 @@ export default defineNuxtConfig({
         }
     },
     image: {
-        dir: 'assets/img'
+        dir: 'assets/img',
+        domains: "https://tour-page-lovat.vercel.app/"
     }
 })
