@@ -3,6 +3,8 @@
         <ToursMain :title="compOptions.title" :text="compOptions.text" :src="compOptions.src" />
         <OutgoingSelect />
         <OutgoingPopular />
+        <MainSubscription />
+        <Footer />
     </div>
 </template>
 

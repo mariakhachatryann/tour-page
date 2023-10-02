@@ -5,7 +5,7 @@
                 Popular <span class="text-primaryBlue">Tours</span> in Armenia
             </p>
         </div>
-        <div class="max-w-[1384px] grid grid-cols-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+        <div class="max-w-[1384px] m-8 sm:m-0 grid grid-cols-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8">
             <div class="md:col-span-4 max-w-[464px] md:max-w-full">
                 <div class="min-w-[320px] min-h-[602px] rounded-b-2xl sm:min-w-[320px]">
                     <TourBlock />
