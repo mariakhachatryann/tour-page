@@ -12,7 +12,7 @@
         </div>
         <MainTopTours v-if="selected === 'tours'" />
         <MainTopHotels v-if="selected === 'hotels'" />
-        <MainOutGoing v-if="selected === 'outgoing'" />
+        <MainOutGoingSection v-if="selected === 'outgoing'" />
         <MainTransfer v-if="selected === 'transfer'" />
     </div> 
 </template>

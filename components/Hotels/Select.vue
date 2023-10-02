@@ -54,20 +54,20 @@
                     </div>
                 </div>
             </div>
-            <div class="flex w-full gap-8 mb-8 sm:flex-col">
-                <div class="w-1/3 sm:w-full">
+            <div class="flex w-full gap-8 mb-8 md:flex-col">
+                <div class="w-1/3 md:w-full">
                     <p class="text-[#333B44]">Adult <span class="text-[#80858A] ml-2">(18+)</span></p>
                     <div class="bg-white rounded-lg mt-1">
                         <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
                     </div>
                 </div>
-                <div class="w-1/3 sm:w-full">
+                <div class="w-1/3 md:w-full">
                     <p class="text-[#333B44]">Child <span class="text-[#80858A] ml-2">(2-17.99)</span></p>
                     <div class="bg-white rounded-lg mt-1">
                         <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
                     </div>
                 </div>
-                <div class="w-1/3 sm:w-full">
+                <div class="w-1/3 md:w-full">
                     <p class="text-[#333B44]">Infant <span class="text-[#80858A] ml-2">(0-1.99)</span></p>
                     <div class="bg-white rounded-lg mt-1">
                         <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
@@ -161,7 +161,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-start w-full gap-8 mb-8 sm:flex-col">
+            <div class="flex justify-start w-full gap-8 mb-8 md:flex-col">
                 <div class="max-w-[406px] w-full">
                     <p class="text-[#333B44]">Price range</p>
                     <div class="flex justify-between mt-2">
@@ -170,13 +170,15 @@
                     </div>
                     <v-range-slider v-model="priceRange" :max="100000" :min="0" :step="1000" class="align-center"></v-range-slider>
                 </div>
-                <div>
-                    <p class="text-[#333B44] mb-1">Choose rate</p>
-                    <Rating :max-rating="5" :initial-rating="0"></Rating>
-                </div>
-                <div class="flex mt-7">
-                    <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="hotOffer">
-                    <label for="hotOffer" class="ml-3 cursor-pointer">Hot offer</label>
+                <div class="flex gap-8">
+                    <div>
+                        <p class="text-[#333B44] mb-1">Choose rate</p>
+                        <Rating :max-rating="5" :initial-rating="0"></Rating>
+                    </div>
+                    <div class="flex mt-7">
+                        <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="hotOffer">
+                        <label for="hotOffer" class="ml-3 cursor-pointer">Hot offer</label>
+                    </div>
                 </div>
             </div>
             <div class="w-full gap-8 mb-8 sm:flex-col">

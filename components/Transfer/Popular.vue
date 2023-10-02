@@ -5,7 +5,7 @@
                 Popular <span class="text-primaryBlue">Transfers</span>
             </p>
         </div>
-        <div class="max-w-[1384px] w-full mt-8 flex flex-col">
+        <div class="max-w-[1384px] m-8 sm:m-0 w-full mt-8 flex flex-col">
             <div class="flex gap-8 mb-8 w-full lg:flex-col">
                 <TransferBlock />
                 <TransferBlock />
