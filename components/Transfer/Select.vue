@@ -11,9 +11,9 @@
                         <div class="max-w-[450px] w-full">
                             <p class="text-[#333B44] mb-1">From</p>
                             <select class="bg-white w-full rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                                <option value="1">select</option>
+                                <option value="2">select</option>
+                                <option value="3">select</option>
                             </select>
                         </div>
                         <div class="mt-8 ">
@@ -24,9 +24,9 @@
                         <div class="max-w-[450px] w-full">
                             <p class="text-[#333B44] mb-1">To</p>
                             <select class="bg-white w-full rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                                <option value="1">select</option>
+                                <option value="2">select</option>
+                                <option value="3">select</option>
                             </select>
                         </div>
                     </div>

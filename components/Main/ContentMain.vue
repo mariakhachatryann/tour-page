@@ -3,7 +3,9 @@
         <div class="w-[558px] mr-[150px] lg:m-0 lg:w-full lg:flex lg:flex-col lg:text-center lg:mb-8 md:p-0 sm:p-0">
             <h1 class="font-extrabold text-[48px] lg:text-[32px]">{{ $t("mainText") }}</h1>
             <p class="text-primaryGrey font-normal text-base lg:my-4">{{ $t("mainBottom") }}</p>
-            <button class="px-8 py-3 lg:px-8 lg:py-3 text-base font-bold mt-7 rounded-lg bg-[#fff] border-solid text-primaryBlue border-[1px] border-primaryBlue">Discover our tours</button>
+            <button class="px-8 py-3 lg:px-8 lg:py-3 text-base font-bold mt-7 rounded-lg bg-[#fff] border-solid text-primaryBlue border-[1px] border-primaryBlue">
+                <NuxtLink to="/tours">Discover our tours</NuxtLink>
+            </button>
         </div>
         <div class="h-[530px] sm:px-1" v-for="(slide, index) in slides" :key="index" :class="{ 'hidden': index !== currentSlide }">
             <div class="relative rounded-t-2xl sm:min-w-[310px] max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: 'url(' + slide.image + ')' }">

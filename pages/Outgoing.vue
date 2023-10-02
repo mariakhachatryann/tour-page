@@ -1,6 +1,8 @@
 <template>
     <div>
         <ToursMain :title="compOptions.title" :text="compOptions.text" :src="compOptions.src" />
+        <OutgoingSelect />
+        <OutgoingPopular />
     </div>
 </template>
 

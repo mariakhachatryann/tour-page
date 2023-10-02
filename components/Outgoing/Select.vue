@@ -2,79 +2,45 @@
     <div class="flex justify-center items-center w-full mb-20">
         <form class="max-w-[1384px] w-full flex justify-center p-8 sm:p-4 rounded-3xl flex-col items-center mx-8 border-[1px] border-solid border-[#D0E1F3] bg-[#F1F7FE]">
             <div class="">
-                <p class="text-[32px] font-extrabold leading-[48px] text-center">Hotels</p>
-                <p class="text-base text-[#4D545B] text-center">Select locations to view transfer options and make a booking in an instant.</p>
+                <p class="text-[32px] font-extrabold leading-[48px] text-center">Calculation of Package</p>
+                <p class="text-base text-[#4D545B] text-center">Select options to view outgoing tours and make a reservation.</p>
             </div>
-            <div class="flex w-full gap-8 my-8 sm:flex-col">
-                <div class="w-1/3 sm:w-full">
-                    <p class="text-[#333B44]">Country</p>
-                    <div class="relative bg-white rounded-lg mt-1">
-                        <div class="py-3 flex px-4 gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5767C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5767C14.8058 9.04779 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.04779 9.19423 10.5767Z" fill="#666C73"/>
-                            </svg>
-                            <select class="w-full bg-white text-[#80858A] rounded-lg cursor-pointer border-none outline-none ">
-                                <option selected disabled value="1" class="text-[#80858A] font-light">Select</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
+            <div class="flex w-full items-center gap-8 sm:flex-col md:gap-2">
+                <div class="max-w-[604] w-full">
+                    <p class="text-[#333B44] mb-1">From</p>
+                    <div class="py-3 flex px-4 gap-2 bg-white w-full rounded-lg ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.953 4.52654C21.9074 4.3696 21.8435 4.21808 21.7633 4.07625C21.3819 3.40231 20.6787 3 19.8821 3C19.4715 3 19.0622 3.1119 18.6982 3.3236L18.6883 3.32938L14.8192 5.78778L7.59608 3.34269C6.53088 2.98211 5.36256 3.10366 4.39072 3.67609C4.16462 3.8092 4.02431 4.05736 4.02447 4.32365C4.02466 4.58998 4.16533 4.83794 4.39158 4.97073L10.4794 8.54392L6.526 11.0966L3.1288 10.8502C2.91821 10.835 2.71032 10.8837 2.52735 10.9914C2.21223 11.1768 2.01544 11.5089 2.00087 11.8797C1.9863 12.2504 2.15637 12.5975 2.45587 12.8081L3.94911 13.8582L4.6454 15.0845C4.77517 15.3405 5.00279 15.5346 5.27357 15.6191C5.37392 15.6504 5.47759 15.6658 5.58092 15.6658C5.76494 15.6658 5.94803 15.6168 6.10971 15.5214L6.11783 15.5166L21.4807 5.7598C21.8972 5.5079 22.0913 5.00249 21.953 4.52654Z" fill="#666C73"/>
+                            <path d="M21.4137 19.5814H2.58959C2.26576 19.5814 2.00326 19.8493 2.00326 20.1796C2.00326 20.51 2.2658 20.7778 2.58959 20.7778H21.4137C21.7375 20.7778 22 20.5099 22 20.1796C22 19.8492 21.7375 19.5814 21.4137 19.5814Z" fill="#666C73"/>
+                        </svg>
+                        <select class="w-full cursor-pointer border-none outline-none ">
+                            <option disabled selected value="1">select</option>
+                            <option value="2">select</option>
+                            <option value="3">select</option>
+                        </select>
                     </div>
                 </div>
-                <div class="w-1/3 sm:w-full">
-                    <p class="text-[#333B44]">City</p>
-                    <div class="bg-white rounded-lg mt-1">
-                        <select class="w-full bg-white rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
-                            <option selected disabled value="1" class="text-[#80858A] font-light">Select</option>
-                            <option value="1">1</option>
+                <div class="mt-8 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0041 21.9009H44.3919C45.2316 21.9009 46.0712 21.4811 46.2811 20.6414C46.701 19.8018 46.491 18.9621 45.8613 18.3324L37.4648 9.93589C36.6251 9.09624 35.3657 9.09624 34.526 9.93589C33.6863 10.7755 33.6863 12.035 34.526 12.8747L39.354 17.7027H15.0041C13.7446 17.7027 12.905 18.5423 12.905 19.8018C12.905 21.0613 13.7446 21.9009 15.0041 21.9009ZM13.5348 38.0642C13.9546 38.484 14.3744 38.6939 15.0042 38.6939C15.6339 38.6939 16.0537 38.484 16.4735 38.0642C17.3132 37.2245 17.3132 35.965 16.4735 35.1254L11.6455 30.2974H35.9954C37.2549 30.2974 38.0946 29.4577 38.0946 28.1983C38.0946 26.9388 37.2549 26.0991 35.9954 26.0991H6.60763C5.76798 26.0991 5.13824 26.519 4.71842 27.3586C4.29859 28.1983 4.50851 29.0379 5.13824 29.6676L13.5348 38.0642Z" fill="#72A4DA"/>
+                    </svg>
+                </div>
+                <div class="max-w-[604px] w-full">
+                    <p class="text-[#333B44] mb-1">To</p>
+                    <div class="py-3 flex px-4 gap-2 bg-white w-full rounded-lg ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.2624 12.7775C20.962 12.5062 20.5885 12.3142 20.1822 12.2224L20.1712 12.2199L15.7145 11.389L12.0485 4.90101C11.5079 3.94425 10.5729 3.25764 9.48309 3.01731C9.22954 2.96149 8.96283 3.04289 8.78681 3.22993C8.6108 3.41693 8.54967 3.68388 8.62732 3.92651L10.7166 10.4562L6.13584 9.63578L3.81385 7.2184C3.66991 7.06853 3.48546 6.96533 3.2805 6.9201C2.9273 6.84218 2.56364 6.94507 2.30763 7.19565C2.05162 7.44628 1.94638 7.80223 2.02615 8.14791L2.42368 9.87137L2.12177 11.192C2.04736 11.4574 2.08544 11.7441 2.22759 11.9822C2.37407 12.2275 2.62055 12.4039 2.90383 12.4662L2.91297 12.4682L20.6058 15.7704C20.6795 15.7858 20.7532 15.7932 20.8261 15.7932C21.2196 15.7932 21.5869 15.5759 21.7673 15.2169C21.8378 15.0766 21.8914 14.9281 21.9264 14.7756C22.0932 14.0507 21.8451 13.3037 21.2624 12.7775Z" fill="#666C73"/>
+                            <path d="M21.4165 19.8576H2.68033C2.35803 19.8576 2.09674 20.1133 2.09674 20.4288C2.09674 20.7443 2.35803 21 2.68033 21H21.4164C21.7387 21 22 20.7443 22 20.4288C22 20.1133 21.7388 19.8576 21.4165 19.8576Z" fill="#666C73"/>
+                        </svg>
+                        <select class="w-full cursor-pointer border-none outline-none">
+                            <option value="1">select</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
                     </div>
                 </div>
-                <div class="w-1/3 sm:w-full">
-                    <p class="text-[#333B44]">Resort</p>
-                    <div class=" bg-white rounded-lg mt-1">
-                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
-                    </div>
-                </div>
             </div>
-            <div class="flex w-full gap-8 mb-8 sm:flex-col">
-                <div class="w-1/2 sm:w-full">
-                    <p class="text-[#333B44]">Hotel Name</p>
-                    <div class="relative bg-white rounded-lg mt-1">
-                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Placeholder" type="text" />
-                    </div>
-                </div>
-                <div class="w-1/2 sm:w-full">
-                    <p class="text-[#333B44]">Extra Services</p>
-                    <div class="bg-white rounded-lg mt-1">
-                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
-                    </div>
-                </div>
-            </div>
-            <div class="flex w-full gap-8 mb-8 sm:flex-col">
-                <div class="w-1/3 sm:w-full">
-                    <p class="text-[#333B44]">Adult <span class="text-[#80858A] ml-2">(18+)</span></p>
-                    <div class="bg-white rounded-lg mt-1">
-                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
-                    </div>
-                </div>
-                <div class="w-1/3 sm:w-full">
-                    <p class="text-[#333B44]">Child <span class="text-[#80858A] ml-2">(2-17.99)</span></p>
-                    <div class="bg-white rounded-lg mt-1">
-                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
-                    </div>
-                </div>
-                <div class="w-1/3 sm:w-full">
-                    <p class="text-[#333B44]">Infant <span class="text-[#80858A] ml-2">(0-1.99)</span></p>
-                    <div class="bg-white rounded-lg mt-1">
-                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
-                    </div>
-                </div>
-            </div>
-            <div class="flex w-full gap-8 mb-8 md:flex-col">
+            <div class="flex w-full gap-8 md:flex-col mt-8">
                 <div class="w-1/2 flex sm:flex-col md:w-full">
                     <div class="w-1/2 sm:w-full">
                         <p class="text-[#333B44] whitespace-nowrap">Transfer date and time</p>
@@ -97,9 +63,9 @@
                             </date-picker>
                         </div>
                     </div>
-                    <div class="w-1/2 mt-6">
+                    <div class="w-1/2 mt-6 sm:w-full">
                         <div class="flex sm:w-full border-[1px] border-solid border-[#E6E6E7] mt-1 bg-white rounded-lg">
-                            <div class=" pl-4 py-3 mr-2">
+                            <div class="pl-4 py-3 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 3.50049C7.80521 3.50049 4 7.3057 4 12.0005C4 16.6953 7.80521 20.5005 12.5 20.5005C17.1948 20.5005 21 16.6953 21 12.0005C21 7.3057 17.1948 3.50049 12.5 3.50049ZM2.5 12.0005C2.5 6.47727 6.97679 2.00049 12.5 2.00049C18.0232 2.00049 22.5 6.47727 22.5 12.0005C22.5 17.5237 18.0232 22.0005 12.5 22.0005C6.97679 22.0005 2.5 17.5237 2.5 12.0005Z" fill="#000A15"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1602 7.09717C12.5744 7.09717 12.9102 7.43295 12.9102 7.84717V12.2683L16.3144 14.2991C16.6701 14.5113 16.7865 14.9717 16.5743 15.3274C16.362 15.6831 15.9016 15.7995 15.5459 15.5873L11.7759 13.3383C11.5491 13.2029 11.4102 12.9583 11.4102 12.6942V7.84717C11.4102 7.43295 11.7459 7.09717 12.1602 7.09717Z" fill="#000A15"/>
@@ -161,6 +127,63 @@
                     </div>
                 </div>
             </div>
+            <div class="flex w-full gap-8 my-8 sm:flex-col">
+                <div class="w-1/2 sm:w-full">
+                    <p class="text-[#333B44]">Resorts</p>
+                    <div class="relative bg-white rounded-lg mt-1">
+                        <select class="bg-white w-full rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
+                                <option value="1">select</option>
+                                <option value="2">select</option>
+                                <option value="3">select</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="w-1/2 sm:w-full">
+                    <p class="text-[#333B44]">Hotel name</p>
+                    <div class="bg-white rounded-lg mt-1">
+                        <select class="bg-white w-full rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
+                            <option value="1">select</option>
+                            <option value="2">select</option>
+                            <option value="3">select</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="flex w-full gap-8 mb-8 sm:flex-col">
+                <div class="w-1/4 sm:w-full">
+                    <p class="text-[#333B44]">Citizenship</p>
+                    <div class="bg-white rounded-lg mt-1">
+                        <select class="bg-white w-full rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
+                            <option value="1">select</option>
+                            <option value="1">Yes</option>
+                            <option value="1">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="w-1/4 sm:w-full">
+                    <p class="text-[#333B44]">Adult</p>
+                    <div class="bg-white rounded-lg mt-1">
+                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
+                    </div>
+                </div>
+                <div class="w-1/4 sm:w-full">
+                    <p class="text-[#333B44]">Child</p>
+                    <div class="bg-white rounded-lg mt-1">
+                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
+                    </div>
+                </div>
+                <div class="w-1/4 sm:w-full">
+                    <p class="text-[#333B44]">Child seats</p>
+                    <div class="bg-white rounded-lg mt-1">
+                        <select class="bg-white  rounded-lg cursor-pointer py-3 px-4 border-none outline-none">
+                            <option selected disabled value="1" class="text-[#80858A] font-light">Select</option>
+                            <option value="1">select</option>
+                            <option value="2">select</option>
+                            <option value="3"><select name="" id=""></select></option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="flex justify-start w-full gap-8 mb-8 sm:flex-col">
                 <div class="max-w-[406px] w-full">
                     <p class="text-[#333B44]">Price range</p>
@@ -181,19 +204,32 @@
             </div>
             <div class="w-full gap-8 mb-8 sm:flex-col">
                 <p class="text-base font-medium text-[#19222C]">Extra Needs</p>
-                <div class="flex mt-4">
-                    <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="individual">
-                    <label for="individual" class="ml-3 cursor-pointer text-primaryBlue">Individual transfer</label>
+                <div class="flex gap-4 flex-wrap">
+                    <div class="flex items-center mt-4">
+                        <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="wheelchair">
+                        <label for="wheelchair" class="ml-3 cursor-pointer">Wheelchair</label>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="pets">
+                        <label for="pets" class="ml-3 cursor-pointer">Pets</label>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="insurance">
+                        <label for="insurance" class="ml-3 cursor-pointer">Insurance</label>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="individualTransfer">
+                        <label for="individualTransfer" class="ml-3 cursor-pointer pb-1">Individual transfer</label>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="firstSeats">
+                        <label for="firstSeats" class="ml-3 cursor-pointer">First seats</label>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="sportEquipment">
+                        <label for="sportEquipment" class="ml-3 cursor-pointer">Sport equipment</label>
+                    </div>
                 </div>
-            </div>
-            <div class="w-full gap-8 mb-8 sm:flex-col">
-                <p class="text-base font-medium text-[#19222C]">Child seats</p>
-                <select class="bg-white w-[250px] rounded-lg cursor-pointer py-3 px-4 border-none outline-none sm:w-[288px] mt-4">
-                    <option selected disabled value="1" class="text-[#80858A] font-light">Select</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
             </div>
             <div class="w-full mt-8">
                 <button @click.prevent="submitOptions" class="bg-primaryBlue rounded-lg py-3 px-8 w-full font-bold text-[#FDFFFE]">Find Results</button>

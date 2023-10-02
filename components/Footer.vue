@@ -1,6 +1,6 @@
 <template>
-<div class="w-full flex justify-center items-center">
-    <div class="max-w-[1384px] flex justify-evenly w-full gap-[26px] xl1:px-4 sm:flex-col md:px-2">
+    <div class="w-full flex justify-center items-center">
+        <div class="max-w-[1384px] flex justify-evenly w-full gap-[26px] xl1:px-4 sm:flex-col md:px-2">
             <div class="max-w-[55%]">
                 <div class="border-l-[3px] border-primaryBlue pl-4 mb-6 sm:pl-2">
                     <p class="text-sm font-light text-primaryBlue mb-2">Tours</p>
@@ -39,18 +39,20 @@
                         <NuxtLink to="/tours" class="text-primaryGrey">Tours</NuxtLink>
                         <NuxtLink to="/hotels" class="text-primaryGrey">Hotels</NuxtLink>
                         <NuxtLink to="/transfer" class="text-primaryGrey">Transfer</NuxtLink>
-                        <li class="text-primaryGrey">Abroad</li>
+                        <NuxtLink to="/outgoing" class="text-primaryGrey">Abroad</NuxtLink>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="max-w-[1856px] h-[1px] bg-[#D0E1F3] my-8 mx-8 "></div>
-    <div class="flex justify-between items-center gap-8 px-[260px] pb-12 md:flex-col xl1:px-8">
-        <div class="w-[152px] h-12 bg-[#E8F0F9] mt-2 text-center items-center">
-            <p class="text-2xl text-[#01000E] font-bold p-1">LOGO</p>
+    <div class="max-w-[1856px] h-[1px] bg-[#D0E1F3] my-8 mx-8"></div>
+    <div class="w-full flex justify-center items-center">
+        <div class="max-w-[1384px] w-full flex justify-between items-center gap-8 pb-12 md:flex-col xl1:px-8">
+            <div class="w-[152px] h-12 bg-[#E8F0F9] mt-2 text-center items-center">
+                <p class="text-2xl text-[#01000E] font-bold p-1">LOGO</p>
+            </div>
+            <p class="tracking-[.28px] text-[#000A15] sm:text-center">© 2023 Unknown. All rights reserved </p>
+            <p class="text-[#000A15]"><span class="text-[#80858A]">by</span><a href="https://www.hsrocket.com/en/" target="_blank"> HS Rocket</a></p>
         </div>
-        <p class="tracking-[.28px] text-[#000A15] sm:text-center">© 2023 Unknown. All rights reserved </p>
-        <p class="text-[#000A15]"><span class="text-[#80858A]">by</span><a href="https://www.hsrocket.com/en/" target="_blank"> HS Rocket</a></p>
     </div>
 </template>
