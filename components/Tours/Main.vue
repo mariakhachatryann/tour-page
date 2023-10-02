@@ -8,7 +8,7 @@
             <img v-if="routeName === 'tours'" src="~/assets/img/frame3.png" class="w-full h-full" />
             <img v-if="routeName === 'hotels'" src="~/assets/img/frame4.png" class="w-full h-full" />
             <img v-if="routeName === 'transfer'" src="~/assets/img/frame5.png" class="w-full h-full" />
-            <img v-if="routeName === 'outgoing'" src="~/assets/img/frame6.png" class="w-full h-full" />
+            <img v-if="routeName === 'Outgoing'" src="~/assets/img/frame6.png" class="w-full h-full" />
             <!-- <nuxt-img :src="props.src" class="w-full h-full" /> -->
         </div>
     </div>
