@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[472px] max-h-[806px] bg-white pt-6 px-8 pb-6 rounded-2xl md:w-[320px] overflow-scroll">
+    <div class="w-[472px] md:w-[320px] bg-white pt-6 px-8 pb-6 rounded-2xl overflow-scroll"  :style="{ height: elementHeight }">
         <div class="flex w-full justify-between mb-8">
             <p class="text-2xl font-bold text-[#000A15]">Register</p>
             <div @click="close" class="cursor-pointer">
@@ -34,7 +34,7 @@
                 <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="rememberMe">
                 <label for="rememberMe" class="ml-3 cursor-pointer">
                     Agree with 
-                    <NuxtLink to="/privacyPolicy" class="text-primaryBlue">Privacy & Policy</NuxtLink>
+                    <NuxtLink to="/privacyPolicy" target="_blank" class="text-primaryBlue">Privacy & Policy</NuxtLink>
                 </label>
             </div>
             <p class="text-primaryBlue whitespace-nowrap text-base font-bold cursor-pointer">Forgot Password</p>
@@ -84,4 +84,31 @@ const emit = defineEmits(["closeLog"]);
 function close() {
     emit("closeLog")
 }
+
+
+import { ref, onMounted } from 'vue';
+
+const elementHeight = ref('806px'); // Default height
+
+function setElementHeight() {
+  // Check the screen height and set elementHeight accordingly
+  if (window.innerHeight < 800) {
+    elementHeight.value = '500px';
+  } else {
+    elementHeight.value = '806px'; // Default height
+  }
+}
+
+// Set the initial element height on component mount
+onMounted(() => {
+  setElementHeight();
+});
+
+// Add an event listener to react to window resize events
+window.addEventListener('resize', setElementHeight);
+
+// Cleanup the event listener when the component is unmounted
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', setElementHeight);
+});
 </script>
