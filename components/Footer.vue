@@ -26,7 +26,7 @@
             <div class="w-1/2 flex justify-center md:flex-col sm:w-full">
                 <div class="mr-[64px]">
                     <p class="text-[#5B95D4] text-xl font-medium mb-4 md:flex-col">Company & Support</p>
-                    <ul class="flex flex-col">
+                    <ul class="flex flex-col gap-2">
                         <NuxtLink to="/about" class="text-primaryGrey cursor-pointer">About us</NuxtLink>
                         <NuxtLink to="/contact" class="text-primaryGrey cursor-pointer">Contact us</NuxtLink>
                         <NuxtLink to="/privacyPolicy" class="text-primaryGrey cursor-pointer">Privacy & Policy</NuxtLink>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="md:mt-8">
                     <p class="text-[#5B95D4] text-xl font-medium mb-4">Services</p>
-                    <ul class="flex flex-col">
+                    <ul class="flex flex-col gap-2">
                         <NuxtLink to="/tours" class="text-primaryGrey">Tours</NuxtLink>
                         <NuxtLink to="/hotels" class="text-primaryGrey">Hotels</NuxtLink>
                         <NuxtLink to="/transfer" class="text-primaryGrey">Transfer</NuxtLink>
