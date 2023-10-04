@@ -43,6 +43,10 @@
                 <NuxtLink @click="closeMenu" to="/transfer" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Transfer</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/outgoing" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Outgoing tours</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/contact" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Contact Us</NuxtLink>
+                <div class="flex w-full">
+                    <button @click="overlay = !overlay" class="m-2 w-1/2 h-[48px] bg-white text-primaryBlue border-[1px] rounded-lg border-primaryBlue font-bold ">Log in</button>
+                    <button @click="overlay1 = !overlay1" class="m-2 w-1/2 h-[48px] bg-primaryBlue text-white border-[1px] rounded-lg border-primaryBlue font-bold">Join us</button>
+                </div>
             </ul>
         </div>
     </div>
