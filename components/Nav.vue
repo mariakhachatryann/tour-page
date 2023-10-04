@@ -50,15 +50,14 @@
             </ul>
         </div>
     </div>
-    <div class="overflow-scroll">
 
         <v-overlay class="flex w-full justify-center items-center" v-model="overlay">
             <AuthenticationLog @closeLog="overlay = !overlay" />
         </v-overlay>
         <v-overlay class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlay1">
-            <AuthenticationJoin />
+            <AuthenticationJoin @closeJ="overlay1 = !overlay1" />
         </v-overlay>
-    </div>
+    
 </template>
 
 <script setup>

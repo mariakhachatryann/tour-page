@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[472px] bg-white pt-6 px-8 pb-6 rounded-2xl md:w-[320px]">
+    <div class="w-[472px] bg-white pt-6 px-8 pb-6 rounded-2xl md:w-[320px] overflow-y-scroll" :style="{ height: elementHeight }">
         <div class="flex w-full justify-between mb-8">
             <p class="text-2xl font-bold text-[#000A15] ">Log into account</p>
             <div @click="close" class="cursor-pointer">
@@ -72,4 +72,28 @@ const emit = defineEmits(["closeLog"]);
 function close() {
     emit("closeLog")
 }
+
+const elementHeight = ref('620px'); // Default height
+
+function setElementHeight() {
+  // Check the screen height and set elementHeight accordingly
+  if (window.innerHeight < 600) {
+    elementHeight.value = '400px';
+  } else {
+    elementHeight.value = '620px'; // Default height
+  }
+}
+
+// Set the initial element height on component mount
+onMounted(() => {
+  setElementHeight();
+});
+
+// Add an event listener to react to window resize events
+window.addEventListener('resize', setElementHeight);
+
+// Cleanup the event listener when the component is unmounted
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', setElementHeight);
+});
 </script>
