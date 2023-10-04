@@ -14,6 +14,7 @@
 </template>
 
 <script setup>
+// Default theme
 import Splide from "@splidejs/splide";
 
 const instances = [1, 2, 3, 4, 5];

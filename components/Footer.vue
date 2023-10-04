@@ -27,7 +27,7 @@
                 <div class="mr-[64px]">
                     <p class="text-[#5B95D4] text-xl font-medium mb-4 md:flex-col">Company & Support</p>
                     <ul class="flex flex-col">
-                        <li class="text-primaryGrey cursor-pointer">About us</li>
+                        <NuxtLink to="/about" class="text-primaryGrey cursor-pointer">About us</NuxtLink>
                         <NuxtLink to="/contact" class="text-primaryGrey cursor-pointer">Contact us</NuxtLink>
                         <NuxtLink to="/privacyPolicy" class="text-primaryGrey cursor-pointer">Privacy & Policy</NuxtLink>
                         <NuxtLink to="/conditions" class="text-primaryGrey cursor-pointer">Terms of conditions</NuxtLink>

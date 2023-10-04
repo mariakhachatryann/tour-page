@@ -1,7 +1,7 @@
 <template>
     <div class="w-full justify-center items-center flex gap-1 sm:mt-14 mb-20">
         <div class="max-w-[1384px] w-full flex lg:flex-col mx-8">
-            <div class="w-full rounded-tl-2xl rounded-bl-2xl lg:rounded-tr-2xl bg-gradient-to-r from-primaryBlue to-[#0C3D73] py-6 px-8">
+            <div class="w-2/5 lg:w-full rounded-tl-2xl rounded-bl-2xl lg:rounded-tr-2xl bg-gradient-to-r from-primaryBlue to-[#0C3D73] py-6 px-8">
                 <div class="flex flex-col justify-center items-center">
                     <p class="text-[32px] xl:text-[28px] leading-[48px] text-[#FDFFFE] font-extrabold mb-4">Get Information About Us</p>
                     <p class="text-[#A1C2E7] mb-[35px]">The team of Direlli LLC consists of more than 20 people. Our style is the speed of execution and the benefit of the company's customers, but first of all — love of our work. This helps us to successfully create digital products </p>
@@ -37,7 +37,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="bg-[#F1F7FE] w-full rounded-tr-2xl rounded-br-2xl p-8">
+            <div class="w-3/5 lg:w-full bg-[#F1F7FE] rounded-tr-2xl rounded-br-2xl p-8">
                 <p class="text-[#000A15] text-[28px] font-extrabold">Please use the form below to send us your message</p>
                 <div class="w-full flex gap-6 mt-6 sm:flex-col">
                     <div class="w-full">
