@@ -22,7 +22,7 @@
                 <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="rememberMe">
                 <label for="rememberMe" class="ml-3 cursor-pointer">Remember me</label>
             </div>
-            <p class="text-primaryBlue whitespace-nowrap text-base font-bold cursor-pointer">Forgot Password</p>
+            <p @click="showRecoverPassword" class="text-primaryBlue whitespace-nowrap text-base font-bold cursor-pointer">Forgot Password</p>
         </div>
         <div class="w-full mb-4">
             <button class="bg-primaryBlue w-full py-3 px-8 text-white rounded-lg font-bold">Log in</button>
@@ -67,33 +67,33 @@
 </template>
 
 <script setup>
-const emit = defineEmits(["closeLog"]);
+const emit = defineEmits(["closeLog", "showRecPass"]);
 
 function close() {
     emit("closeLog")
 }
 
-const elementHeight = ref('620px'); // Default height
-
-function setElementHeight() {
-  // Check the screen height and set elementHeight accordingly
-  if (window.innerHeight < 600) {
-    elementHeight.value = '400px';
-  } else {
-    elementHeight.value = '620px'; // Default height
-  }
+function showRecoverPassword() {
+    emit("showRecPass")
 }
 
-// Set the initial element height on component mount
+const elementHeight = ref("620px");
+
+function setElementHeight() {
+    if (window.innerHeight < 600) {
+        elementHeight.value = "400px";
+    } else {
+        elementHeight.value = "620px"; 
+    }
+}
+
 onMounted(() => {
-  setElementHeight();
+    setElementHeight();
 });
 
-// Add an event listener to react to window resize events
-window.addEventListener('resize', setElementHeight);
+window.addEventListener("resize", setElementHeight);
 
-// Cleanup the event listener when the component is unmounted
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', setElementHeight);
+    window.removeEventListener("resize", setElementHeight);
 });
 </script>

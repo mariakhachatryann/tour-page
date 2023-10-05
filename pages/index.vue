@@ -11,4 +11,8 @@
 useHead({
     title: "Home"
 })
+
+onMounted(() => {
+    console.log("HELLo");
+})
 </script>

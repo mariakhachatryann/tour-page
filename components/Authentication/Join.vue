@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[472px] md:w-[320px] bg-white pt-6 px-8 pb-6 rounded-2xl overflow-y-scroll"  :style="{ height: elementHeight }">
+    <div class="w-[472px] md:w-[320px] bg-white pt-6 px-8 pb-6 rounded-2xl overflow-y-scroll" :style="{ height: elementHeight }">
         <div class="flex w-full justify-between mb-8">
             <p class="text-2xl font-bold text-[#000A15]">Register</p>
             <div @click="closeJ" class="cursor-pointer">
@@ -37,7 +37,7 @@
                     <NuxtLink to="/privacyPolicy" target="_blank" class="text-primaryBlue">Privacy & Policy</NuxtLink>
                 </label>
             </div>
-            <p class="text-primaryBlue whitespace-nowrap text-base font-bold cursor-pointer">Forgot Password</p>
+            <p @click="showRecoverPassword" class="text-primaryBlue whitespace-nowrap text-base font-bold cursor-pointer">Forgot Password</p>
         </div>
         <div class="w-full mb-4">
             <button class="bg-primaryBlue w-full py-3 px-8 text-white rounded-lg font-bold">Join us</button>
@@ -79,36 +79,33 @@
 </template>
 
 <script setup>
-const emit = defineEmits(["closeJoin"]);
+const emit = defineEmits(["closeJoin", "showRecPass"]);
 
 function closeJ() {
     emit("closeJoin")
 }
 
-
-import { ref, onMounted } from 'vue';
-
-const elementHeight = ref('806px'); // Default height
-
-function setElementHeight() {
-  // Check the screen height and set elementHeight accordingly
-  if (window.innerHeight < 840) {
-    elementHeight.value = '500px';
-  } else {
-    elementHeight.value = '906px'; // Default height
-  }
+function showRecoverPassword() {
+    emit("showRecPass")
 }
 
-// Set the initial element height on component mount
+const elementHeight = ref("806px");
+
+function setElementHeight() {
+    if (window.innerHeight < 860) {
+        elementHeight.value = "600px";
+    }else {
+        elementHeight.value = "906px";
+    }
+}
+
 onMounted(() => {
   setElementHeight();
 });
 
-// Add an event listener to react to window resize events
-window.addEventListener('resize', setElementHeight);
+window.addEventListener("resize", setElementHeight);
 
-// Cleanup the event listener when the component is unmounted
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', setElementHeight);
+    window.removeEventListener("resize", setElementHeight);
 });
 </script>

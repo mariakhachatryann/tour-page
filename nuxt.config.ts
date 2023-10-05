@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-    modules: ["@pinia/nuxt", "@nuxtjs/google-fonts", "@invictus.codes/nuxt-vuetify", "@nuxt/image"],
+    modules: ["@pinia/nuxt", "@nuxtjs/google-fonts", "@nuxt/image", "@invictus.codes/nuxt-vuetify"],
     postcss: {
         plugins: {
             tailwindcss: {},

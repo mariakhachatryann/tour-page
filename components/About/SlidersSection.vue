@@ -52,9 +52,7 @@ onMounted(() => {
 });
 </script>
 
-<style>
-/* @import '@splidejs/splide/css/sea-green'; */
-
+<style scoped>
 .splide {
     padding: 0;
 } 
@@ -62,4 +60,5 @@ onMounted(() => {
 .splide__arrows {
     display: none;
 }
+
 </style>

@@ -10,3 +10,7 @@
         <Footer />
     </div>
 </template>
+
+<style>
+/* @import '@splidejs/splide/css/sea-green'; */
+</style>

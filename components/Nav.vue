@@ -50,14 +50,15 @@
             </ul>
         </div>
     </div>
-
-        <v-overlay class="flex w-full justify-center items-center" v-model="overlay">
-            <AuthenticationLog @closeLog="overlay = !overlay" />
-        </v-overlay>
-        <v-overlay class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlay1">
-            <AuthenticationJoin @closeJ="overlay1 = !overlay1" />
-        </v-overlay>
-    
+    <v-overlay class="flex w-full h-full justify-center items-center" v-model="overlay">
+        <AuthenticationLog @showRecPass="() => { overlay = false; overlayPass = true}" @closeLog="overlay = !overlay" />
+    </v-overlay>
+    <v-overlay class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlay1">
+        <AuthenticationJoin @showRecPass="() => { overlay1 = false; overlayPass = true}" @closeJoin="overlay1 = !overlay1" />
+    </v-overlay>
+    <v-overlay class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlayPass">
+        <AuthenticationRecoverPass @closeLog="overlayPass = false" />
+    </v-overlay>
 </template>
 
 <script setup>
@@ -73,6 +74,7 @@ function closeMenu() {
 
 const overlay = ref(false);
 const overlay1 = ref(false);
+const overlayPass = ref(false)
 </script>
 
 <style>
