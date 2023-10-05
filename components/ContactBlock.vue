@@ -1,6 +1,6 @@
 <template>
     <div class="w-full justify-center items-center flex gap-1 sm:mt-14 mb-20">
-        <div class="max-w-[1384px] w-full flex lg:flex-col mx-8">
+        <form class="max-w-[1384px] w-full flex lg:flex-col mx-8">
             <div class="w-2/5 lg:w-full rounded-tl-2xl rounded-bl-2xl lg:rounded-tr-2xl bg-gradient-to-r from-primaryBlue to-[#0C3D73] py-6 px-8">
                 <div class="flex flex-col justify-center items-center">
                     <p class="text-[32px] xl:text-[28px] leading-[48px] text-[#FDFFFE] font-extrabold mb-4">Get Information About Us</p>
@@ -43,13 +43,13 @@
                     <div class="w-full">
                         <p class="text-[#333B44]">Name, Surname</p>
                         <div class="bg-white rounded-lg mt-1">
-                            <input class="w-1/2 mt-1 py-3 px-4 border-none outline-none" placeholder="Enter here" type="text" />
+                            <input v-model="userForm.nameSur" class="w-full mt-1 py-3 px-4 border-none outline-none" placeholder="Enter here" type="text" />
                         </div>
                     </div>
                     <div class="w-full">
                         <p class="text-[#333B44]">E-mail</p>
                         <div class="bg-white rounded-lg mt-1">
-                            <input class="w-1/2 mt-1 py-3 px-4 border-none outline-none" placeholder="Enter here" type="email" />
+                            <input v-model="userForm.mail" class="w-full mt-1 py-3 px-4 border-none outline-none" placeholder="Enter here" type="email" />
                         </div>
                     </div>
                 </div>
@@ -57,14 +57,14 @@
                     <div class="w-full">
                         <p class="text-[#333B44]">Phone</p>
                         <div class="bg-white rounded-lg mt-1">
-                            <input class="w-1/2 mt-1 py-3 px-4 border-none outline-none" placeholder="Enter phone number" type="text" />
+                            <input v-model="userForm.phone" class="w-full mt-1 py-3 px-4 border-none outline-none" placeholder="Enter phone number" type="text" />
                         </div>
                     </div>
                     <div class="w-full">
-                        <p class="text-[#333B44]">E-mail</p>
+                        <p class="text-[#333B44]">Subject</p>
                         <div class="bg-white rounded-lg mt-1">
-                            <select class="bg-white w-1/2 rounded-lg cursor-pointer py-3 px-4 border-none outline-none">
-                                <option selected disabled value="1" class="text-[#80858A] font-light">Select</option>
+                            <select v-model="userForm.subject" class="bg-white w-full rounded-lg cursor-pointer py-3 px-4 border-none outline-none">
+                                <option selected disabled value="unselect" class="text-[#80858A] font-light">Select</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -74,12 +74,26 @@
                 </div>
                 <div class="w-full mt-6">
                     <p class="text-[#333B44]">Message</p>
-                    <textarea class="bg-white py-3 px-4 w-full mt-1 rounded-lg outline-none" placeholder="Enter here" name="" id="" cols="30" rows="5"></textarea>
+                    <textarea v-model="userForm.message" class="bg-white py-3 px-4 w-full mt-1 rounded-lg outline-none" placeholder="Enter here" name="" id="" cols="30" rows="5"></textarea>
                 </div>
                 <div class="flex justify-end mt-6">
-                    <button class="bg-primaryBlue text-[#FDFFFE] rounded-lg py-3 px-8 font-bold">Calculate Result</button>
+                    <button @click.prevent="calcResults" class="bg-primaryBlue text-[#FDFFFE] rounded-lg py-3 px-8 font-bold">Calculate Result</button>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </template>
+
+<script setup>
+const userForm = reactive({
+    nameSur: "",
+    mail: "",
+    phone: "",
+    subject: "unselect",
+    message: ""
+})
+
+function calcResults() {
+    console.log(userForm);
+}
+</script>

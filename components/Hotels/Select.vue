@@ -13,11 +13,11 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5767C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5767C14.8058 9.04779 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.04779 9.19423 10.5767Z" fill="#666C73"/>
                             </svg>
-                            <select class="w-full bg-white text-[#80858A] rounded-lg cursor-pointer border-none outline-none ">
-                                <option selected disabled value="1" class="text-[#80858A] font-light">Select</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                            <select v-model="hotelOptions.country" class="w-full bg-white text-[#80858A] rounded-lg cursor-pointer border-none outline-none ">
+                                <option selected disabled value="unselect" class="text-[#80858A] font-light">Select</option>
+                                <option value="fr">France</option>
+                                <option value="gr">Greece</option>
+                                <option value="usa">USA</option>
                             </select>
                         </div>
                     </div>
@@ -25,18 +25,18 @@
                 <div class="w-1/3 sm:w-full">
                     <p class="text-[#333B44]">City</p>
                     <div class="bg-white rounded-lg mt-1">
-                        <select class="w-full bg-white rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
-                            <option selected disabled value="1" class="text-[#80858A] font-light">Select</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                        <select v-model="hotelOptions.city" class="w-full bg-white rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
+                            <option selected disabled value="unselect" class="text-[#80858A] font-light">Select</option>
+                            <option value="la">LA</option>
+                            <option value="ny">NY</option>
+                            <option value="yvn">YVN</option>
                         </select>
                     </div>
                 </div>
                 <div class="w-1/3 sm:w-full">
                     <p class="text-[#333B44]">Resort</p>
                     <div class=" bg-white rounded-lg mt-1">
-                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
+                        <input v-model="hotelOptions.resort" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
                     </div>
                 </div>
             </div>
@@ -44,13 +44,13 @@
                 <div class="w-1/2 sm:w-full">
                     <p class="text-[#333B44]">Hotel Name</p>
                     <div class="relative bg-white rounded-lg mt-1">
-                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Placeholder" type="text" />
+                        <input v-model="hotelOptions.hotel" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Placeholder" type="text" />
                     </div>
                 </div>
                 <div class="w-1/2 sm:w-full">
                     <p class="text-[#333B44]">Extra Services</p>
                     <div class="bg-white rounded-lg mt-1">
-                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
+                        <input v-model="hotelOptions.extraServ" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
                     </div>
                 </div>
             </div>
@@ -58,19 +58,19 @@
                 <div class="w-1/3 md:w-full">
                     <p class="text-[#333B44]">Adult <span class="text-[#80858A] ml-2">(18+)</span></p>
                     <div class="bg-white rounded-lg mt-1">
-                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
+                        <input v-model="hotelOptions.adult" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
                     </div>
                 </div>
                 <div class="w-1/3 md:w-full">
                     <p class="text-[#333B44]">Child <span class="text-[#80858A] ml-2">(2-17.99)</span></p>
                     <div class="bg-white rounded-lg mt-1">
-                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
+                        <input v-model="hotelOptions.child" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
                     </div>
                 </div>
                 <div class="w-1/3 md:w-full">
                     <p class="text-[#333B44]">Infant <span class="text-[#80858A] ml-2">(0-1.99)</span></p>
                     <div class="bg-white rounded-lg mt-1">
-                        <input v-model="tourOptions.direaction" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
+                        <input v-model="hotelOptions.infant" class="w-full mt-1 py-3 px-4 border-none outline-none sm:w-[288px]" placeholder="Enter here" type="text" />
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                                 </svg>
                             </div>
                             <date-picker
-                                v-model="tourOptions.date"
+                                v-model="hotelOptions.date"
                                 :full-month-name="true"
                                 placeholder="Choose day"
                                 wrapper-class="p-0 min-w-[80px]"
@@ -173,10 +173,10 @@
                 <div class="flex gap-8">
                     <div>
                         <p class="text-[#333B44] mb-1">Choose rate</p>
-                        <Rating :max-rating="5" :initial-rating="0"></Rating>
+                        <Rating v-model="rating" :max-rating="5" :initial-rating="0"></Rating>
                     </div>
                     <div class="flex mt-7">
-                        <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="hotOffer">
+                        <input v-model="hotelOptions.hotOff" type="checkbox" class="cursor-pointer w-5 h-5" name="" id="hotOffer">
                         <label for="hotOffer" class="ml-3 cursor-pointer">Hot offer</label>
                     </div>
                 </div>
@@ -184,14 +184,14 @@
             <div class="w-full gap-8 mb-8 sm:flex-col">
                 <p class="text-base font-medium text-[#19222C]">Extra Needs</p>
                 <div class="flex mt-4">
-                    <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="individual">
+                    <input v-model="hotelOptions.extraNeeds" type="checkbox" class="cursor-pointer w-5 h-5" name="" id="individual">
                     <label for="individual" class="ml-3 cursor-pointer text-primaryBlue">Individual transfer</label>
                 </div>
             </div>
             <div class="w-full gap-8 mb-8 sm:flex-col">
                 <p class="text-base font-medium text-[#19222C]">Child seats</p>
-                <select class="bg-white w-[250px] rounded-lg cursor-pointer py-3 px-4 border-none outline-none sm:w-[288px] mt-4">
-                    <option selected disabled value="1" class="text-[#80858A] font-light">Select</option>
+                <select v-model="hotelOptions.childSeats" class="bg-white w-[250px] rounded-lg cursor-pointer py-3 px-4 border-none outline-none sm:w-[288px] mt-4">
+                    <option selected disabled value="unselected" class="text-[#80858A] font-light">Select</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -209,15 +209,24 @@ import DatePicker from "vuejs3-datepicker";
 const priceRange = ref([0, 100000]);
 const rating = ref("")
 
-const tourOptions = reactive({
-    direaction: "",
-    date: "",
-    type: "",
-    price: priceRange.value
+const hotelOptions = reactive({
+    country: "unselect",
+    city: "unselect",
+    resort: "",
+    hotel: "",
+    extraServ: "",
+    adult: "",
+    child: "",
+    infant: "",
+    rating: rating.value,
+    hotOff: "",
+    extraNeeds: "",
+    childSeats: "unselect",
+    price: { "from": priceRange.value[0], "to": priceRange.value[1] }
 })
 
 function submitOptions() {
-    console.log(tourOptions);
+    console.log(hotelOptions);
 }
 </script>
 

@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="ml-8 mt-auto md:w-full md:ml-0">
-                    <button class="bg-primaryBlue text-[#FDFFFE] rounded-lg w-[193px] h-[48px] md:w-full md:mt-8">Calculate Result</button>
+                    <button @click.prevent="submitOptions" class="bg-primaryBlue text-[#FDFFFE] rounded-lg w-[193px] h-[48px] md:w-full md:mt-8">Calculate Result</button>
                 </div>
             </div>
         </form>
@@ -47,9 +47,9 @@
 //     price: priceRange.value
 // })
 
-// function submitOptions() {
-//     console.log(tourOptions);
-// }
+function submitOptions() {
+    console.log("submit");
+}
 </script>
 
 <style>

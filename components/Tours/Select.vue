@@ -64,7 +64,7 @@ const tourOptions = reactive({
     direaction: "",
     date: "",
     type: "",
-    price: priceRange.value
+    price: { "from": priceRange.value[0], "to": priceRange.value[1] }
 })
 
 function submitOptions() {
