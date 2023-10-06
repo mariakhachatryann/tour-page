@@ -1,10 +1,10 @@
 <template>
-    <!-- <MainContentMain /> -->
-    <!-- <MainTopPlaces />  -->
-    <!-- <MainAbout />  -->
-    <!-- <MainAchieved />  -->
+    <MainContentMain />
+    <MainTopPlaces /> 
+    <MainAbout /> 
+    <MainAchieved /> 
     <MainSubscription /> 
-    <!-- <Footer /> -->
+    <Footer />
 </template>
 
 <script setup>
