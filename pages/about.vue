@@ -9,8 +9,10 @@
         <MainSubscription />
         <Footer />
     </div>
+      
+    <label class="script"> 
+        Absolutely Yes 
+        <input type="checkbox" > 
+        <span class="geekmark"></span> 
+    </label> 
 </template>
-
-<style>
-/* @import '@splidejs/splide/css/sea-green'; */
-</style>

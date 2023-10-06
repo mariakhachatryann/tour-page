@@ -6,7 +6,7 @@
                     <TransferBlock />
                 </div>
             </div>
-            <div class="w-screen flex justify-center items-center">
+            <div class="w-screen flex justify-center items-center md:mt-48">
                 <MainSliderArrows /> 
             </div>
         </div>
