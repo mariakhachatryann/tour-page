@@ -175,27 +175,15 @@
                         <p class="text-[#333B44] mb-1">Choose rate</p>
                         <Rating v-model="rating" :max-rating="5" :initial-rating="0"></Rating>
                     </div>
-                    <div class="flex mt-7">
-                        <!-- <input v-model="hotelOptions.hotOff" type="checkbox" class="cursor-pointer w-5 h-5" name="" id="hotOffer">
-                        <label for="hotOffer" class="ml-3 cursor-pointer">Hot offer</label> -->
-                        <label for="hotOffer" :class="hotelOptions.hotOff ? 'text-primaryBlue' : 'text-[#4D545B]'" class="script cursor-pointer">
-                            Hot offer
-                            <input v-model="hotelOptions.hotOff" type="checkbox" id="hotOffer"> 
-                            <span class="geekmark"></span> 
-                        </label> 
+                    <div class="mt-7">
+                        <CheckInp :forId="'hotOffer'" :inpVal="hotelOptions.hotOff" @changeInp="hotelOptions.hotOff = !hotelOptions.extraNeeds;">Hot offer</CheckInp>
                     </div>
                 </div>
             </div>
             <div class="w-full gap-8 mb-8 sm:flex-col">
                 <p class="text-base font-medium text-[#19222C]">Extra Needs</p>
-                <div class="flex mt-4">
-                    <!-- <input v-model="hotelOptions.extraNeeds" type="checkbox" class="cursor-pointer w-5 h-5" name="" id="individual">
-                    <label for="individual" class="ml-3 cursor-pointer text-primaryBlue">Individual transfer</label> -->
-                    <label for="individual" :class="hotelOptions.extraNeeds ? 'text-primaryBlue' : 'text-[#4D545B]'" class="script cursor-pointer"> 
-                        Individual transfer
-                        <input v-model="hotelOptions.extraNeeds" type="checkbox" id="individual"> 
-                        <span class="geekmark"></span> 
-                    </label> 
+                <div class="mt-7">
+                    <CheckInp :forId="'individual'" :inpVal="hotelOptions.extraNeeds" @changeInp="hotelOptions.extraNeeds = !hotelOptions.extraNeeds;">Individual transfer</CheckInp>
                 </div>
             </div>
             <div class="w-full gap-8 mb-8 sm:flex-col">
@@ -229,8 +217,8 @@ const hotelOptions = reactive({
     child: "",
     infant: "",
     rating: rating.value,
-    hotOff: "",
-    extraNeeds: "",
+    hotOff: false,
+    extraNeeds: false,
     childSeats: "unselect",
     price: { "from": priceRange.value[0], "to": priceRange.value[1] }
 })
@@ -238,6 +226,10 @@ const hotelOptions = reactive({
 function submitOptions() {
     console.log(hotelOptions);
 }
+
+const updateExtraNeeds = () => {
+
+};
 </script>
 
 <style>

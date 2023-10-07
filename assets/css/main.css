@@ -35,6 +35,10 @@ input[type=checkbox] {
     border: 2px #1467C2 solid;
 }
 
+.script:hover {
+    color: #1467C2;
+}
+
 .script:hover input ~ .geekmark { 
     background-color: white; 
 } 
