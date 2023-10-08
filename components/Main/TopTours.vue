@@ -3,7 +3,9 @@
         <div class="splide__track">
             <div class="splide__list h-[600px] flex gap-8">
                 <div v-for="instance in instances" :key="instance" class="splide__slide min-w-[416px] h-[602px] max-w-[430px] rounded-b-2xl sm:min-w-[320px]">
-                    <TourBlock />
+                    <TourBlock :img="'frame.png'">
+                        <template v-slot:title>Gyumri (Urban life museum, Black Fortress, walking through the old str...</template>
+                    </TourBlock>
                 </div>
             </div>
             <div class="w-screen flex gap-8 justify-center items-center">
