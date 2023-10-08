@@ -1,5 +1,5 @@
 <template>
-    <div :style="{ backgroundImage: `url(${imgSrc})` }" class="p-[0.5px] rounded-t-2xl h-[278px] bg-cover bg-center bg-no-repeat">
+    <div :style="{ backgroundImage: `url(${myImage})` }" class="p-[0.5px] rounded-t-2xl h-[278px] bg-cover bg-center bg-no-repeat">
         <svg class="rounded-t-2xl" width="99" height="34" viewBox="0 0 99 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0H83C91.8366 0 99 7.16344 99 16V18C99 26.8366 91.8366 34 83 34H0V0Z" fill="#000A15" fill-opacity="0.5" />
             <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3333 16.8785C18.3333 13.812 20.8959 11.3334 23.9956 11.3334C27.1041 11.3334 29.6666 13.812 29.6666 16.8785C29.6666 18.4238 29.1047 19.8585 28.1796 21.0744C27.1592 22.4157 25.9014 23.5844 24.4857 24.5017C24.1617 24.7137 23.8692 24.7297 23.5136 24.5017C22.0898 23.5844 20.832 22.4157 19.8203 21.0744C18.8946 19.8585 18.3333 18.4238 18.3333 16.8785ZM22.1295 17.0512C22.1295 18.0785 22.9678 18.8865 23.9956 18.8865C25.0241 18.8865 25.8705 18.0785 25.8705 17.0512C25.8705 16.0319 25.0241 15.1846 23.9956 15.1846C22.9678 15.1846 22.1295 16.0319 22.1295 17.0512Z" fill="#FDFFFE"/>
@@ -45,13 +45,13 @@
 </template>
 
 <script setup>
-import { watchEffect } from "vue";
-
 const props = defineProps(["img"])
 let imgSrc = ref(myImage.slice(0, 18) + props.img)
 
 import myImage from "~/assets/img/frame8.png";
 console.log(imgSrc.value);
+
+// const imageSrc = ref(require(`~/assets/img/${props.img}`).default);
 // imgSrc.value = myImage
 // const srcc = `${myImage.slice(0, 18)}${props.img}`
 // console.log(`${myImage.slice(0, 18)}${props.img}`);
