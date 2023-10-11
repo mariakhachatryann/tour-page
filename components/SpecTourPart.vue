@@ -48,17 +48,16 @@
         <div class="mt-4">
             <p class="text-[#333B44]">This tour visits Khor Virap monastery, a great place to embrace the most picturesque views of Mount Ararat. Then comes Noravank monastery complex, magnificent in its construction, as the church of Holy Mother of God is 2-storied monastery. The last stop is in Tatev monastery, a spiritual center, that had an outstanding scientific and political significance. The monastery is surrounded by beautiful nature. It is here, where one can take the World's longest ropeway without stops – "Tatever".</p>
         </div>
-        <div class="w-full bg-[#F1F7FE] p-4 mt-4 mb-8 rounded-sm flex justify-between items-center">
-            <p class="text-xl font-bold text-[#000E1D]">Share with:</p>
-            <div class="flex gap-4">
-                <img src="~/assets/img/fb.svg" alt="">
-                <img src="~/assets/img/insta.svg" alt="">
-            </div>
+        <div class="mt-8 flex gap-8 flex-wrap">
+            <img v-for="instane in instances" :key="instane" class="h-40 w-40 rounded-lg" src="~/assets/img/specTour.jpg" alt="">
         </div>
+        <ShareComp />
     </div>
 </template>
 
 <script setup>
 const props = defineProps(["selectedTour"])
 console.log(props.selectedTour);
+
+const instances = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 </script>

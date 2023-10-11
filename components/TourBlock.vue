@@ -7,7 +7,7 @@
         </svg>
     </div>
     <div class="bg-[#E8F0F9] p-4 rounded-b-2xl">
-        <p class="text-xl font-bold leading-[30px]">
+        <p class="text-xl font-bold leading-[30px] line-clamp-2">
             <slot name="title"></slot>
         </p>
         <p class="text-[#333B44] text-[14px] mt-2 mb-4">On this tour you will visit Gyumri, the second largest city in Armenia, one of the main cultural centers of the republic. The only Catholic…</p>
