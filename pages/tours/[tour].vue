@@ -4,7 +4,7 @@
         <div class="w-[1384px]">
             <div class="flex justify-start lg:flex-col gap-8 py-8">
                 <SpecTourPart :selectedTour="selected[0]" />
-                <div class="min-w-[310px] p-6 rounded-lg h-[566px] border-[1px] border-solid border-[#D0E1F3]">
+                <div class="min-w-[310px] p-6 rounded-lg max-h-[600px] border-[1px] border-solid border-[#D0E1F3]">
                     <div class="flex gap-2 whitespace-pre-wrap">
                         <p class="font-light text-[#666C73] mr-2">Direction:</p>
                         <p class="text-[#000A15] font-medium">{{ selected[0].direction }}</p>
@@ -65,8 +65,12 @@
 
 <script setup>
 const route = useRoute()
+import { useToursStore } from "../../stores/store.js"
+const { tours } = useToursStore();
+const selected = tours.filter(tour => tour.id == route.params.tour);
+console.log(selected);
 useHead({
-    title: `Tour: ${route.params.id}`
+    title: `Tour: ${selected[0].desc}`
 })
 
 let adults = reactive({
@@ -79,13 +83,9 @@ const infants = reactive({
     qnt: 0 
 })
 
-import { useToursStore } from "../../stores/store.js"
-const { tours } = useToursStore();
 
 console.log(tours);
 
-const selected = tours.filter(tour => tour.id == route.params.id);
-console.log(selected[0]);
 
 function addQnt(param) {
     param.qnt++

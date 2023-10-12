@@ -6,36 +6,20 @@
             </p>
         </div>
         <div class="max-w-[1384px] w-full grid grid-cols-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
-            <div class="md:col-span-4 max-w-[464px] md:max-w-full">
+            <div v-for="(hotel, index) in hotels" :class="(index + 1) % 3 === 0 ? 'lg:col-span-4 md:col-span-1 max-w-[464px] lg:max-w-full' : 'md:col-span-4 max-w-[464px] md:max-w-full'" :key="index">
                 <div class="min-w-[320px] min-h-[602px] rounded-b-2xl sm:min-w-[320px]">
-                    <HotelBlock />
-                </div>
-            </div>
-            <div class="md:col-span-4 max-w-[464px] md:max-w-full">
-                <div class="min-w-[320px] min-h-[602px] rounded-b-2xl sm:min-w-[320px]">
-                    <HotelBlock />
-                </div>
-            </div>
-            <div class="lg:col-span-4 md:col-span-1 max-w-[464px] lg:max-w-full">
-                <div class="min-w-[320px] min-h-[602px] rounded-b-2xl sm:min-w-[320px]">
-                    <HotelBlock />
-                </div>
-            </div>
-            <div class="md:col-span-4 max-w-[464px] md:max-w-full">
-                <div class="min-w-[320px] min-h-[602px] rounded-b-2xl sm:min-w-[320px]">
-                    <HotelBlock />
-                </div>
-            </div>
-            <div class="md:col-span-4 max-w-[464px] md:max-w-full">
-                <div class="min-w-[320px] min-h-[602px] rounded-b-2xl sm:min-w-[320px]">
-                    <HotelBlock />
-                </div>
-            </div>
-            <div class="lg:col-span-4 md:col-span-1 max-w-[464px] lg:max-w-full">
-                <div class="min-w-[320px] min-h-[602px] rounded-b-2xl sm:min-w-[320px]">
-                    <HotelBlock />
+                    <NuxtLink :to="'/hotels/' + hotel.id" target="_blank">
+                        <HotelBlock :img="hotel.img" :hotelFac="hotel.facilities">
+                            <template v-slot:title>{{ hotel.title }}</template>
+                        </HotelBlock>
+                    </NuxtLink>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script setup>
+import { useHotelsStore } from "../../stores/store.js"
+const { hotels } = useHotelsStore();
+</script>
