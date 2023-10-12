@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="flex justify-center items-center mt-20 flex-col">
-                <div>
+                <div class="w-full">
                     <p class="text-[32px] leading-[48px] font-extrabold text-[#000A15] text-center mb-8">
                         Suggested <span class="text-primaryBlue">Hotels</span> in Armenia
                     </p>
