@@ -8,7 +8,7 @@
                 <NuxtLink @click="closeMenu" to="/tours" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Tours</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/hotels" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Hotels</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/transfer" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Transfer</NuxtLink>
-                <NuxtLink @click="closeMenu" to="/outgoing"  class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Outgoing tours</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/outgoings"  class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Outgoing tours</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/contact" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Contact us</NuxtLink>
             </ul>
         </div>
@@ -41,7 +41,7 @@
                 <NuxtLink @click="closeMenu" to="/tours" class="text-center w-full mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Tours</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/hotels" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Hotels</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/transfer" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Transfer</NuxtLink>
-                <NuxtLink @click="closeMenu" to="/outgoing" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Outgoing tours</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/outgoings" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Outgoing tours</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/contact" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Contact Us</NuxtLink>
                 <div class="flex w-full">
                     <button @click="overlay = !overlay" class="m-2 w-1/2 h-[48px] bg-white text-primaryBlue border-[1px] rounded-lg border-primaryBlue font-bold ">Log in</button>

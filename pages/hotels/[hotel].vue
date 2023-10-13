@@ -48,9 +48,9 @@
                         </div>
                     </div>
                     <div class="flex flex-col gap-2 lg:flex-row lg:justify-between lg:flex-wrap">
-                        <QntInput @add="addQnt(adults)" @subtract="subtrQnt(adults)" :qnt="adults.qnt" :label="'Adults'" :age="'3-8'" />
-                        <QntInput @add="addQnt(children)" @subtract="subtrQnt(children)" :qnt="children.qnt" :label="'Child'" :age="'3-8'" />
-                        <QntInput @add="addQnt(infants)" @subtract="subtrQnt(infants)" :qnt="infants.qnt" :label="'Infant'" :age="'0-3'" />
+                        <QntInput @add="addQnt(adults)" @subtract="subtrQnt(adults)" :qnt="adults.qnt" :label="'Adults'" :age="'12+'" />
+                        <QntInput @add="addQnt(children)" @subtract="subtrQnt(children)" :qnt="children.qnt" :label="'Child'" :age="'2-12'" />
+                        <QntInput @add="addQnt(infants)" @subtract="subtrQnt(infants)" :qnt="infants.qnt" :label="'Infant'" :age="'0-1.99'" />
                     </div>
                     <div class="flex justify-between">
                         <p class="text-xl text-[#666C73] font-medium">Total Price:</p>

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex w-full md:flex-col mb-20 md:px-8">
+    <div class="flex w-full md:flex-col mb-20 md:px-8 cursor-pointer">
         <div class="">
             <div class="rounded-bl-2xl rounded-tl-2xl bg-[url('~/assets/img/bus.png')] w-[206px] md:w-full h-[190px] bg-cover bg-center"></div>
         </div>

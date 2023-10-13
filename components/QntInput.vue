@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="flex gap-2">
-            <p class="text-[#19222C] mr-2">{{ props.label }}</p>
-            <p class="text-[#666C73] font-medium">(age {{ props.age }})</p>
+            <p class="text-[#19222C]">{{ props.label }}</p>
+            <p class="text-[#666C73] font-medium">({{ props.age }})</p>
         </div>
         <div class="flex mt-1 bg-primaryBlue rounded-lg w-[160px]">
             <div @click="decr" class="flex justify-center items-center bg-primaryBlue rounded-lg py-3 w-14 text-white text-center cursor-pointer">

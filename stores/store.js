@@ -45,16 +45,16 @@ export const useTransfersStore = defineStore("transfersStore", {
     }
 })
 
-export const useOutgoingStore = defineStore("outgoingsStore", {
+export const useOutgoingsStore = defineStore("outgoingsStore", {
     state: () => {
         return {
             outgoings: [
-                { id: 0, title: "Tour to Sharjah", img: "outgoing" },
-                { id: 1, title: "Tour to Sharjah", img: "outgoing1" },
-                { id: 2, title: "Tour to Sharjah", img: "outgoing2" },
-                { id: 3, title: "Tour to Sharjah", img: "outgoing3" },
-                { id: 4, title: "Tour to Sharjah", img: "outgoing4" },
-                { id: 5, title: "Tour to Sharjah", img: "outgoing5" },
+                { id: 0, title: "Tour to Sharjah", img: "outgoing", facilities: ["Pool", "Bar", "Breakfast", "Gym", "Wi-Fi", "Front desk 24/7", "Express check-in", "Lounge area", "In-room dining", "Daily housekeeping", "Non-smoking", "Safety deposit box", "Luggage storage"] },
+                { id: 1, title: "Sharm El Sheikh", img: "outgoing1", facilities: ["Pool", "Bar", "Breakfast", "Gym", "Wi-Fi", "Front desk 24/7", "Express check-in", "Lounge area", "In-room dining", "Daily housekeeping", "Non-smoking", "Safety deposit box", "Luggage storage"] },
+                { id: 2, title: "Hurghada", img: "outgoing2", facilities: ["Pool", "Bar", "Breakfast", "Gym", "Wi-Fi", "Front desk 24/7", "Express check-in", "Lounge area", "In-room dining", "Daily housekeeping", "Non-smoking", "Safety deposit box", "Luggage storage"] },
+                { id: 3, title: "Athens", img: "outgoing3", facilities: ["Pool", "Bar", "Breakfast", "Gym", "Wi-Fi", "Front desk 24/7", "Express check-in", "Lounge area", "In-room dining", "Daily housekeeping", "Non-smoking", "Safety deposit box", "Luggage storage"] },
+                { id: 4, title: "Dubai", img: "outgoing4", facilities: ["Pool", "Bar", "Breakfast", "Gym", "Wi-Fi", "Front desk 24/7", "Express check-in", "Lounge area", "In-room dining", "Daily housekeeping", "Non-smoking", "Safety deposit box", "Luggage storage"] },
+                { id: 5, title: "Abu Dabi", img: "outgoing5", facilities: ["Pool", "Bar", "Breakfast", "Gym", "Wi-Fi", "Front desk 24/7", "Express check-in", "Lounge area", "In-room dining", "Daily housekeeping", "Non-smoking", "Safety deposit box", "Luggage storage"] },
             ]
         }
     }
