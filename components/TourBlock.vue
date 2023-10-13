@@ -45,37 +45,12 @@
 </template>
 
 <script setup>
-const props = defineProps(["img"])
-// let imgSrc = ref(myImage.slice(0, 18) + props.img)
+const props = defineProps(["tour"]);
 
 import frame1 from "~/assets/img/frame.png";
 import frame2 from "~/assets/img/frame8.png";
-import frame3 from "~/assets/img/frame9.png"
+import frame3 from "~/assets/img/frame9.png";
 
-// const str = "Hello Joe";
-// let reversed = myImage.split("").reverse().join("").slice(-18).split("").reverse().join("")
-// console.log(reversed);
-
-const imgSrc = computed(() => {
-    if (props.img === "frame1") {
-        return frame1
-    } else if (props.img === "frame2") {
-        return frame2
-    } else if (props.img === "frame3") {
-        return frame3
-    }
-})
-// const sliced = myImage.slice(-17, -15)
-// console.log(sliced);
-
-// const imageSrc = ref(require(`~/assets/img/${props.img}`).default);
-// imgSrc.value = myImage
-// const srcc = `${myImage.slice(0, 18)}${props.img}`
-// console.log(`${myImage.slice(0, 18)}${props.img}`);
-
-// watch(myImage, () => {
-//     imgSrc.value = myImage
-// })
-// console.log(myImage);
-//bg-[url('~/assets/img/frame.png')]
+const imgSources = { frame1, frame2, frame3 };
+const imgSrc = computed(() => imgSources[props.tour.img] || frame1);
 </script>

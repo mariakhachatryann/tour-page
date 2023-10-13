@@ -5,11 +5,11 @@
                 Popular <span class="text-primaryBlue">Hotels</span> in Armenia
             </p>
         </div>
-        <div class="max-w-[1384px] w-full grid grid-cols-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+        <div class="max-w-[1384px] md:w-full m-8 sm:m-1 grid grid-cols-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8">
             <div v-for="(hotel, index) in hotels" :class="(index + 1) % 3 === 0 ? 'lg:col-span-4 md:col-span-1 max-w-[464px] lg:max-w-full' : 'md:col-span-4 max-w-[464px] md:max-w-full'" :key="index">
                 <div class="min-w-[320px] min-h-[602px] rounded-b-2xl sm:min-w-[320px]">
                     <NuxtLink :to="'/hotels/' + hotel.id" target="_blank">
-                        <HotelBlock :img="hotel.img" :hotelFac="hotel.facilities">
+                        <HotelBlock :hotel="hotels[index]">
                             <template v-slot:title>{{ hotel.title }}</template>
                         </HotelBlock>
                     </NuxtLink>

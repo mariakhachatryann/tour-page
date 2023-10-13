@@ -29,3 +29,33 @@ export const useHotelsStore = defineStore("hotelsStore", {
         }
     }
 })
+
+export const useTransfersStore = defineStore("transfersStore", {
+    state: () => {
+        return {
+            transfers: [
+                { id: 0, title: "Comfort Sedan", img: "bus1" },
+                { id: 1, title: "Elegant Sedan", img: "bus" },
+                { id: 2, title: "Premium Sedan", img: "sedan" },
+                { id: 3, title: "SUV", img: "suv" },
+                { id: 4, title: "Minivan", img: "minivan" },
+                { id: 5, title: "Minibus", img: "minibus" },
+            ]
+        }
+    }
+})
+
+export const useOutgoingStore = defineStore("outgoingsStore", {
+    state: () => {
+        return {
+            outgoings: [
+                { id: 0, title: "Tour to Sharjah", img: "outgoing" },
+                { id: 1, title: "Tour to Sharjah", img: "outgoing1" },
+                { id: 2, title: "Tour to Sharjah", img: "outgoing2" },
+                { id: 3, title: "Tour to Sharjah", img: "outgoing3" },
+                { id: 4, title: "Tour to Sharjah", img: "outgoing4" },
+                { id: 5, title: "Tour to Sharjah", img: "outgoing5" },
+            ]
+        }
+    }
+})

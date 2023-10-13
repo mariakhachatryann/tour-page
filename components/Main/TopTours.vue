@@ -3,7 +3,7 @@
         <div class="splide__track">
             <div class="splide__list h-[600px] flex gap-8">
                 <div v-for="instance in instances" :key="instance" class="splide__slide min-w-[416px] h-[602px] max-w-[430px] rounded-b-2xl sm:min-w-[320px]">
-                    <TourBlock :img="'frame1'">
+                    <TourBlock :tour="tours[0]">
                         <template v-slot:title>Gyumri (Urban life museum, Black Fortress, walking through the old str...</template>
                     </TourBlock>
                 </div>
@@ -16,8 +16,10 @@
 </template>
 
 <script setup>
+import { useToursStore } from "../../stores/store.js"
+const { tours } = useToursStore();
+console.log(tours);
 import Splide from "@splidejs/splide";
-
 const instances = [1, 2, 3, 4, 5];
 
 const splideOptions = {

@@ -1,13 +1,13 @@
 <template>
-    <RoutePath :desc="selected[0].desc" />
+    <RoutePath :desc="selectedTour.desc" />
     <div class="w-full justify-center items-center flex px-8">
         <div class="w-[1384px]">
             <div class="flex justify-start lg:flex-col gap-8 py-8">
-                <SpecTourPart :selectedTour="selected[0]" />
+                <SpecTourPart :selectedTour="selectedTour" />
                 <div class="min-w-[310px] p-6 rounded-lg max-h-[600px] border-[1px] border-solid border-[#D0E1F3]">
                     <div class="flex gap-2 whitespace-pre-wrap">
                         <p class="font-light text-[#666C73] mr-2">Direction:</p>
-                        <p class="text-[#000A15] font-medium">{{ selected[0].direction }}</p>
+                        <p class="text-[#000A15] font-medium">{{ selectedTour.direction }}</p>
                     </div>
                     <div class="flex gap-2 mt-3 mb-6 sm:flex-col">
                         <p class="font-light text-[#666C73] mr-2">Start date and time:</p>
@@ -40,7 +40,7 @@
                         <div v-for="(tour, index) in tours.slice(0, 3)" :class="(index + 1) % 3 === 0 ? 'lg:col-span-4 md:col-span-1 max-w-[464px] lg:max-w-full' : 'md:col-span-4 max-w-[464px] md:max-w-full' " :key="tour.id">
                             <div class="min-w-[320px] min-h-[602px] rounded-b-2xl sm:min-w-[320px]">
                                 <NuxtLink :to="'/tours/' + tour.id" target="_blank">
-                                    <TourBlock :img="tour.img">
+                                    <TourBlock :tour="tours[index]">
                                         <template v-slot:title>{{ tour.title.slice(0, 70) }}...</template>
                                     </TourBlock>
                                 </NuxtLink>
@@ -64,28 +64,28 @@
 </template>
 
 <script setup>
-const route = useRoute()
 import { useToursStore } from "../../stores/store.js"
 const { tours } = useToursStore();
+const route = useRoute();
+
 const selected = tours.filter(tour => tour.id == route.params.tour);
-console.log(selected);
+const [selectedTour] = selected
+
 useHead({
-    title: `Tour: ${selected[0].desc}`
+    title: `${selectedTour.desc}`
 })
 
 let adults = reactive({
     qnt: 0
 })
+
 const children = reactive({
     qnt: 0
 })
+
 const infants = reactive({
     qnt: 0 
 })
-
-
-console.log(tours);
-
 
 function addQnt(param) {
     param.qnt++

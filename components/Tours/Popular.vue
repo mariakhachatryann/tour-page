@@ -9,7 +9,7 @@
             <div v-for="(tour, index) in tours" :class="(index + 1) % 3 === 0 ? 'lg:col-span-4 md:col-span-1 max-w-[464px] lg:max-w-full' : 'md:col-span-4 max-w-[464px] md:max-w-full' " :key="tour.id">
                 <div class="min-w-[320px] min-h-[602px] rounded-b-2xl sm:min-w-[320px]">
                     <NuxtLink :to="'/tours/' + tour.id" target="_blank">
-                        <TourBlock :img="tour.img">
+                        <TourBlock :tour="tours[index]">
                             <template v-slot:title>{{ tour.title.slice(0, 70) }}...</template>
                         </TourBlock>
                     </NuxtLink>

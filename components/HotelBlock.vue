@@ -22,7 +22,7 @@
             </svg>
         </div>
         <div class="flex mt-2 gap-2">
-            <FacButton v-for="fac in props.hotelFac.slice(0, 3)" :key="fac">{{ fac }}</FacButton>
+            <FacButton v-for="fac in props.hotel.facilities.slice(0, 3)" :key="fac">{{ fac }}</FacButton>
             <div class="rounded-2xl bg-[#72A4DA] text-[#FDFFFE] font-medium px-2 py-1">+4</div>
         </div>
         <div class="mt-4">
@@ -52,30 +52,15 @@
 </template>
 
 <script setup>
-const props = defineProps(["img", "hotelFac"])
+const props = defineProps(["hotel"])
 
 import hotel from "~/assets/img/hotel.jpg";
 import hotel1 from "~/assets/img/hotel1.jpg";
-import hotel2 from "~/assets/img/hotel2.jpg"
-import hotel3 from "~/assets/img/hotel3.jpg"
-import hotel4 from "~/assets/img/hotel4.jpg"
-import hotel5 from "~/assets/img/hotel5.jpg"
+import hotel2 from "~/assets/img/hotel2.jpg";
+import hotel3 from "~/assets/img/hotel3.jpg";
+import hotel4 from "~/assets/img/hotel4.jpg";
+import hotel5 from "~/assets/img/hotel5.jpg";
 
-console.log(props.hotelFac);
-
-const imgSrc = computed(() => {
-    if (props.img === "hotel") {
-        return hotel
-    } else if (props.img === "hotel1") {
-        return hotel1
-    } else if (props.img === "hotel2") {
-        return hotel2
-    } else if (props.img === "hotel3") {
-        return hotel3
-    } else if (props.img === "hotel4") {
-        return hotel4
-    } else if (props.img === "hotel5") {
-        return hotel5
-    }
-})
+const imgSources = { hotel, hotel1, hotel2, hotel3, hotel4, hotel5, };
+const imgSrc = computed(() => imgSources[props.hotel.img] || hotel);
 </script>

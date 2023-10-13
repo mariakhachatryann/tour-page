@@ -3,7 +3,9 @@
         <div class="splide__track" >
             <div class="splide__list flex gap-8">
                 <div v-for="instance in instances" :key="instance" class="splide__slide min-w-[416px] min-h-[602px] rounded-b-2xl sm:min-w-[320px]">
-                    <HotelBlock />
+                    <HotelBlock :hotel="hotels[0]">
+                        <template v-slot:title>Best Western Plus Congress hotel</template>
+                    </HotelBlock>
                 </div>
             </div>
             <div class="w-screen flex justify-center items-center">
@@ -15,7 +17,9 @@
 
 <script setup>
 import Splide from "@splidejs/splide";
-
+import { useHotelsStore } from "../../stores/store.js"
+const { hotels } = useHotelsStore();
+console.log(hotels);
 const instances = [1, 2, 3, 4, 5];
 let selected = ref("tours");
 

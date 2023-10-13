@@ -1,9 +1,9 @@
 <template>
-    <RoutePath />
+    <RoutePath :desc="selectedHotel.title" />
     <div class="w-full justify-center items-center flex px-8">
         <div class="max-w-[1384px]">
             <div class="flex justify-start lg:flex-col gap-8 py-8">
-                <SpecHotelPart :selectedHotel="selected[0]" />
+                <SpecHotelPart :selectedHotel="selectedHotel" />
                 <div class="min-w-[310px] p-6 rounded-lg max-h-[788px] border-[1px] border-solid border-[#D0E1F3]">
                     <div class="flex flex-col gap-2 whitespace-pre-wrap">
                         <div class="w-full mb-6">
@@ -77,7 +77,7 @@
                         <div v-for="(hotel, index) in hotels.slice(0, 3)" :class="(index + 1) % 3 === 0 ? 'lg:col-span-4 md:col-span-1 max-w-[464px] lg:max-w-full' : 'md:col-span-4 max-w-[464px] md:max-w-full' " :key="hotel.id">
                             <div class="min-w-[300px] min-h-[602px] rounded-b-2xl sm:min-w-[300px]">
                                 <NuxtLink :to="'/hotels/' + hotel.id" target="_blank">
-                                    <HotelBlock :img="hotel.img" :hotelFac="hotel.facilities">
+                                    <HotelBlock :hotel="hotels[index]">
                                         <template v-slot:title>{{ hotel.title }}</template>
                                     </HotelBlock>
                                 </NuxtLink>
@@ -96,36 +96,34 @@
             </div>
         </div>
     </div>
-    <!-- <MainSubscription />
-    <Footer /> -->
+    <MainSubscription />
+    <Footer />
 </template>
 
-<script setup>4
+<script setup>
 import DatePicker from "vuejs3-datepicker";
 import { useHotelsStore } from "../../stores/store.js"
 const { hotels } = useHotelsStore();
 
 const route = useRoute()
 const selected = hotels.filter(hotel => hotel.id == route.params.hotel);
-console.log(selected[0]);
+const [selectedHotel] = selected
 
 useHead({
-    title: `${selected[0].title}`
+    title: `${selectedHotel.title}`
 })
 
-let adults = reactive({
+const adults = reactive({
     qnt: 0
 })
+
 const children = reactive({
     qnt: 0
 })
+
 const infants = reactive({
     qnt: 0 
 })
-
-
-console.log(hotels);
-
 
 function addQnt(param) {
     param.qnt++

@@ -3,7 +3,9 @@
         <div class="splide__track">
             <div class="splide__list flex gap-8" >
                 <div v-for="instance in instances" :key="instance" class="splide__slide min-w-[440px] min-h-[432px] rounded-b-2xl sm:min-w-[320px]">
-                    <OutgoingBlock />
+                    <OutgoingBlock :outgoing="outgoings[0]">
+                        <template v-slot:title>{{ outgoings[0].title }}</template>
+                    </OutgoingBlock>
                 </div>
             </div>
             <div class="w-screen flex justify-center items-center">
@@ -15,7 +17,9 @@
 
 <script setup>
 import Splide from "@splidejs/splide";
-
+import { useOutgoingStore } from "../../stores/store.js"
+const { outgoings } = useOutgoingStore();
+console.log(outgoings);
 const instances = [1, 2, 3, 4, 5];
 let selected = ref("tours");
 

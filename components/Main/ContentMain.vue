@@ -42,12 +42,12 @@
             </div>
             <div class="flex sm:flex-col max-w-[794px] sm:max-w-[310px] lg:max-w-[960px] min-h-[170px] rounded-b-2xl bg-[#D0E1F3] py-[20px] px-[21px]">
                 <div class="max-w-[586px]">
-                    <p class="text-[21px] font-bold leading-8">{{ slide.caption }}</p>
-                    <p class="text-[#333B44] text-[14px] mt-2 sm:mb-4">On this tour you will visit Gyumri, the second largest city in Armenia, one of the main cultural centers of the republic. The only Catholic…</p>
+                    <p class="text-[21px] font-bold leading-8 line-clamp-2">{{ slide.caption }}</p>
+                    <p class="text-[#333B44] text-[14px] mt-2 sm:mb-4 line-clamp-3">On this tour you will visit Gyumri, the second largest city in Armenia, one of the main cultural centers of the republic. The only Catholic…</p>
                 </div>
-                <div class="pl-8 min-w-[160px] sm:pl-0">
+                <div class="pl-8 min-w-[160px] sm:pl-0 ">
                     <div class="flex min-w-[110px]">
-                        <p class="mr-1 text-base font-medium text-[#000A15]">15,000 AMD</p>
+                        <p class="mr-1 text-base font-medium text-[#000A15] sm:mr-0">15,000 AMD</p>
                         <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2806 7.94729C14.2806 10.3114 12.3641 12.2279 10 12.2279C7.63589 12.2279 5.7194 10.3114 5.7194 7.94729C5.7194 5.58318 7.63589 3.66669 10 3.66669C12.3641 3.66669 14.2806 5.58318 14.2806 7.94729ZM2.60742 18.3998C2.60742 15.7468 4.75586 13.5983 7.40885 13.5983H12.5911C15.2441 13.5983 17.3926 15.7468 17.3926 18.3998C17.3926 19.4675 16.5267 20.3334 15.459 20.3334H4.54102C3.47331 20.3334 2.60742 19.4675 2.60742 18.3998Z" fill="#80858A"/>
                             <path d="M29.392 18H28.512V9.504C28.512 9.19467 28.512 8.928 28.512 8.704C28.512 8.48 28.5173 8.272 28.528 8.08C28.5387 7.888 28.544 7.70667 28.544 7.536C28.3947 7.67467 28.256 7.80267 28.128 7.92C28 8.02667 27.8293 8.16 27.616 8.32L26.016 9.552L25.536 8.912L28.64 6.576H29.392V18Z" fill="#4D545B"/>

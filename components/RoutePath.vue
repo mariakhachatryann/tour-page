@@ -21,15 +21,13 @@ const props = defineProps(["desc"])
 const router = useRouter();
 const routeName = router.currentRoute.value.name;
 const routeNameCapitalized = routeName.slice(0, 1).toUpperCase() + routeName.slice(1).toLowerCase();
-console.log(routeNameCapitalized);
-console.log(router.currentRoute);
 </script>
 
 <style>
-        .truncate-text {
-        white-space: nowrap;     /* Prevent text from wrapping */
-        overflow: hidden;        /* Hide overflowing text */
-        text-overflow: ellipsis; /* Add ellipsis (...) for overflow */
-        max-width: 100%;         /* Optional: Set a maximum width */
+    .truncate-text {
+        white-space: nowrap;     
+        overflow: hidden;        
+        text-overflow: ellipsis; 
+        max-width: 100%;
     }
 </style>
