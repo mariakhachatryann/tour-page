@@ -4,7 +4,16 @@
         <div class="max-w-[1384px]">
             <div class="flex justify-start lg:flex-col gap-8 py-8">
                 <SpecOutgoingPart :selectedOutgoing="selectedOutgoing" />
-                <div class="min-w-[310px] p-6 rounded-lg max-h-[788px] border-[1px] border-solid border-[#D0E1F3]">
+                <div class="min-w-[310px] p-6 rounded-lg max-h-[644px] border-[1px] border-solid border-[#D0E1F3]">
+                    <div class="flex gap-2">
+                        <p class="text-[#000A15] font-medium">Yerevan</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.04272 9.12478H18.2876C18.6375 9.12478 18.9874 8.94985 19.0748 8.59999C19.2497 8.25014 19.1623 7.90028 18.8999 7.63789L15.4013 4.13934C15.0515 3.78949 14.5267 3.78949 14.1768 4.13934C13.827 4.4892 13.827 5.01398 14.1768 5.36384L16.1885 7.3755H6.04272C5.51794 7.3755 5.16809 7.72536 5.16809 8.25014C5.16809 8.77492 5.51794 9.12478 6.04272 9.12478ZM5.4305 15.8595C5.60543 16.0344 5.78035 16.1218 6.04275 16.1218C6.30514 16.1218 6.48006 16.0344 6.65499 15.8595C7.00485 15.5096 7.00485 14.9848 6.65499 14.635L4.64333 12.6233H14.7891C15.3139 12.6233 15.6638 12.2734 15.6638 11.7487C15.6638 11.2239 15.3139 10.874 14.7891 10.874H2.5442C2.19434 10.874 1.93195 11.049 1.75702 11.3988C1.5821 11.7487 1.66956 12.0985 1.93195 12.3609L5.4305 15.8595Z" fill="#72A4DA"/>
+                        </svg>
+                        <p class="text-[#000A15] font-medium">{{ selectedOutgoing.title }} </p>
+                    </div>
+                    <div class="max-w-[320px] h-[1px] bg-[#D0E1F3] my-4"></div>
+
                     <div class="flex flex-col gap-2 lg:flex-row lg:justify-between lg:flex-wrap">
                         <QntInput @add="addQnt(adults)" @subtract="subtrQnt(adults)" :qnt="adults.qnt" :label="'Adults'" :age="'12+'" />
                         <QntInput @add="addQnt(children)" @subtract="subtrQnt(children)" :qnt="children.qnt" :label="'Child'" :age="'2-12'" />
