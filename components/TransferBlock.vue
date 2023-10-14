@@ -1,11 +1,11 @@
 <template>
     <div class="flex w-full md:flex-col mb-20 md:px-8 cursor-pointer">
         <div class="">
-            <div class="rounded-bl-2xl rounded-tl-2xl bg-[url('~/assets/img/bus.png')] w-[206px] md:w-full h-[190px] bg-cover bg-center"></div>
+            <div :style="{ backgroundImage: `url(${imgSrc})` }" class="rounded-bl-2xl rounded-tl-2xl w-[206px] md:w-full h-[190px] bg-cover bg-center"></div>
         </div>
         <div class="p-4 bg-[#F7FAFE] h-[190px] max-w-[704px] min-w-[270px] w-full md:w-full rounded-br-2xl rounded-tr-2xl">
             <div class="flex justify-between  w-full">
-                <p class="text-xl font-bold text-[#000A15]">Ani Plaza hotel</p>
+                <p class="text-xl font-bold text-[#000A15]">{{ props.transfer.title }}</p>
                 <div class=" bg-white px-4 p-1 rounded-3xl border-[1px] border-[#47CB92]">
                     <p class="text-[#47CB93] text-xs font-semibold">Popular</p>
                 </div>
@@ -50,3 +50,17 @@
         </div>      
     </div>
 </template>
+
+<script setup>
+const props = defineProps(["transfer"]);
+
+import bus1 from "~/assets/img/bus1.jpg";
+import bus from "~/assets/img/bus.png";
+import sedan from "~/assets/img/sedan.jpg";
+import suv from "~/assets/img/suv.jpg";
+import minivan from "~/assets/img/minivan.jpg";
+import minibus from "~/assets/img/minibus.jpg";
+
+const imgSources = { bus1, bus, sedan, suv, minivan, minibus };
+const imgSrc = computed(() => imgSources[props.transfer.img] || bus);
+</script>

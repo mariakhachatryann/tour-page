@@ -39,7 +39,7 @@
                         <NuxtLink to="/tours" class="text-primaryGrey">Tours</NuxtLink>
                         <NuxtLink to="/hotels" class="text-primaryGrey">Hotels</NuxtLink>
                         <NuxtLink to="/transfer" class="text-primaryGrey">Transfer</NuxtLink>
-                        <NuxtLink to="/outgoing" class="text-primaryGrey">Abroad</NuxtLink>
+                        <NuxtLink to="/outgoings" class="text-primaryGrey">Abroad</NuxtLink>
                     </ul>
                 </div>
             </div>
