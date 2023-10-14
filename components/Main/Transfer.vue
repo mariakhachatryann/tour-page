@@ -3,7 +3,7 @@
         <div class="splide__track" >
             <div class="splide__list flex gap-8">
                 <div v-for="instance in instances" :key="instance" class="splide__slide flex gap-2 w-[676px] h-[190px] rounded-2xl sm:min-w-[320px] bg-[#F7FAFE]">
-                    <TransferBlock />
+                    <TransferBlock :transfer="transfers[0]"></TransferBlock>
                 </div>
             </div>
             <div class="w-screen flex justify-center items-center md:mt-48">
@@ -15,6 +15,9 @@
 
 <script setup>
 import Splide from "@splidejs/splide";
+import { useTransfersStore } from "../../stores/store.js"
+const { transfers } = useTransfersStore();
+console.log(transfers);
 
 const instances = [1, 2, 3, 4, 5];
 let selected = ref("tours");
