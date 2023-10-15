@@ -1,11 +1,11 @@
 <template>
-    <div class="flex w-full md:flex-col mb-20 md:px-8 cursor-pointer">
+    <div class="flex w-full md:flex-col mb-20 px-4 cursor-pointer">
         <div class="">
-            <div :style="{ backgroundImage: `url(${imgSrc})` }" class="rounded-bl-2xl rounded-tl-2xl w-[206px] md:w-full h-[190px] bg-cover bg-center"></div>
+            <div :style="{ backgroundImage: `url(${imgSrc})` }" class="md:rounded-t-2xl md:rounded-b-none rounded-bl-2xl rounded-tl-2xl w-[206px] md:w-full h-[190px] bg-cover bg-center"></div>
         </div>
-        <div class="p-4 bg-[#F7FAFE] h-[190px] max-w-[704px] min-w-[270px] w-full md:w-full rounded-br-2xl rounded-tr-2xl">
-            <div class="flex justify-between  w-full">
-                <p class="text-xl font-bold text-[#000A15]">{{ props.transfer.title }}</p>
+        <div class="p-4 bg-[#F7FAFE] h-[190px] max-w-[704px] min-w-[200px] w-full md:w-full rounded-br-2xl rounded-tr-2xl">
+            <div class="flex justify-between w-full ">
+                <p class="text-xl font-bold text-[#000A15] truncate">{{ props.transfer.title }}</p>
                 <div class=" bg-white px-4 p-1 rounded-3xl border-[1px] border-[#47CB92]">
                     <p class="text-[#47CB93] text-xs font-semibold">Popular</p>
                 </div>

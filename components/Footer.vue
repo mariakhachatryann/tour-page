@@ -27,19 +27,19 @@
                 <div class="mr-[64px]">
                     <p class="text-[#5B95D4] text-xl font-medium mb-4 md:flex-col">Company & Support</p>
                     <ul class="flex flex-col gap-2">
-                        <NuxtLink to="/about" class="text-primaryGrey cursor-pointer">About us</NuxtLink>
-                        <NuxtLink to="/contact" class="text-primaryGrey cursor-pointer">Contact us</NuxtLink>
-                        <NuxtLink to="/privacyPolicy" class="text-primaryGrey cursor-pointer">Privacy & Policy</NuxtLink>
-                        <NuxtLink to="/conditions" class="text-primaryGrey cursor-pointer">Terms of conditions</NuxtLink>
+                        <NuxtLink to="/about" class="text-primaryGrey cursor-pointer hover:text-primaryBlue">About us</NuxtLink>
+                        <NuxtLink to="/contact" class="text-primaryGrey cursor-pointer hover:text-primaryBlue">Contact us</NuxtLink>
+                        <NuxtLink to="/privacyPolicy" class="text-primaryGrey cursor-pointer hover:text-primaryBlue">Privacy & Policy</NuxtLink>
+                        <NuxtLink to="/conditions" class="text-primaryGrey cursor-pointer hover:text-primaryBlue">Terms of conditions</NuxtLink>
                     </ul>
                 </div>
                 <div class="md:mt-8">
                     <p class="text-[#5B95D4] text-xl font-medium mb-4">Services</p>
                     <ul class="flex flex-col gap-2">
-                        <NuxtLink to="/tours" class="text-primaryGrey">Tours</NuxtLink>
-                        <NuxtLink to="/hotels" class="text-primaryGrey">Hotels</NuxtLink>
-                        <NuxtLink to="/transfer" class="text-primaryGrey">Transfer</NuxtLink>
-                        <NuxtLink to="/outgoings" class="text-primaryGrey">Abroad</NuxtLink>
+                        <NuxtLink to="/tours" class="text-primaryGrey hover:text-primaryBlue">Tours</NuxtLink>
+                        <NuxtLink to="/hotels" class="text-primaryGrey hover:text-primaryBlue">Hotels</NuxtLink>
+                        <NuxtLink to="/transfer" class="text-primaryGrey hover:text-primaryBlue">Transfer</NuxtLink>
+                        <NuxtLink to="/outgoings" class="text-primaryGrey hover:text-primaryBlue">Abroad</NuxtLink>
                     </ul>
                 </div>
             </div>

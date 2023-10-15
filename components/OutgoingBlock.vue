@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="lg:px-4">
         <div :style="{ backgroundImage: `url(${imgSrc})` }" class="p-[0.5px] rounded-t-2xl h-[278px] bg-cover bg-center bg-no-repeat">
             <svg class="rounded-t-2xl" width="99" height="34" viewBox="0 0 99 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0H83C91.8366 0 99 7.16344 99 16V18C99 26.8366 91.8366 34 83 34H0V0Z" fill="#000A15" fill-opacity="0.5"/>
@@ -11,7 +11,7 @@
             <p class="text-xl font-bold leading-[30px]">
                 <slot name="title"></slot>
             </p>
-            <div class="flex mt-2 justify-between">
+            <div class="flex mt-2 justify-between flex-row-reverse lg:flex-col">
                 <div>
                     <div class="bg-[#5B95D4] text-[#FDFFFE] rounded-[27px] px-3 py-1">7 days / 8 nights</div>
                 </div>
