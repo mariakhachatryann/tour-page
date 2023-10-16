@@ -72,7 +72,7 @@
             <p class="text-[#333B44]">This tour visits Khor Virap monastery, a great place to embrace the most picturesque views of Mount Ararat. Then comes Noravank monastery complex, magnificent in its construction, as the church of Holy Mother of God is 2-storied monastery. The last stop is in Tatev monastery, a spiritual center, that had an outstanding scientific and political significance. The monastery is surrounded by beautiful nature. It is here, where one can take the World's longest ropeway without stops – "Tatever".</p>
         </div>
         <div class="mt-8 flex bg-[#F7FAFE] w-full rounded-lg border-[1px] border-solid border-[#D0E1F3]">
-            <div class="bg-[url('~/assets/img/bus.png')] rounded-tl-lg rounded-bl-lg bg-center bg-cover w-14 h-14" ></div>
+            <div class="bg-[url('~/assets/img/transfer/bus.png')] rounded-tl-lg rounded-bl-lg bg-center bg-cover w-14 h-14" ></div>
             <div class="flex w-full justify-between items-center p-4 sm:flex-col">
                 <div class="flex gap-2">
                     <p class="text-[#000A15] font-bold">Miniven</p>
