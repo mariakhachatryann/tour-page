@@ -49,9 +49,9 @@
 <script setup>
 const props = defineProps(["tour"]);
 
-import frame1 from "~/assets/img/frame.png";
-import frame2 from "~/assets/img/frame8.png";
-import frame3 from "~/assets/img/frame9.png";
+import frame1 from "~/assets/img/tour/frame.png";
+import frame2 from "~/assets/img/tour/frame8.png";
+import frame3 from "~/assets/img/tour/frame9.png";
 
 const imgSources = { frame1, frame2, frame3 };
 const imgSrc = computed(() => imgSources[props.tour.img] || frame1);

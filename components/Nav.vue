@@ -51,7 +51,7 @@
         </div>
     </div>
     <v-overlay class="flex w-full h-full justify-center items-center" v-model="overlay">
-        <AuthenticationLog @showRecPass="() => { overlay = false; overlayPass = true}" @closeLog="overlay = !overlay" />
+        <AuthenticationLog @createAccount="() => { overlay = false; overlay1 = true }" @showRecPass="() => { overlay = false; overlayPass = true}" @closeLog="overlay = !overlay" />
     </v-overlay>
     <v-overlay class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlay1">
         <AuthenticationJoin @showRecPass="() => { overlay1 = false; overlayPass = true}" @closeJoin="overlay1 = !overlay1" />

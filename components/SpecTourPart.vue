@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-[984px] xl:w-full">
-        <img class="rounded-lg w-full h-[560px] sm:w-[320px] sm:h-[208px]" src="~/assets/img/frame.png" alt="">
+        <img class="rounded-lg w-full h-[560px] sm:w-[320px] sm:h-[208px]" src="~/assets/img/tour/frame.png" alt="">
         <div class="mt-4 flex gap-2">
             <img class="w-6 h-6" src="~/assets/img/owl.png" alt="">
             <p class="text-[#666C73]">Comments</p>

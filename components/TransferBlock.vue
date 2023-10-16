@@ -54,12 +54,12 @@
 <script setup>
 const props = defineProps(["transfer"]);
 
-import bus1 from "~/assets/img/bus1.jpg";
-import bus from "~/assets/img/bus.png";
-import sedan from "~/assets/img/sedan.jpg";
-import suv from "~/assets/img/suv.jpg";
-import minivan from "~/assets/img/minivan.jpg";
-import minibus from "~/assets/img/minibus.jpg";
+import bus1 from "~/assets/img/transfer/bus1.jpg";
+import bus from "~/assets/img/transfer/bus.png";
+import sedan from "~/assets/img/transfer/sedan.jpg";
+import suv from "~/assets/img/transfer/suv.jpg";
+import minivan from "~/assets/img/transfer/minivan.jpg";
+import minibus from "~/assets/img/transfer/minibus.jpg";
 
 const imgSources = { bus1, bus, sedan, suv, minivan, minibus };
 const imgSrc = computed(() => imgSources[props.transfer.img] || bus);

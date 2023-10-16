@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-[984px] xl:w-full">
-        <img class="rounded-lg w-full h-[560px] sm:w-[320px] sm:h-[208px]" src="~/assets/img/hotel4.jpg" alt="">
+        <img class="rounded-lg w-full h-[560px] sm:w-[320px] sm:h-[208px]" src="~/assets/img/hotel/hotel4.jpg" alt="">
         <div class="mt-4 flex justify-between">
             <div class="flex gap-2">
                 <img class="w-6 h-6" src="~/assets/img/owl.png" alt="">

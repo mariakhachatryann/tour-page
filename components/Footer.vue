@@ -49,7 +49,9 @@
     <div class="w-full flex justify-center items-center">
         <div class="max-w-[1384px] w-full flex justify-between items-center gap-8 pb-12 md:flex-col xl1:px-8">
             <div class="w-[152px] h-12 bg-[#E8F0F9] mt-2 text-center items-center">
-                <p class="text-2xl text-[#01000E] font-bold p-1">LOGO</p>
+                <NuxtLink to="/">
+                    <p class="text-2xl text-[#01000E] font-bold p-1">LOGO</p>
+                </NuxtLink>
             </div>
             <p class="tracking-[.28px] text-[#000A15] sm:text-center">© 2023 Unknown. All rights reserved </p>
             <p class="text-[#000A15]"><span class="text-[#80858A]">by</span><a href="https://www.hsrocket.com/en/" target="_blank"> HS Rocket</a></p>

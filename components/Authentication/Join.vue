@@ -29,13 +29,14 @@
             <p class="text-[#333B44] mb-1">Confirm Password</p>
             <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter your password" />
         </div>
-        <div class="flex justify-between mb-6 md:flex-col md:gap-4">
-            <div class="flex items-center gap-2 w-full">
-                <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="rememberMe">
-                <label for="rememberMe" class="ml-3 cursor-pointer">
-                    Agree with 
-                    <NuxtLink to="/privacyPolicy" target="_blank" class="text-primaryBlue">Privacy & Policy</NuxtLink>
-                </label>
+        <div class="flex mb-6 flex-col md:gap-4">
+            <div class="w-full">
+                <CheckInp :forId="'agree'">
+                    <div class="flex gap-1">
+                        <p class="text-base">Agree with </p>
+                        <NuxtLink to="/privacyPolicy" target="_blank" class="text-primaryBlue text-base">Privacy & Policy</NuxtLink>
+                    </div>
+                </CheckInp>
             </div>
             <p @click="showRecoverPassword" class="text-primaryBlue whitespace-nowrap text-base font-bold cursor-pointer">Forgot Password</p>
         </div>

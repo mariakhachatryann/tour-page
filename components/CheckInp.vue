@@ -1,8 +1,8 @@
 <template>
     <label :for="props.forId" :class="checked ? 'text-primaryBlue' : 'text-[#4D545B]'" class="script cursor-pointer"> 
-      <slot></slot>
-      <input v-model="checked" type="checkbox" :id="props.forId"> 
-      <span class="geekmark"></span> 
+        <slot></slot>
+        <input v-model="checked" type="checkbox" :id="props.forId"> 
+        <span class="geekmark"></span> 
     </label> 
 </template>
   

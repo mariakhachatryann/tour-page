@@ -18,9 +18,10 @@
             <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter your password" />
         </div>
         <div class="flex justify-between mb-6 md:flex-col md:gap-4">
-            <div class="flex items-center gap-2 w-full">
-                <input type="checkbox" class="cursor-pointer w-5 h-5" name="" id="rememberMe">
-                <label for="rememberMe" class="ml-3 cursor-pointer">Remember me</label>
+            <div class="flex items-cente gap-2 w-full">
+                <CheckInp :forId="'rememberMe'">
+                    Remember me
+                </CheckInp>
             </div>
             <p @click="showRecoverPassword" class="text-primaryBlue whitespace-nowrap text-base font-bold cursor-pointer">Forgot Password</p>
         </div>
@@ -28,7 +29,7 @@
             <button class="bg-primaryBlue w-full py-3 px-8 text-white rounded-lg font-bold">Log in</button>
         </div>
         <div class="w-full mb-6">
-            <button class="text-primaryBlue border-[1px] border-solid border-primaryBlue w-full py-3 px-8 rounded-lg font-bold">Create an account</button>
+            <button @click="createAcc" class="text-primaryBlue border-[1px] border-solid border-primaryBlue w-full py-3 px-8 rounded-lg font-bold">Create an account</button>
         </div>
         <div class="flex w-full items-center mb-6">
             <div class="w-[44%] h-[1px] bg-[#D0E1F3]"></div>
@@ -67,7 +68,7 @@
 </template>
 
 <script setup>
-const emit = defineEmits(["closeLog", "showRecPass"]);
+const emit = defineEmits(["closeLog", "showRecPass", "createAccount"]);
 
 function close() {
     emit("closeLog")
@@ -75,6 +76,10 @@ function close() {
 
 function showRecoverPassword() {
     emit("showRecPass")
+}
+
+function createAcc() {
+    emit("createAccount")
 }
 
 const elementHeight = ref("620px");

@@ -38,12 +38,12 @@
 <script setup>
 const props = defineProps(["outgoing"]);
 
-import outgoing from "~/assets/img/outgoing.jpg";
-import outgoing1 from "~/assets/img/outgoing1.jpg";
-import outgoing2 from "~/assets/img/outgoing2.jpg";
-import outgoing3 from "~/assets/img/outgoing3.jpg";
-import outgoing4 from "~/assets/img/outgoing4.jpg";
-import outgoing5 from "~/assets/img/outgoing5.jpg";
+import outgoing from "~/assets/img/outgoing/outgoing.jpg";
+import outgoing1 from "~/assets/img/outgoing/outgoing1.jpg";
+import outgoing2 from "~/assets/img/outgoing/outgoing2.jpg";
+import outgoing3 from "~/assets/img/outgoing/outgoing3.jpg";
+import outgoing4 from "~/assets/img/outgoing/outgoing4.jpg";
+import outgoing5 from "~/assets/img/outgoing/outgoing5.jpg";
 
 const imgSources = { outgoing, outgoing1, outgoing2, outgoing3, outgoing4, outgoing5 };
 const imgSrc = computed(() => imgSources[props.outgoing.img] || outgoing);

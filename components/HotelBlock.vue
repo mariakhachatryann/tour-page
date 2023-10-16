@@ -29,7 +29,7 @@
             <div class="mt-4">
                 <p class="text-xs text-[#80858A]">Favourite Choice</p>
                 <div class="flex gap-2 w-full bg-[#F1F7FE] mt-2 p-2 rounded-lg border-[1px] border-[#D0E1F3]">
-                    <img class="w-[56px] h-[56px] rounded-lg" src="~/assets/img/bus.png" alt="">
+                    <img class="w-[56px] h-[56px] rounded-lg" src="~/assets/img/transfer/bus.png" alt="">
                     <div class="flex flex-col gap-2">
                         <div>
                             <p class="text-[#000A15] font-medium">Miniven</p>
@@ -56,12 +56,12 @@
 <script setup>
 const props = defineProps(["hotel"])
 
-import hotel from "~/assets/img/hotel.jpg";
-import hotel1 from "~/assets/img/hotel1.jpg";
-import hotel2 from "~/assets/img/hotel2.jpg";
-import hotel3 from "~/assets/img/hotel3.jpg";
-import hotel4 from "~/assets/img/hotel4.jpg";
-import hotel5 from "~/assets/img/hotel5.jpg";
+import hotel from "~/assets/img/hotel/hotel.jpg";
+import hotel1 from "~/assets/img/hotel/hotel1.jpg";
+import hotel2 from "~/assets/img/hotel/hotel2.jpg";
+import hotel3 from "~/assets/img/hotel/hotel3.jpg";
+import hotel4 from "~/assets/img/hotel/hotel4.jpg";
+import hotel5 from "~/assets/img/hotel/hotel5.jpg";
 
 const imgSources = { hotel, hotel1, hotel2, hotel3, hotel4, hotel5, };
 const imgSrc = computed(() => imgSources[props.hotel.img] || hotel);
