@@ -10,10 +10,10 @@
                                 <!-- <img class="w-full h-auto" src="~/assets/img/frame7.jpg" alt=""> -->
                             </li>
                             <li class="splide__slide">
-                                <div class="w-full h-96 rounded-lg bg-[url('~/assets/img/hotel.jpg')] bg-center"></div>
+                                <div class="w-full h-96 rounded-lg bg-[url('~/assets/img/hotel/hotel.jpg')] bg-center"></div>
                             </li>
                             <li class="splide__slide">
-                                <div class="w-full h-96 rounded-lg bg-[url('~/assets/img/frame6.png')] bg-center"></div>
+                                <div class="w-full h-96 rounded-lg bg-[url('~/assets/img/frame1.png')] bg-center"></div>
                             </li>
                         </ul>
                     </div>
