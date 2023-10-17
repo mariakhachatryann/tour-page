@@ -20,7 +20,7 @@
         <div class="flex justify-between mb-6 md:flex-col md:gap-4">
             <div class="flex items-cente gap-2 w-full">
                 <CheckInp :forId="'rememberMe'">
-                    Remember me
+                    <p class="text-base">Remember me</p>
                 </CheckInp>
             </div>
             <p @click="showRecoverPassword" class="text-primaryBlue whitespace-nowrap text-base font-bold cursor-pointer">Forgot Password</p>

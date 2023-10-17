@@ -1,7 +1,7 @@
 <template>
     <div class="max-w-[984px] pl-4 w-full ">
         <p class="text-[32px] font-extrabold mb-4 text-[#000A15]">Reservation</p>
-        <TransferBlock :transfer="props.selectedTransfer"></TransferBlock>
+        <TransferBlock class="cursor-default" :transfer="props.selectedTransfer"></TransferBlock>
         <div class="w-full">
             <p class="text-2xl font-bold text-[#000A15] mb-4">Fill information</p>
             <div class="flex w-full items-center gap-8 md:flex-col md:gap-2 mb-8">
