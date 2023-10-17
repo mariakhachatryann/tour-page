@@ -19,7 +19,7 @@
 import Splide from "@splidejs/splide";
 import { useOutgoingsStore } from "../../stores/store.js"
 const { outgoings } = useOutgoingsStore();
-console.log(outgoings);
+
 const instances = [1, 2, 3, 4, 5];
 let selected = ref("tours");
 

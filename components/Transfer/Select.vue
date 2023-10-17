@@ -47,9 +47,7 @@
 //     price: priceRange.value
 // })
 
-function submitOptions() {
-    console.log("submit");
-}
+
 </script>
 
 <style>

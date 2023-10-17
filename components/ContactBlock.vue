@@ -92,8 +92,4 @@ const userForm = reactive({
     subject: "unselect",
     message: ""
 })
-
-function calcResults() {
-    console.log(userForm);
-}
 </script>

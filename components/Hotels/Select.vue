@@ -222,14 +222,6 @@ const hotelOptions = reactive({
     childSeats: "unselect",
     price: { "from": priceRange.value[0], "to": priceRange.value[1] }
 })
-
-function submitOptions() {
-    console.log(hotelOptions);
-}
-
-const updateExtraNeeds = () => {
-
-};
 </script>
 
 <style>

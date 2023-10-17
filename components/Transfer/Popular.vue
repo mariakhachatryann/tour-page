@@ -21,8 +21,6 @@
 import { useTransfersStore } from "../../stores/store.js"
 const { transfers } = useTransfersStore();
 
-console.log(transfers);
-
 const transferGroups = [
     {
         id: 1,

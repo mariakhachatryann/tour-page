@@ -240,9 +240,6 @@ const outgoingOptions = reactive({
     sportEquipment: false
 })
 
-function submitOptions() {
-    console.log(outgoingOptions);
-}
 </script>
 
 <style>

@@ -21,6 +21,4 @@ const props = defineProps(["title", "text", "src"])
 
 const router = useRouter();
 const routeName = router.currentRoute.value.name;
-console.log(router);
-console.log(routeName);
 </script>
