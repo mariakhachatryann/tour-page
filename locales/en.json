@@ -1,4 +1,12 @@
 {
     "mainText": "Tour your dream destination with tourve.",
-    "mainBottom": "Plan and book your perfect trip with expert advice, travel tips, destination information and inspiration from us."
+    "mainBottom": "Plan and book your perfect trip with expert advice, travel tips, destination information and inspiration from us.",
+    "tourPageTitle": "Our Tours",
+    "tourPageDesc": "Discover the wonders of the world with our meticulously crafted itineraries, curated to provide a perfect blend of adventure, culture, and relaxation. Whether you're a solo traveler, a couple seeking a romantic getaway, or a group of friends looking for an unforgettable experience, we have the ideal tour for you.",
+    "hotelPageTitle": "Hotels",
+    "hotelPageDesc": "At [Travel Company Name], we understand that where you stay plays a vital role in creating a memorable travel experience. That's why we handpick accommodations that combine comfort, convenience, and character. Whether you prefer luxury resorts, boutique hotels, charming bed and breakfasts, or budget-friendly options, we have a diverse range of accommodations to suit every preference and budget. Relax in well-appointed rooms, enjoy exceptional service, and revel in the unique ambiance of each carefully selected property.",
+    "trasnferPageTitle": "Transfer",
+    "trasnferPageDesc": "Experience seamless and comfortable transfers with our premier tour agency's dedicated transfer service. Whether you're arriving at the airport, train station, or any other location, our professional drivers and modern fleet ensure a safe and luxurious journey to your destination. Sit back and relax as we handle all the logistics, making your travel between places a stress-free and enjoyable part of your overall adventure.",
+    "outgoingPageTitle": "Outgoing Tours",
+    "outgoingPageDesc": "Embark on an extraordinary adventure with our abroad destinations. We take you beyond borders to discover the world's most enchanting places. From the sun-kissed beaches of the Caribbean to the vibrant markets of Asia, the ancient ruins of Europe to the exotic landscapes of Africa, our abroad destinations offer a kaleidoscope of cultures, natural beauty, and awe-inspiring sights."
 }
