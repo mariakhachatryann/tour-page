@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center items-center mt-20 py-20 px-8 xl1:mb-10 xl1:flex-col xl1:justify-center xl1:items-center md:px-10">
+    <div class="flex justify-center items-center py-20 px-8 xl1:mb-10 xl1:flex-col xl1:justify-center xl1:items-center md:px-10">
         <div class="w-full mr-8 xl1min:max-w-[676px]">
             <p class="mt-4 text-[40px] font-extrabold text-[#000A15]">Who <span class="text-primaryBlue">We</span> Are</p>
             <p class="text-base text-primaryGrey">Lorem ipsum dolor sit amet consectetur. Mus sed augue fames tristique mi elementum volutpat magna. Ut non enim dui vitae egestas justo aliquet sed suspendisse. Iaculis pharetra commodo cras fringilla facilisis ullamco. Lorem ipsum dolor sit amet consectetur. Mus sed augue fames tristique mi elementum volutpat magna. Ut non enim dui vitae egestLorem ipsum dolor sit amet consectetur. </p>

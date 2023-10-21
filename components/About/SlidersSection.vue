@@ -2,7 +2,7 @@
     <div class="flex justify-center items-center mt-8 px-8">
         <div class="max-w-[1384px] flex w-full flex-col xl:flex-col-reverse gap-6">
             <div class="flex gap-6 w-full">
-                <div class="splide w-1/2 h-96 p-0" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide splider w-1/2 h-96 p-0" role="group" aria-label="Splide Basic HTML Example">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
@@ -17,6 +17,7 @@
                             </li>
                         </ul>
                     </div>
+
                 </div>
                 <div class="w-1/2 h-96 rounded-lg bg-[url('~/assets/img/frame7.jpg')] bg-center"></div>
             </div>
@@ -33,7 +34,7 @@
 </template>
 
 <script setup>
-// import '@splidejs/splide/css/sea-green';
+import '@splidejs/splide/css/sea-green';
 import Splide from "@splidejs/splide";
 
 const splideOptions = {
@@ -44,15 +45,24 @@ const splideOptions = {
 
 let splide;
 
-onMounted(() => {
-    if (process.client) {
-        splide = new Splide(".splide");
-        splide.mount();
+const initSplide = () => {
+    splide = new Splide(".splide", splideOptions);
+    splide.mount();
+}
+
+const destroySplide = () => {
+    if (splide) {
+        splide.destroy();
+        splide = null;
     }
-});
+}
+
+onMounted(initSplide);
+onUnmounted(destroySplide);
 </script>
 
 <style scoped>
+/* @import '@splidejs/splide/css/sea-green'; */
 .splide {
     padding: 0;
 } 
