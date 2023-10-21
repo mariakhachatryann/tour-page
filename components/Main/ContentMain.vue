@@ -7,42 +7,29 @@
                 <NuxtLink to="/tours">Discover our tours</NuxtLink>
             </button>
         </div>
-        <div class="h-[530px] sm:px-1" v-for="(slide, index) in slides" :key="index" :class="{ 'hidden': index !== currentSlide }">
-            <div class="relative rounded-t-2xl sm:min-w-[310px] max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: 'url(' + slide.image + ')' }">
-                <div class="flex gap-1 absolute right-[40%] top-4 py-2 px-4 rounded-2xl bg-transparentCol">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.3335 6.87852C2.3335 3.81194 4.89608 1.33334 7.99579 1.33334C11.1042 1.33334 13.6668 3.81194 13.6668 6.87852C13.6668 8.4238 13.1048 9.85843 12.1798 11.0744C11.1594 12.4157 9.9016 13.5843 8.48586 14.5016C8.16184 14.7136 7.86941 14.7296 7.5138 14.5016C6.08999 13.5843 4.83222 12.4157 3.8205 11.0744C2.89482 9.85843 2.3335 8.4238 2.3335 6.87852ZM6.12965 7.05118C6.12965 8.07848 6.96793 8.88646 7.99579 8.88646C9.02432 8.88646 9.87068 8.07848 9.87068 7.05118C9.87068 6.03187 9.02432 5.18456 7.99579 5.18456C6.96793 5.18456 6.12965 6.03187 6.12965 7.05118Z" fill="#FDFFFE"/>
-                    </svg>
-                    <p class="text-xs font-medium text-[#FDFFFE]">Yerevan</p>
-                </div>
-                <div class="flex justify-between">
-                    <svg @click="prevSlide" class="rounded-t-2xl" width="104" height="354" viewBox="0 0 104 354" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="104" height="354" fill="url(#paint0_linear_1399_2953)"/>
-                        <path class="cursor-pointer" d="M51.9994 161C63.0294 161 71.9994 169.972 71.9994 181C71.9994 192.028 63.0294 201 51.9994 201C40.9714 201 31.9995 192.028 31.9995 181C31.9995 169.972 40.9714 161 51.9994 161Z" fill="white"/>
-                        <path class="cursor-pointer" d="M55.6441 172.686C55.2621 172.686 54.8781 172.832 54.5861 173.124L47.6121 180.064C47.3301 180.346 47.1721 180.728 47.1721 181.128C47.1721 181.526 47.3301 181.908 47.6121 182.19L54.5861 189.134C55.1721 189.718 56.1201 189.718 56.7061 189.13C57.2901 188.542 57.2881 187.592 56.7021 187.008L50.7961 181.128L56.7021 175.248C57.2881 174.664 57.2901 173.716 56.7061 173.128C56.4141 172.832 56.0281 172.686 55.6441 172.686Z" fill="#1467C2"/>
-                        <defs>
-                        <linearGradient id="paint0_linear_1399_2953" x1="104" y1="177" x2="1.75888e-10" y2="177" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0C0710" stop-opacity="0"/>
-                            <stop offset="1" stop-color="#0C0710" stop-opacity="0.7"/>
-                        </linearGradient>
-                        </defs>
-                    </svg>
-                    <svg @click="nextSlide" class="rounded-t-2xl" width="104" height="354" viewBox="0 0 104 354" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="104" height="354" fill="url(#paint0_linear_1399_2948)"/>
-                        <path class="cursor-pointer" d="M51.9994 153C63.0294 153 71.9994 161.972 71.9994 173C71.9994 184.028 63.0294 193 51.9994 193C40.9714 193 31.9994 184.028 31.9994 173C31.9994 161.972 40.9714 153 51.9994 153Z" fill="white"/>
-                        <path class="cursor-pointer" d="M49.1142 164.558C49.4962 164.558 49.8802 164.704 50.1722 164.996L57.1462 171.936C57.4282 172.218 57.5862 172.6 57.5862 173C57.5862 173.398 57.4282 173.78 57.1462 174.062L50.1722 181.006C49.5862 181.59 48.6382 181.59 48.0522 181.002C47.4682 180.414 47.4702 179.464 48.0562 178.88L53.9622 173L48.0562 167.12C47.4702 166.536 47.4682 165.588 48.0522 165C48.3442 164.704 48.7302 164.558 49.1142 164.558Z" fill="#1467C2"/>
-                        <defs>
-                        <linearGradient id="paint0_linear_1399_2948" x1="104" y1="177" x2="1.75888e-10" y2="177" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0C0710" stop-opacity="0.7"/>
-                        <stop offset="1" stop-color="#0C0710" stop-opacity="0"/>
-                        </linearGradient>
-                        </defs>
-                    </svg> 
+        <div class="h-[530px] sm:px-1" >
+            <div id="splider" class="splide h-[354px]">
+                <div class="splide__track h-[354px]">
+                    <ul class="splide__list h-[354px]">
+                        <div data-splide-interval="3000" class="splide__slide relative rounded-t-2xl sm:max-w-[310px] sm:w-full max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/tour/frame.png')]"> </div>
+                        <div data-splide-interval="3000" class="splide__slide relative rounded-t-2xl sm:max-w-[310px] sm:w-full max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/hotel/hotel.jpg')]" ></div>
+                        <div data-splide-interval="3000" class="splide__slide relative rounded-t-2xl sm:max-w-[310px] sm:w-full max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/tour/frame9.png')]" ></div>
+                    </ul>
+                    <div class="splide__arrows top-0">
+                        <svg class="splide__arrow splide__arrow--prev rounded-t-2xl" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M19.9994 -0.000396729C31.0294 -0.000396729 39.9994 8.9716 39.9994 19.9996C39.9994 31.0276 31.0294 39.9996 19.9994 39.9996C8.97145 39.9996 -0.000549316 31.0276 -0.000549316 19.9996C-0.000549316 8.9716 8.97145 -0.000396729 19.9994 -0.000396729Z" fill="white"/>
+                            <path d="M23.6441 11.6859C23.2621 11.6859 22.8781 11.8319 22.5861 12.1239L15.6121 19.0639C15.3301 19.3459 15.1721 19.7279 15.1721 20.1279C15.1721 20.5259 15.3301 20.9079 15.6121 21.1899L22.5861 28.1339C23.1721 28.7179 24.1201 28.7179 24.7061 28.1299C25.2901 27.5419 25.2881 26.5919 24.7021 26.0079L18.7961 20.1279L24.7021 14.2479C25.2881 13.6639 25.2901 12.7159 24.7061 12.1279C24.4141 11.8319 24.0281 11.6859 23.6441 11.6859Z" fill="#1467C2"/>
+                        </svg>
+                        <svg class="splide__arrow splide__arrow--next rounded-t-2xl" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M19.9994 -0.000396729C31.0294 -0.000396729 39.9994 8.9716 39.9994 19.9996C39.9994 31.0276 31.0294 39.9996 19.9994 39.9996C8.97139 39.9996 -0.000610352 31.0276 -0.000610352 19.9996C-0.000610352 8.9716 8.97139 -0.000396729 19.9994 -0.000396729Z" fill="white"/>
+                            <path d="M17.1142 11.5582C17.4962 11.5582 17.8802 11.7042 18.1722 11.9962L25.1462 18.9362C25.4282 19.2182 25.5862 19.6002 25.5862 20.0002C25.5862 20.3982 25.4282 20.7802 25.1462 21.0622L18.1722 28.0062C17.5862 28.5902 16.6382 28.5902 16.0522 28.0022C15.4682 27.4142 15.4702 26.4642 16.0562 25.8802L21.9622 20.0002L16.0562 14.1202C15.4702 13.5362 15.4682 12.5882 16.0522 12.0002C16.3442 11.7042 16.7302 11.5582 17.1142 11.5582Z" fill="#1467C2"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
             <div class="flex sm:flex-col max-w-[794px] sm:max-w-[310px] lg:max-w-[960px] min-h-[170px] rounded-b-2xl bg-[#D0E1F3] py-[20px] px-[21px]">
                 <div class="max-w-[586px]">
-                    <p class="text-[21px] font-bold leading-8 line-clamp-2">{{ slide.caption }}</p>
+                    <p class="text-[21px] font-bold leading-8 line-clamp-2">Gyumri (Urban life museum, Black Fortress, walking through the old streets), Harichavank</p>
                     <p class="text-[#333B44] text-[14px] mt-2 sm:mb-4 line-clamp-3">On this tour you will visit Gyumri, the second largest city in Armenia, one of the main cultural centers of the republic. The only Catholic…</p>
                 </div>
                 <div class="pl-8 min-w-[160px] sm:pl-0 ">
@@ -61,6 +48,8 @@
 </template>
 
 <script setup>
+import Splide from "@splidejs/splide";
+import '@splidejs/splide/css';
 const slides = [
     {  image: "https://s3-alpha-sig.figma.com/img/2376/8f16/d0ec930bbe4ee6aad7d64a0cbeadfc89?Expires=1698624000&Signature=bnIAPeIjai2JwZoUv7545lbCgBvN9rXLmPRD0Iq6al2hKS1Hh~jmrXd9TbaeO2o7OEx0xuz0FAvrZh7OeNWdHpOwF3Am7JndgiimBmuC~3fcd4WelORlojeWzwWDtWyqZBHExRRr~aXILdRcj4e9ymJuklcF9lN4VAMPUb1oayzWNJVi2yJ1gld5jD2q3r9ZfMZCNW9MWfLX9DiJpbdbACxXkDWQA6zilK0jR9zqDao2VZj79CJIXaSzhtZfP3ciqAxdDftPEskZh4HvKeWXeSv1j05-N~FGO7s5jPDVnjgZ5Y9h3VDiiR78vPPMp-dVn3jjd60MmrlAUU3~uXo38A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4", caption: "Sevan (Urban life museum, Black Fortress, walking through the old streets), Harichavank" },
     {  image: "https://s3-alpha-sig.figma.com/img/b6d9/e65e/a6d703aee3ea86c368d2d7d196d50b73?Expires=1698624000&Signature=cCJsfSsjLjI7Zi0EGt3boH5el-T267V6ZdH6gLKyZpPh-mwn8E77UHFIS6aeU9NZRttZwEPRj0ostDmDJAQBZ1zSUOcUHR1JWO-L2PuEuo3cIwHVCIBmNw48m6R9~Jd~RGycE~ZKVtKluuWiXrfi4WxJz-uifEntyEv7Tvy32nZ4os8xjPMQ~5NwAuXpdEeqNfx590piZ5hNTA-X~ofasvnieYrgcvq3Nf4iDWyOQcsWzhKY1D~-BBFg~leSnA~FeHEnlyaW2Tq51Tu5jXLOPJ4cLhm0nQA34fnPBwzk9tb1fKr184ZQrxtWEzNBnWL0~xFci94BTZO3UU0vSinJZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4", caption: "Gyumri (Urban life museum, Black Fortress, walking through the old streets), Harichavank" },
@@ -69,11 +58,36 @@ const slides = [
 
 let currentSlide = ref(0);
 
-function prevSlide() {
-    currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length;
+// function prevSlide() {
+//     currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length;
+// }
+
+// function nextSlide() {
+//     currentSlide.value = (currentSlide.value + 1) % slides.length;
+// }
+
+const splideOptions = {
+    type: "loop",
+    perPage: 1,
+    arrows: true,
+    pagination: false,
+    autoplay: true
+};
+
+let splide;
+
+const initSplide = () => {
+    splide = new Splide("#splider", splideOptions);
+    splide.mount();
 }
 
-function nextSlide() {
-    currentSlide.value = (currentSlide.value + 1) % slides.length;
+const destroySplide = () => {
+    if (splide) {
+        splide.destroy();
+        splide = null;
+    }
 }
+
+onMounted(initSplide);
+onUnmounted(destroySplide);
 </script>
