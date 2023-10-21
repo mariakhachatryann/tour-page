@@ -11,9 +11,9 @@
             <div id="splider" class="splide h-[354px]">
                 <div class="splide__track h-[354px]">
                     <ul class="splide__list h-[354px]">
-                        <div data-splide-interval="3000" class="splide__slide relative rounded-t-2xl sm:max-w-[310px] sm:w-full max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/tour/frame.png')]"> </div>
-                        <div data-splide-interval="3000" class="splide__slide relative rounded-t-2xl sm:max-w-[310px] sm:w-full max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/hotel/hotel.jpg')]" ></div>
-                        <div data-splide-interval="3000" class="splide__slide relative rounded-t-2xl sm:max-w-[310px] sm:w-full max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/tour/frame9.png')]" ></div>
+                        <div data-splide-interval="3500" class="splide__slide relative rounded-t-2xl sm:max-w-[310px] sm:w-full max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/tour/frame.png')]"> </div>
+                        <div data-splide-interval="3500" class="splide__slide relative rounded-t-2xl sm:max-w-[310px] sm:w-full max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/hotel/hotel.jpg')]" ></div>
+                        <div data-splide-interval="3500" class="splide__slide relative rounded-t-2xl sm:max-w-[310px] sm:w-full max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/tour/frame9.png')]" ></div>
                     </ul>
                     <div class="splide__arrows top-0">
                         <svg class="splide__arrow splide__arrow--prev rounded-t-2xl" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -50,28 +50,14 @@
 <script setup>
 import Splide from "@splidejs/splide";
 import '@splidejs/splide/css';
-const slides = [
-    {  image: "https://s3-alpha-sig.figma.com/img/2376/8f16/d0ec930bbe4ee6aad7d64a0cbeadfc89?Expires=1698624000&Signature=bnIAPeIjai2JwZoUv7545lbCgBvN9rXLmPRD0Iq6al2hKS1Hh~jmrXd9TbaeO2o7OEx0xuz0FAvrZh7OeNWdHpOwF3Am7JndgiimBmuC~3fcd4WelORlojeWzwWDtWyqZBHExRRr~aXILdRcj4e9ymJuklcF9lN4VAMPUb1oayzWNJVi2yJ1gld5jD2q3r9ZfMZCNW9MWfLX9DiJpbdbACxXkDWQA6zilK0jR9zqDao2VZj79CJIXaSzhtZfP3ciqAxdDftPEskZh4HvKeWXeSv1j05-N~FGO7s5jPDVnjgZ5Y9h3VDiiR78vPPMp-dVn3jjd60MmrlAUU3~uXo38A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4", caption: "Sevan (Urban life museum, Black Fortress, walking through the old streets), Harichavank" },
-    {  image: "https://s3-alpha-sig.figma.com/img/b6d9/e65e/a6d703aee3ea86c368d2d7d196d50b73?Expires=1698624000&Signature=cCJsfSsjLjI7Zi0EGt3boH5el-T267V6ZdH6gLKyZpPh-mwn8E77UHFIS6aeU9NZRttZwEPRj0ostDmDJAQBZ1zSUOcUHR1JWO-L2PuEuo3cIwHVCIBmNw48m6R9~Jd~RGycE~ZKVtKluuWiXrfi4WxJz-uifEntyEv7Tvy32nZ4os8xjPMQ~5NwAuXpdEeqNfx590piZ5hNTA-X~ofasvnieYrgcvq3Nf4iDWyOQcsWzhKY1D~-BBFg~leSnA~FeHEnlyaW2Tq51Tu5jXLOPJ4cLhm0nQA34fnPBwzk9tb1fKr184ZQrxtWEzNBnWL0~xFci94BTZO3UU0vSinJZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4", caption: "Gyumri (Urban life museum, Black Fortress, walking through the old streets), Harichavank" },
-    {  image: "https://s3-alpha-sig.figma.com/img/9815/3508/7ebfca599b90330ed685bec03b6c0229?Expires=1698624000&Signature=hXT7o3euIuHWJC6raGUKDWFfX~qEqeaqSILze1wQ8DbMTfl8O6U9BKuK7TwVUuvR5Eq1nGBKq-k~xxa~vKITej~dRDqdyz1HMGGHw65L7ixSoQ0RwbJ6pVvAi6ZpR7O8UA~SXMGT7v6jEL9w0aTZJolmhI2f5venX5z3ZJLlf5YkJJpmFU55kmfVaPvhHvJjAuYvE4mk-eCpk5Q6hvCXPRPzL4Dy9XwFeUn58bZ9GYSFN2duWj20EjWiy8Q0Fydt18Gzj17d6x-Mr3d21RfgYsJ3GrsFFsq-dl87HXVqmke4HxY8RPXZE1bR5kwMbDGNEsmQLVXC8-YGicZht2VEyw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4", caption: "Ijevan (Urban life museum, Black Fortress, walking through the old streets), Harichavank" },
-]
-
-let currentSlide = ref(0);
-
-// function prevSlide() {
-//     currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length;
-// }
-
-// function nextSlide() {
-//     currentSlide.value = (currentSlide.value + 1) % slides.length;
-// }
 
 const splideOptions = {
     type: "loop",
     perPage: 1,
     arrows: true,
     pagination: false,
-    autoplay: true
+    autoplay: true,
+    drag: false
 };
 
 let splide;

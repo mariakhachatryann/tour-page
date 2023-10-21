@@ -57,7 +57,6 @@ const destroySplide = () => {
 }
 
 onMounted(initSplide);
-
 onUnmounted(destroySplide);
 </script>
 
@@ -83,8 +82,8 @@ onUnmounted(destroySplide);
         }
     } */
     
-/* 
-    .left {
+
+    /* .left {
         left: 35%;
     } */
 </style>
