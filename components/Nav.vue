@@ -13,7 +13,7 @@
             </ul>
         </div>
         <div class="flex md:justify-between">
-            <div>
+            <div @click="openCart = !openCart" class="cursor-pointer">
                 <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect y="8" width="48" height="48" rx="8" fill="#E8F0F9"/>
                     <path d="M34.377 28.868L32.2342 36.368C31.9597 37.3287 31.0702 38 30.0705 38H20.787C19.6687 38 18.7343 37.1975 18.5633 36.0928L17.2583 26.8618L16.719 23.627C16.659 23.2632 16.3478 23 15.9795 23H14.25C13.8353 23 13.5 22.664 13.5 22.25C13.5 21.836 13.8353 21.5 14.25 21.5H15.9795C17.085 21.5 18.018 22.2912 18.1988 23.3802L18.6353 26H32.2125C32.925 26 33.579 26.3263 34.0087 26.8947C34.4377 27.4632 34.572 28.1825 34.377 28.868ZM21 39.5C20.1712 39.5 19.5 40.1712 19.5 41C19.5 41.8288 20.1712 42.5 21 42.5C21.8287 42.5 22.5 41.8288 22.5 41C22.5 40.1712 21.8287 39.5 21 39.5ZM30 39.5C29.1713 39.5 28.5 40.1712 28.5 41C28.5 41.8288 29.1713 42.5 30 42.5C30.8288 42.5 31.5 41.8288 31.5 41C31.5 40.1712 30.8288 39.5 30 39.5Z" fill="#1467C2"/>
@@ -50,15 +50,19 @@
             </ul>
         </div>
     </div>
-    <v-overlay class="flex w-full h-full justify-center items-center" v-model="overlay">
+    <v-overlay scroll-strategy="close" class="flex w-full h-full justify-center items-center" v-model="overlay">
         <AuthenticationLog @createAccount="() => { overlay = false; overlay1 = true }" @showRecPass="() => { overlay = false; overlayPass = true}" @closeLog="overlay = !overlay" />
     </v-overlay>
-    <v-overlay class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlay1">
+    <v-overlay scroll-strategy="close" class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlay1">
         <AuthenticationJoin @showRecPass="() => { overlay1 = false; overlayPass = true}" @closeJoin="overlay1 = !overlay1" />
     </v-overlay>
     <v-overlay class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlayPass">
         <AuthenticationRecoverPass @closeLog="overlayPass = false" />
     </v-overlay>
+    <v-overlay v-model="openCart" class="h-full w-[512px] md:w-[312px] ml-auto absolute">
+        <CartSide @closeCart="openCart = false" />
+    </v-overlay>
+    
 </template>
 
 <script setup>
@@ -74,7 +78,8 @@ function closeMenu() {
 
 const overlay = ref(false);
 const overlay1 = ref(false);
-const overlayPass = ref(false)
+const overlayPass = ref(false);
+const openCart = ref(false);
 </script>
 
 <style>

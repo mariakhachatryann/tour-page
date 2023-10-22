@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
     modules: ["@pinia/nuxt", "@nuxtjs/google-fonts", "@nuxt/image", "@invictus.codes/nuxt-vuetify"],
     postcss: {
         plugins: {

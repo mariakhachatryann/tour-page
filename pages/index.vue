@@ -3,7 +3,7 @@
     <MainTopPlaces /> 
     <MainAbout /> 
     <MainAchieved /> 
-    <MainSubscription /> 
+    <MainSubscription />
     <Footer />
 </template>
 
