@@ -54,7 +54,7 @@
                 </NuxtLink>
             </div>
             <p class="tracking-[.28px] text-[#000A15] sm:text-center">© 2023 Unknown. All rights reserved </p>
-            <p class="text-[#000A15]"><span class="text-[#80858A]">by</span><a href="https://www.hsrocket.com/en/" target="_blank"> HS Rocket</a></p>
+            <p class="text-[#000A15]"><span class="text-[#80858A]">by</span><a href="https://www.hsrocket.com/" target="_blank"> HS Rocket</a></p>
         </div>
     </div>
 </template>
