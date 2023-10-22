@@ -73,7 +73,7 @@ onUnmounted(destroySplide);
     }
 
     .top {
-        top: 610px;
+        top: 605px;
     }
 
     /* @media (max-width: 768px) {

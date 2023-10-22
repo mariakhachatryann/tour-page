@@ -1,7 +1,7 @@
 <template>
     <div class="splide splide4 flex gap-8 w-full xl:max-w-[1266px] lg:max-w-[1024px] overflow-hidden">
-        <div class="splide__track h-[240px] md:h-[500px]">
-            <div class="splide__list h-[240px] md:h-[500px] flex gap-8">
+        <div class="splide__track h-[250px] md:h-[450px]">
+            <div class="splide__list h-[250px] md:h-[450px] flex gap-8">
                 <div v-for="instance in instances" :key="instance" class="splide__slide flex gap-2 max-w-[676px] w-full h-[190px] rounded-2xl sm:min-w-[320px] bg-[#F7FAFE]">
                     <TransferBlock :transfer="transfers[0]"></TransferBlock>
                 </div>
@@ -63,5 +63,11 @@ onUnmounted(destroySplide);
 <style scoped>
 .top {
     top: 230px;
+}
+
+@media (max-width: 768px) {
+    .top {
+        top: 430px;
+    }
 }
 </style>

@@ -62,6 +62,6 @@ onUnmounted(destroySplide);
 
 <style scoped>
 .top {
-    top: 480px;
+    top: 485px;
 }
 </style>
