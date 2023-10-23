@@ -59,10 +59,11 @@
     <v-overlay class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlayPass">
         <AuthenticationRecoverPass @closeLog="overlayPass = false" />
     </v-overlay>
-    <v-overlay v-model="openCart" class="h-full w-[512px] md:w-[312px] ml-auto absolute">
+          
+    <v-overlay transition="slide-x-reverse-transition" v-model="openCart" class="h-full w-[512px] md:w-[312px] ml-auto absolute">
         <CartSide @closeCart="openCart = false" />
     </v-overlay>
-    
+            
 </template>
 
 <script setup>
