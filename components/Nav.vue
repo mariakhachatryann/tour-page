@@ -5,11 +5,11 @@
         </NuxtLink>
         <div class="mt-2 w-[470px] sm:hidden md:hidden" :class="{ 'lg:hidden md:hidden': !menu}">
             <ul class="menu flex justify-start sm:hidden">
-                <NuxtLink @click="closeMenu" to="/tours" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Tours</NuxtLink>
-                <NuxtLink @click="closeMenu" to="/hotels" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Hotels</NuxtLink>
-                <NuxtLink @click="closeMenu" to="/transfer" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Transfer</NuxtLink>
-                <NuxtLink @click="closeMenu" to="/outgoings"  class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Outgoing tours</NuxtLink>
-                <NuxtLink @click="closeMenu" to="/contact" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Contact us</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/tours" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue hover:duration-300">Tours</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/hotels" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue hover:duration-300">Hotels</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/transfer" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue hover:duration-300">Transfer</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/outgoings"  class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue hover:duration-300">Outgoing tours</NuxtLink>
+                <NuxtLink @click="closeMenu" to="/contact" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue hover:duration-300">Contact us</NuxtLink>
             </ul>
         </div>
         <div class="flex md:justify-between">
@@ -30,8 +30,8 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70711 6.29289C7.31658 5.90237 6.68342 5.90237 6.29289 6.29289C5.90237 6.68342 5.90237 7.31658 6.29289 7.70711L10.5835 11.9977L6.29296 16.2874C5.9024 16.6778 5.90234 17.311 6.29283 17.7016C6.68331 18.0921 7.31648 18.0922 7.70704 17.7017L11.9977 13.4119L16.2929 17.7071C16.6834 18.0976 17.3166 18.0976 17.7071 17.7071C18.0976 17.3166 18.0976 16.6834 17.7071 16.2929L13.412 11.9978L17.6995 7.71108C18.0901 7.32059 18.0902 6.68743 17.6997 6.29687C17.3092 5.9063 16.676 5.90625 16.2855 6.29673L11.9978 10.5836L7.70711 6.29289Z" fill="#000A15"/>
                 </svg>
             </div>
-            <button @click="overlay = !overlay" class="m-2 w-[113px] h-[48px] bg-white text-primaryBlue border-[1px] rounded-lg border-primaryBlue font-bold lg:hidden md:hidden sm:hidden">Log in</button>
-            <button @click="overlay1 = !overlay1" class="m-2 w-[113px] h-[48px] bg-primaryBlue text-white border-[1px] rounded-lg border-primaryBlue font-bold lg:hidden md:hidden sm:hidden">Join us</button>
+            <button @click="overlay = !overlay" class="m-2 w-[113px] h-[48px] bg-[#fff] text-primaryBlue border-[1px] border-solid rounded-lg border-primaryBlue font-bold lg:hidden md:hidden sm:hidden hover:bg-primaryBlue hover:text-white hover:duration-300">Log in</button>
+            <button @click="overlay1 = !overlay1" class="m-2 w-[113px] h-[48px] bg-primaryBlue text-white border-[1px] rounded-lg border-primaryBlue font-bold lg:hidden md:hidden sm:hidden hover:bg-[#4385CE] hover:duration-300 hover:text-[#FDFFFE]">Join us</button>
         </div>
     </div>
     <div class="hidden z-10 bg-white absolute w-full pb-8" :class="{ 'sm:block md:block': menu}">
@@ -44,8 +44,8 @@
                 <NuxtLink @click="closeMenu" to="/outgoings" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Outgoing tours</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/contact" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Contact Us</NuxtLink>
                 <div class="flex w-full">
-                    <button @click="overlay = !overlay" class="m-2 w-1/2 h-[48px] bg-white text-primaryBlue border-[1px] rounded-lg border-primaryBlue font-bold ">Log in</button>
-                    <button @click="overlay1 = !overlay1" class="m-2 w-1/2 h-[48px] bg-primaryBlue text-white border-[1px] rounded-lg border-primaryBlue font-bold">Join us</button>
+                    <button @click="overlay = !overlay" class="m-2 w-1/2 h-[48px] bg-white text-[#f00000] border-solid border-[1px] rounded-lg border-primaryBlue font-bold hover:bg-primaryBlue hover:text-white hover:duration-300">Log in</button>
+                    <button @click="overlay1 = !overlay1" class="m-2 w-1/2 h-[48px] bg-primaryBlue text-white border-solid border-[1px] rounded-lg border-primaryBlue font-bold">Join us</button>
                 </div>
             </ul>
         </div>

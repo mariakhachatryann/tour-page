@@ -1,5 +1,5 @@
 <template>
-    <div class="md:px-4">
+    <div class="md:px-4 hover:scale-95 hover:duration-300 hover:shadow-xl hover:rounded-2xl">
         <div :style="{ backgroundImage: `url(${imgSrc})` }" class="relative p-[0.5px] rounded-t-2xl h-[278px] bg-cover bg-center bg-no-repeat">
             <div class="absolute py-2 px-4 rounded-t-2xl rounded-br-2xl bg-transparentCol">
                 <div class="flex gap-1">
@@ -11,7 +11,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-[#E8F0F9] p-4 rounded-b-2xl">
+        <div class="bg-[#E8F0F9] p-4 rounded-b-2xl hover:bg-[#fff]">
             <p class="text-xl font-bold leading-[30px] line-clamp-1">
                 <slot name="title"></slot>
             </p>

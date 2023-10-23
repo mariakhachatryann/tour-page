@@ -26,10 +26,10 @@
             <p @click="showRecoverPassword" class="text-primaryBlue whitespace-nowrap text-base font-bold cursor-pointer">Forgot Password</p>
         </div>
         <div class="w-full mb-4">
-            <button class="bg-primaryBlue w-full py-3 px-8 text-white rounded-lg font-bold">Log in</button>
+            <button class="bg-primaryBlue w-full py-3 px-8 text-white rounded-lg font-bold hover:bg-[#4385CE] hover:duration-300 hover:text-[#FDFFFE]">Log in</button>
         </div>
         <div class="w-full mb-6">
-            <button @click="createAcc" class="text-primaryBlue border-[1px] border-solid border-primaryBlue w-full py-3 px-8 rounded-lg font-bold">Create an account</button>
+            <button @click="createAcc" class="text-primaryBlue border-[1px] border-solid border-primaryBlue w-full py-3 px-8 rounded-lg font-bold hover:bg-primaryBlue hover:text-white hover:duration-300">Create an account</button>
         </div>
         <div class="flex w-full items-center mb-6">
             <div class="w-[44%] h-[1px] bg-[#D0E1F3]"></div>

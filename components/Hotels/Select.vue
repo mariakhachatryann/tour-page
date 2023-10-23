@@ -196,7 +196,7 @@
                 </select>
             </div>
             <div class="w-full mt-8">
-                <button @click.prevent="submitOptions" class="bg-primaryBlue rounded-lg py-3 px-8 w-full font-bold text-[#FDFFFE]">Find Results</button>
+                <button @click.prevent="submitOptions" class="bg-primaryBlue rounded-lg py-3 px-8 w-full font-bold text-[#FDFFFE] hover:bg-[#4385CE] hover:duration-300 hover:text-[#FDFFFE]">Find Results</button>
             </div>
         </form>
     </div>

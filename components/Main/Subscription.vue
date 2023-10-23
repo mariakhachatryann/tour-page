@@ -6,7 +6,7 @@
                 <p class="font-base text-primaryGrey mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam morbi odio id dictum ut vestibulum. Tempor duis molestie proin nec. Interdum dolor dui venenatis elementum leo eleifend arcu, cursus justo.</p>
                 <div class="flex mt-8 sm:flex-col sm:gap-4">
                     <input class="px-4 py-2 w-full mr-4 focus:outline-primaryBlue" type="email" placeholder="Enter email address" />
-                    <button class="bg-primaryBlue text-[#FDFFFE] rounded-lg py-3 px-8 font-bold">Subscribe</button>
+                    <button class="bg-primaryBlue text-[#FDFFFE] rounded-lg py-3 px-8 font-bold hover:bg-[#4385CE] hover:duration-300 hover:text-[#FDFFFE]">Subscribe</button>
                 </div>
             </div>
             <div class="w-full">

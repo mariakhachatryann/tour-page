@@ -77,7 +77,7 @@
                     <textarea v-model="userForm.message" class="bg-white py-3 px-4 w-full mt-1 rounded-lg outline-none" placeholder="Enter here" name="" id="" cols="30" rows="5"></textarea>
                 </div>
                 <div class="flex justify-end mt-6">
-                    <button @click.prevent="calcResults" class="bg-primaryBlue text-[#FDFFFE] rounded-lg py-3 px-8 font-bold">Calculate Result</button>
+                    <button @click.prevent="calcResults" class="bg-primaryBlue text-[#FDFFFE] rounded-lg py-3 px-8 font-bold hover:bg-[#4385CE] hover:duration-300 hover:text-[#FDFFFE]">Calculate Result</button>
                 </div>
             </div>
         </form>

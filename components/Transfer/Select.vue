@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="ml-8 mt-auto md:w-full md:ml-0">
-                    <button @click.prevent="submitOptions" class="bg-primaryBlue text-[#FDFFFE] rounded-lg w-[193px] h-[48px] md:w-full md:mt-8">Calculate Result</button>
+                    <button @click.prevent="submitOptions" class="bg-primaryBlue text-[#FDFFFE] rounded-lg w-[193px] h-[48px] md:w-full md:mt-8 hover:bg-[#4385CE] hover:duration-300 hover:text-[#FDFFFE]">Calculate Result</button>
                 </div>
             </div>
         </form>

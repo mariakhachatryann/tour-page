@@ -1,9 +1,9 @@
 <template>
-    <div class="flex w-full md:flex-col mb-20 px-4 cursor-pointer">
+    <div class="flex w-full md:flex-col mb-20 px-4 cursor-pointer hover:scale-95 hover:duration-300 hover:shadow-xl hover:rounded-2xl">
         <div class="">
             <div :style="{ backgroundImage: `url(${imgSrc})` }" class="md:rounded-t-2xl md:rounded-b-none rounded-bl-2xl rounded-tl-2xl w-[206px] md:w-full h-[190px] bg-cover bg-center"></div>
         </div>
-        <div class="p-4 bg-[#F7FAFE] h-[190px] max-w-[704px] min-w-[200px] w-full md:w-full rounded-br-2xl rounded-tr-2xl">
+        <div class="p-4 bg-[#F7FAFE] hover:bg-[#fff] h-[190px] max-w-[704px] min-w-[200px] w-full md:w-full rounded-br-2xl rounded-tr-2xl">
             <div class="flex justify-between w-full ">
                 <p class="text-xl font-bold text-[#000A15] truncate">{{ props.transfer.title }}</p>
                 <div class=" bg-white px-4 p-1 rounded-3xl border-[1px] border-[#47CB92]">

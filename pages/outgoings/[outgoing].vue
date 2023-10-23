@@ -26,7 +26,7 @@
                     <div class="flex justify-end">
                         <p class="text-xs text-[#088C53] font-medium">including taxes & fees</p>
                     </div>
-                    <button class="w-full my-6 text-white font-bold  bg-primaryBlue rounded-lg px-8 py-3">Apply</button>
+                    <button class="w-full my-6 text-white font-bold  bg-primaryBlue rounded-lg px-8 py-3 cursor-pointer hover:bg-[#4385CE] hover:duration-300 hover:text-[#FDFFFE]">Apply</button>
                     <div class="flex justify-center gap-2 items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M10.0003 1.66602C5.3945 1.66602 1.66699 5.3931 1.66699 9.99935C1.66699 14.6051 5.39408 18.3327 10.0003 18.3327C14.6062 18.3327 18.3337 14.6056 18.3337 9.99935C18.3337 5.39359 14.6066 1.66602 10.0003 1.66602ZM10.8561 13.3073C10.8561 13.5706 10.4722 13.8338 10.0005 13.8338C9.50687 13.8338 9.15589 13.5706 9.15589 13.3073V9.12806C9.15589 8.82093 9.5069 8.61247 10.0005 8.61247C10.4722 8.61247 10.8561 8.82093 10.8561 9.12806V13.3073ZM10.0005 7.60339C9.49593 7.60339 9.10107 7.23044 9.10107 6.81357C9.10107 6.39675 9.49596 6.03477 10.0005 6.03477C10.4941 6.03477 10.8891 6.39675 10.8891 6.81357C10.8891 7.23044 10.4941 7.60339 10.0005 7.60339Z" fill="#3747A4"/>
