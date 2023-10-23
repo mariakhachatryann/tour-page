@@ -30,10 +30,8 @@
 import Splide from "@splidejs/splide";
 import { useTransfersStore } from "../../stores/store.js"
 const { transfers } = useTransfersStore();
-console.log(transfers);
 
 const instances = [1, 2, 3, 4, 5];
-let selected = ref("tours");
 
 const splideOptions = {
     type: "loop",

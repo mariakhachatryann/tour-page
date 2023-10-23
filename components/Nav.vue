@@ -1,10 +1,10 @@
 <template>
-    <div class="flex justify-evenly gap-14 h-[80px] bg-white py-2 xl:justify-between px-8 sm:gap-2 sm:px-1 sm:justify-between">
+    <div class="flex justify-evenly gap-14 h-[80px] bg-white pt-2 xl:justify-between px-8 sm:gap-2 sm:px-1 sm:justify-between">
         <NuxtLink to="/" class="w-[152px] h-[48px] bg-[#E8F0F9] mt-2 text-center items-center">
             <p class="text-2xl text-[#01000E] font-bold p-1">LOGO</p>
         </NuxtLink>
         <div class="mt-2 w-[470px] sm:hidden md:hidden" :class="{ 'lg:hidden md:hidden': !menu}">
-            <ul class="flex justify-start sm:hidden">
+            <ul class="menu flex justify-start sm:hidden">
                 <NuxtLink @click="closeMenu" to="/tours" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Tours</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/hotels" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Hotels</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/transfer" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue">Transfer</NuxtLink>
@@ -50,16 +50,15 @@
             </ul>
         </div>
     </div>
-    <v-overlay scroll-strategy="close" class="flex w-full h-full justify-center items-center" v-model="overlay">
+    <v-overlay transition="scroll-y-transition" scroll-strategy="close" class="flex w-full h-full justify-center items-center" v-model="overlay">
         <AuthenticationLog @createAccount="() => { overlay = false; overlay1 = true }" @showRecPass="() => { overlay = false; overlayPass = true}" @closeLog="overlay = !overlay" />
     </v-overlay>
-    <v-overlay scroll-strategy="close" class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlay1">
+    <v-overlay transition="scroll-y-transition" scroll-strategy="close" class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlay1">
         <AuthenticationJoin @showRecPass="() => { overlay1 = false; overlayPass = true}" @closeJoin="overlay1 = !overlay1" />
     </v-overlay>
-    <v-overlay class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlayPass">
+    <v-overlay transition="scroll-y-transition" class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlayPass">
         <AuthenticationRecoverPass @closeLog="overlayPass = false" />
     </v-overlay>
-          
     <v-overlay transition="slide-x-reverse-transition" v-model="openCart" class="h-full w-[512px] md:w-[312px] ml-auto absolute">
         <CartSide @closeCart="openCart = false" />
     </v-overlay>
@@ -86,5 +85,27 @@ const openCart = ref(false);
 <style>
 .router-link-active {
     @apply text-primaryBlue;
+}
+
+.menu a {
+    text-decoration: none;
+    position: relative;
+}
+
+.menu a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #4385CE;
+    bottom: 0px;
+    left: 0;
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.4s;
+}
+
+.menu a:hover::before {
+    transform: scaleX(1);
 }
 </style>

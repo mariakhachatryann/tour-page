@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="w-full">
-                <img src="~/assets/img/frame1.png" class="rounded-3xl w-[780px] h-[472px] lg:w-[960px] lg:h-[312px] sm:max-w-[280px]"  alt="">
+                <img src="~/assets/img/frame1.png" class="rounded-3xl w-[780px] h-[472px] lg:w-[960px] lg:h-[312px]"  alt="">
                 <!-- <NuxtImg v-once format="webp" src="/frame1.png" class="rounded-3xl w-[780px] h-[472px] lg:w-[960px] lg:h-[312px] sm:max-w-[280px]"></NuxtImg> -->
             </div>
         </div>
