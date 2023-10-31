@@ -3,8 +3,8 @@
         <NuxtLink to="/" class="w-[152px] h-[48px] bg-[#E8F0F9] mt-2 text-center items-center">
             <p class="text-2xl text-[#01000E] font-bold p-1">LOGO</p>
         </NuxtLink>
-        <div class="mt-2 w-[470px] sm:hidden md:hidden" :class="{ 'lg:hidden md:hidden': !menu}">
-            <ul class="menu flex justify-start sm:hidden">
+        <div class="mt-2 w-[470px] sm:hidden md:hidden flex items-center" :class="{ 'lg:hidden md:hidden': !menu}">
+            <ul class="menu flex justify-start sm:hidden items-center">
                 <NuxtLink @click="closeMenu" to="/tours" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue hover:duration-300">Tours</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/hotels" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue hover:duration-300">Hotels</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/transfer" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue hover:duration-300">Transfer</NuxtLink>
@@ -12,15 +12,16 @@
                 <NuxtLink @click="closeMenu" to="/contact" class="text-[16px] text-primaryGrey p-2 mr-2 cursor-pointer hover:text-primaryBlue hover:duration-300">Contact us</NuxtLink>
             </ul>
         </div>
-        <div class="flex md:justify-between">
-            <div @click="openCart = !openCart" class="cursor-pointer">
-                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="8" width="48" height="48" rx="8" fill="#E8F0F9"/>
-                    <path d="M34.377 28.868L32.2342 36.368C31.9597 37.3287 31.0702 38 30.0705 38H20.787C19.6687 38 18.7343 37.1975 18.5633 36.0928L17.2583 26.8618L16.719 23.627C16.659 23.2632 16.3478 23 15.9795 23H14.25C13.8353 23 13.5 22.664 13.5 22.25C13.5 21.836 13.8353 21.5 14.25 21.5H15.9795C17.085 21.5 18.018 22.2912 18.1988 23.3802L18.6353 26H32.2125C32.925 26 33.579 26.3263 34.0087 26.8947C34.4377 27.4632 34.572 28.1825 34.377 28.868ZM21 39.5C20.1712 39.5 19.5 40.1712 19.5 41C19.5 41.8288 20.1712 42.5 21 42.5C21.8287 42.5 22.5 41.8288 22.5 41C22.5 40.1712 21.8287 39.5 21 39.5ZM30 39.5C29.1713 39.5 28.5 40.1712 28.5 41C28.5 41.8288 29.1713 42.5 30 42.5C30.8288 42.5 31.5 41.8288 31.5 41C31.5 40.1712 30.8288 39.5 30 39.5Z" fill="#1467C2"/>
-                    <rect x="32.5" y="0.5" width="23" height="23" rx="11.5" fill="#088C53"/>
-                    <path d="M44.708 17H43.238V10.364C43.238 10.1307 43.238 9.916 43.238 9.72C43.2473 9.51467 43.2567 9.31867 43.266 9.132C43.2753 8.936 43.2847 8.74933 43.294 8.572C43.1727 8.69333 43.0467 8.81 42.916 8.922C42.7853 9.034 42.636 9.16467 42.468 9.314L41.376 10.196L40.62 9.244L43.476 7.004H44.708V17Z" fill="#FDFFFE"/>
-                    <rect x="32.5" y="0.5" width="23" height="23" rx="11.5" stroke="white"/>
-                </svg>
+        <div class="flex flex-row md:justify-between items-center gap-4">
+            <div @click="openCart = !openCart" class="cursor-pointer relative">
+                <div class="bg-[#E8F0F9] rounded-lg p-3 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M22.377 8.868L20.2342 16.368C19.9597 17.3287 19.0702 18 18.0705 18H8.787C7.66875 18 6.73425 17.1975 6.56325 16.0928L5.25825 6.86175L4.719 3.627C4.659 3.26325 4.34775 3 3.9795 3H2.25C1.83525 3 1.5 2.664 1.5 2.25C1.5 1.836 1.83525 1.5 2.25 1.5H3.9795C5.085 1.5 6.018 2.29125 6.19875 3.38025L6.63525 6H20.2125C20.925 6 21.579 6.32625 22.0087 6.89475C22.4377 7.46325 22.572 8.1825 22.377 8.868ZM9 19.5C8.17125 19.5 7.5 20.1712 7.5 21C7.5 21.8288 8.17125 22.5 9 22.5C9.82875 22.5 10.5 21.8288 10.5 21C10.5 20.1712 9.82875 19.5 9 19.5ZM18 19.5C17.1713 19.5 16.5 20.1712 16.5 21C16.5 21.8288 17.1713 22.5 18 22.5C18.8288 22.5 19.5 21.8288 19.5 21C19.5 20.1712 18.8288 19.5 18 19.5Z" fill="#1467C2"/>
+                    </svg>
+                </div>
+                <div class="absolute bottom-8 left-8">
+                    <div class=" rounded-full bg-[#088C53] text-white p-2 w-6 h-6 flex items-center">{{ myCart.transfers.length }}</div>
+                </div>
             </div>
             <div class="cursor-pointer ">
                 <svg @click="toggleMenu" class="m-2 mt-5 ml-2" :class="{ 'hidden sm:block lg:block md:block': !menu, 'sm:hidden md:hidden': menu }" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,10 +63,12 @@
     <v-overlay transition="slide-x-reverse-transition" v-model="openCart" class="h-full w-[512px] md:w-[312px] ml-auto absolute">
         <CartSide @closeCart="openCart = false" />
     </v-overlay>
-            
 </template>
 
 <script setup>
+import { useMyCart } from "~/stores/store";
+const myCart = useMyCart();
+
 let menu = ref(false);
 
 function toggleMenu() {

@@ -5,3 +5,8 @@
 *{
     font-family: 'Noto Sans Armenian';
 }
+
+.vuejs3-datepicker__inputvalue {
+    max-width: 120px;
+    min-width: 100px;
+}

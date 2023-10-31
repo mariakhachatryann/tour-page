@@ -59,3 +59,20 @@ export const useOutgoingsStore = defineStore("outgoingsStore", {
         }
     }
 })
+
+export const useMyCart = defineStore("myCart", {
+    state: () => {
+        return {
+            tours: [],
+            hotels: [],
+            outgoings: [],
+            transfers: []
+        }
+    },
+    actions: {
+        transferToCart(transferDate) {
+            this.transfers.push(transferDate)
+            console.log(this.transfers);
+        }
+    }
+})
