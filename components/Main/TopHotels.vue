@@ -1,5 +1,5 @@
 <template>
-    <div class="splide splide2 flex gap-8 w-full xl:max-w-[1266px] lg:max-w-[1024px] overflow-hidden">
+    <div id="splide2"  class="splide splide2 flex gap-8 w-full xl:max-w-[1266px] lg:max-w-[1024px] overflow-hidden">
         <div class="splide__track h-[590px]">
             <div class="splide__list h-[590px] flex gap-8">
                 <div v-for="instance in instances" :key="instance" class="splide__slide min-w-[416px] min-h-[602px] max-w-[430px] rounded-b-2xl sm:min-w-[320px]">
@@ -28,6 +28,7 @@
 </template>
 
 <script setup>
+// import '@splidejs/splide/css/skyblue';
 import Splide from "@splidejs/splide";
 import { useHotelsStore } from "../../stores/store.js"
 const { hotels } = useHotelsStore();
@@ -39,13 +40,14 @@ const splideOptions = {
     type: "loop",
     drag: "free",
     arrows: true,
-    perPage: 1
+    perPage: 1,
+    theme: "skyblue"
 };
 
 let splide;
 
 const initSplide = () => {
-    splide = new Splide(".splide2", splideOptions);
+    splide = new Splide("#splide2", splideOptions);
     splide.mount();
 }
 

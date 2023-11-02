@@ -1,5 +1,5 @@
 <template>
-    <div class="splide splide3 flex gap-8 w-full xl:max-w-[1266px] lg:max-w-[1024px] overflow-hidden">
+    <div id="splide3" class="splide splide--skyblue flex gap-8 w-full xl:max-w-[1266px] lg:max-w-[1024px] overflow-hidden">
         <div class="splide__track h-[500px]">
             <div class="splide__list h-[500px] flex gap-8" >
                 <div v-for="instance in instances" :key="instance" class="splide__slide min-w-[440px] min-h-[432px] max-w-[430px] rounded-b-2xl sm:min-w-[320px]">
@@ -28,6 +28,8 @@
 </template>
 
 <script setup>
+// import '@splidejs/splide/css/skyblue';
+
 import Splide from "@splidejs/splide";
 import { useOutgoingsStore } from "../../stores/store.js"
 const { outgoings } = useOutgoingsStore();
@@ -45,7 +47,7 @@ const splideOptions = {
 let splide;
 
 const initSplide = () => {
-    splide = new Splide(".splide3", splideOptions);
+    splide = new Splide("#splide3", splideOptions);
     splide.mount();
 }
 

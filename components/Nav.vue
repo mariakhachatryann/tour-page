@@ -23,7 +23,7 @@
                     <div class=" rounded-full bg-[#088C53] text-white p-2 w-6 h-6 flex items-center">{{ myCart.transfers.length }}</div>
                 </div>
             </div>
-            <div class="cursor-pointer ">
+            <div class="cursor-pointer">
                 <svg @click="toggleMenu" class="m-2 mt-5 ml-2" :class="{ 'hidden sm:block lg:block md:block': !menu, 'sm:hidden md:hidden': menu }" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.21582 6.50977H20.7845C21.4548 6.50977 22 6.06133 22 5.50988C22 4.95844 21.4548 4.50977 20.7845 4.50977H3.21582C2.54544 4.50977 2 4.95844 2 5.50988C2 6.06133 2.54544 6.50977 3.21582 6.50977ZM20.7845 10.7842H3.21582C2.54544 10.7842 2 11.2329 2 11.7843C2 12.3357 2.54544 12.7842 3.21582 12.7842H20.7845C21.4548 12.7842 22 12.3357 22 11.7843C22 11.2329 21.4548 10.7842 20.7845 10.7842ZM3.21582 17.0586H20.7845C21.4549 17.0586 22 17.5074 22 18.0588C22 18.6102 21.4548 19.0586 20.7845 19.0586H3.21582C2.54544 19.0586 2 18.6102 2 18.0588C2 17.5074 2.54544 17.0586 3.21582 17.0586Z" fill="#000A15"/>
                 </svg>
@@ -45,8 +45,8 @@
                 <NuxtLink @click="closeMenu" to="/outgoings" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Outgoing tours</NuxtLink>
                 <NuxtLink @click="closeMenu" to="/contact" class="w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Contact Us</NuxtLink>
                 <div class="flex w-full">
-                    <button @click="overlay = !overlay" class="m-2 w-1/2 h-[48px] bg-white text-[#f00000] border-solid border-[1px] rounded-lg border-primaryBlue font-bold hover:bg-primaryBlue hover:text-white hover:duration-300">Log in</button>
-                    <button @click="overlay1 = !overlay1" class="m-2 w-1/2 h-[48px] bg-primaryBlue text-white border-solid border-[1px] rounded-lg border-primaryBlue font-bold">Join us</button>
+                    <button @click="overlay = !overlay" class="m-2 w-1/2 h-[48px] bg-[#fff] text-primaryBlue border-solid border-[1px] rounded-lg border-primaryBlue font-bold hover:bg-primaryBlue hover:text-white hover:duration-300">Log in</button>
+                    <button @click="overlay1 = !overlay1" class="m-2 w-1/2 h-[48px] bg-primaryBlue text-white border-solid border-[1px] rounded-lg border-primaryBlue font-bold hover:bg-[#4385CE] hover:duration-300 hover:text-[#FDFFFE]">Join us</button>
                 </div>
             </ul>
         </div>

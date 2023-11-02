@@ -1,6 +1,6 @@
 <template>
     <div class="splide splide1 flex gap-8 w-full xl:max-w-[1266px] lg:max-w-[1024px] overflow-hidden">
-        <div class="splide__track h-[620px]">
+        <div  class="splide__track h-[620px]">
             <div class="splide__list h-[630px] flex gap-8">
                 <div v-for="instance in instances" :key="instance" class="splide__slide min-w-[416px] h-[602px] max-w-[430px] rounded-b-2xl sm:min-w-[320px]">
                     <TourBlock :tour="tours[0]">
@@ -32,7 +32,7 @@ import { useToursStore } from "../../stores/store.js"
 const { tours } = useToursStore();
 
 import Splide from "@splidejs/splide";
-import '@splidejs/splide/css/skyblue';
+// import '@splidejs/splide/css/skyblue';
 const instances = [1, 2, 3, 4, 5];
 
 const splideOptions = {

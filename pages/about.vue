@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <!-- <AboutSlidersSection /> -->
+    <div class="sm:mt-24">
+        <AboutSlidersSection />
         <RoutePath />
         <AboutDirectorArt />
         <AboutBoxes />
