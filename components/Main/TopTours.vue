@@ -74,4 +74,16 @@ onUnmounted(destroySplide);
     .top {
         top: 605px;
     }
+
+    .splide__arrow {
+        background: none;
+        width: 45px;
+        height: 45px;
+    }
+
+    .splide__arrow svg {
+        background: none;
+        width: 45px;
+        height: 45px;
+    }
 </style>

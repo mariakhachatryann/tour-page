@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col justify-center items-center md:mt-20 mb-20">
-        <div class="max-w-[530px] mt-[160px] flex flex-col justify-center items-center gap-4">
+        <div class="max-w-[530px] mt-32 flex flex-col justify-center items-center gap-4">
             <h3 class="text-[32px] font-extrabold">Top Places</h3>
             <p class="text-base text-primaryGrey text-center">Lorem ipsum dolor sit amet consectetur. Mus sed augue fames tristique mi elementum volutpat magna. Ut non enim dui vitae egestas justo aliquet sed suspendisse.</p>
             <div class="mt-[30px] mb-10">
