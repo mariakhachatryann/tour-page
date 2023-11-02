@@ -101,6 +101,5 @@ const { removeFromCart } = myCart;
 function remove(index) {
     removeFromCart(index);
     window.location.reload()
-
 }
 </script>

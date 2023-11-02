@@ -6,8 +6,8 @@
             </p>
         </div>
         <div class="max-w-[1384px] m-8 sm:m-0 w-full mt-8 flex flex-col">
-            <div class="flex gap-8 mb-8 lg:flex-col" v-for="group in transferGroups" :key="group.id">
-                <div class="w-full md:mb-32" v-for="(block, index) in group.blocks" :key="block.id">
+            <div class="flex gap-8 lg:flex-col" v-for="group in transferGroups" :key="group.id">
+                <div class="w-full" v-for="(block, index) in group.blocks" :key="block.id">
                     <NuxtLink :to="'/transfer/' + group.blocks[index].id" target="_blank">
                         <TransferBlock :transfer="group.blocks[index]" />
                     </NuxtLink>

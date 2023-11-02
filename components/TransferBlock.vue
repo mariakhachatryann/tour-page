@@ -1,12 +1,12 @@
 <template>
-    <div class="flex w-full h-[190px] bg-[#E8F0F9] hover:bg-[#fff] md:flex-col mb-20 cursor-pointer hover:scale-95 hover:duration-300 hover:shadow-xl rounded-2xl">
+    <div class="flex w-full border-[1px] border-[#D0E1F3] h-[190px] md:h-[390px] bg-[#F7FAFE] hover:bg-[#fff] md:flex-col mb-8 cursor-pointer hover:scale-95 hover:duration-300 hover:shadow-xl rounded-2xl">
         <div class="">
             <div :style="{ backgroundImage: `url(${imgSrc})` }" class="md:rounded-t-2xl md:rounded-b-none rounded-bl-2xl rounded-tl-2xl w-[206px] md:w-full h-[190px] bg-cover bg-center"></div>
         </div>
         <div class="p-4 max-w-[704px] min-w-[200px] w-full md:w-full rounded-br-2xl rounded-tr-2xl">
             <div class="flex justify-between w-full ">
                 <p class="text-xl font-bold text-[#000A15] truncate">{{ props.transfer.title }}</p>
-                <div class=" bg-white px-4 p-1 rounded-3xl border-[1px] border-[#47CB92]">
+                <div class="px-4 p-1 rounded-3xl border-[1px] border-[#47CB92]">
                     <p class="text-[#47CB93] text-xs font-semibold">Popular</p>
                 </div>
             </div>

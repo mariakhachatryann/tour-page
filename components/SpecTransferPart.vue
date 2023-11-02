@@ -2,7 +2,6 @@
     <div class="max-w-[984px] pl-4 w-full ">
         <p class="text-[32px] font-extrabold mb-4 text-[#000A15]">Reservation</p>
         <TransferBlock class="cursor-default" :transfer="props.selectedTransfer"></TransferBlock>
-        
         <form name="transferCart">
             <div class="w-full">
                 <p class="text-2xl font-bold text-[#000A15] mb-4">Fill information</p>
