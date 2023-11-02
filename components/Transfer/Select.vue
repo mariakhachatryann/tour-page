@@ -10,11 +10,19 @@
                     <div class="flex w-full items-center gap-8 sm:flex-col md:gap-2">
                         <div class="max-w-[450px] w-full">
                             <p class="text-[#333B44] mb-1">From</p>
-                            <select class="bg-white w-full rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
-                                <option value="1">select</option>
-                                <option value="2">select</option>
-                                <option value="3">select</option>
-                            </select>
+                            <div class="relative bg-white rounded-lg mt-1">
+                                <div class="py-3 flex px-4 gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5767C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5767C14.8058 9.04779 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.04779 9.19423 10.5767Z" fill="#666C73"/>
+                                    </svg>
+                                    <select class="bg-white w-full rounded-lg cursor-pointer border-none outline-none">
+                                        <option selected disabled value="unselect" class="text-[#80858A] font-light">Select</option>
+                                        <option value="fr">France</option>
+                                        <option value="gr">Greece</option>
+                                        <option value="usa">USA</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         <div class="mt-8 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
@@ -23,11 +31,19 @@
                         </div>
                         <div class="max-w-[450px] w-full">
                             <p class="text-[#333B44] mb-1">To</p>
-                            <select class="bg-white w-full rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
-                                <option value="1">select</option>
-                                <option value="2">select</option>
-                                <option value="3">select</option>
-                            </select>
+                            <div class="relative bg-white rounded-lg mt-1">
+                                <div class="py-3 flex px-4 gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5767C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5767C14.8058 9.04779 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.04779 9.19423 10.5767Z" fill="#666C73"/>
+                                    </svg>
+                                    <select class="bg-white w-full rounded-lg cursor-pointer border-none outline-none">
+                                        <option selected disabled value="unselect" class="text-[#80858A] font-light">Select</option>
+                                        <option value="fr">France</option>
+                                        <option value="gr">Greece</option>
+                                        <option value="usa">USA</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

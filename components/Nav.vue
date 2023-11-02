@@ -94,7 +94,7 @@ onMounted(() => {
     if (toursData === null) {
         tours.value = [];
     } else {
-        tours.value = toursData;
+        tours.value = transfersData;
     }
 });
 </script>
