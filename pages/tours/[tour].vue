@@ -91,7 +91,7 @@ const infants = reactive({
 })
 
 function addTour() {
-    if (adults && children ) {
+    if (adults.qnt) {
         let toData = { adults, children, infants, ...selectedTour}
         tourToCart(toData)
     }

@@ -3,7 +3,7 @@
     <div class="w-full justify-center items-center flex px-8">
         <div class="max-w-[1384px] w-full">
             <div class="w-full flex justify-start lg:flex-col gap-4 py-8">
-                <SpecTransferPart @provide-options="getOptions" :selectedTransfer="selectedTransfer" />
+                <SpecTransferPart :not-valid="notValid" @provide-options="getOptions" :selectedTransfer="selectedTransfer" />
                 <div class="w-[322px] lg:w-full p-6 rounded-lg max-h-[550px] border-[1px] border-solid border-[#D0E1F3]">
                     <div class="flex gap-2 whitespace-pre-wrap">
                         <p class="font-light text-[#666C73]">Transport: </p>
@@ -89,10 +89,18 @@ function getOptions(details) {
     details = {}
 }
 
+// let notValid = false
+
 function addTransfer() {
     if (transferDetails.from && transferDetails.to && transferDetails.startAdress && transferDetails.destinationAdress && transferDetails.date && transferDetails.time) {
         let toData = {...transferDetails, ...selectedTransfer}
         transferToCart(toData)
+        // notValid = false
+        // console.log('don;');
+    } else {
+        notValid = true
+        // console.log('don5555;');
+
     }
     window.location.reload()
 }
