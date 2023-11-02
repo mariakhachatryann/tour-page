@@ -6,11 +6,11 @@
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
-                                <div class="w-full h-96 rounded-lg bg-[url('~/assets/img/frame7.jpg')] bg-center"></div>
+                                <div class="w-full h-96 rounded-lg bg-[url('~/assets/img/hotel/hotel.jpg')] bg-center"></div>
                                 <!-- <img class="w-full h-auto" src="~/assets/img/frame7.jpg" alt=""> -->
                             </li>
                             <li class="splide__slide">
-                                <div class="w-full h-96 rounded-lg bg-[url('~/assets/img/hotel/hotel.jpg')] bg-center"></div>
+                                <div class="w-full h-96 rounded-lg bg-[url('~/assets/img/hotel/hotel1.jpg')] bg-center"></div>
                             </li>
                             <li class="splide__slide">
                                 <div class="w-full h-96 rounded-lg bg-[url('~/assets/img/tour/frame3.png')] bg-center"></div>
@@ -42,7 +42,7 @@
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
-                                    <div class="w-full h-[248px] rounded-lg bg-[url('~/assets/img/hotel/hotel1.jpg')] bg-center bg-cover"></div>
+                                    <div class="w-full h-[248px] rounded-lg bg-[url('~/assets/img/hotel/hotel2.jpg')] bg-center bg-cover"></div>
                                 </li>
                                 <li class="splide__slide">
                                     <div class="w-full h-[248px] rounded-lg bg-[url('~/assets/img/hotel/hotel3.jpg')] bg-center bg-cover"></div>
@@ -63,7 +63,7 @@
 </template>
 
 <script setup>
-// import '@splidejs/splide/css/sea-green';
+import '@splidejs/splide/css/skyblue';
 import Splide from "@splidejs/splide";
 
 const splideOptions = {

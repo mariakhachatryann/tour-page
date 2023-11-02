@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center w-full items-center my-16">
+    <div class="flex justify-center w-full items-center my-16 px-4">
         <div class="max-w-[1384px] flex justify-center items-center lg:flex-col-reverse bg-[#F1F7FE] rounded-3xl ">
             <div class="max-w-[530px] mx-12 my-4 lg:max-w-full md:mx-4">
                 <p class="text-[32px] xl:text-[28px] font-extrabold lg:text-[28px]">Subscription our newsletter and get updated every time</p>

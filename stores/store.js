@@ -71,8 +71,19 @@ export const useMyCart = defineStore("myCart", {
     },
     actions: {
         transferToCart(transferDate) {
+            // let data = {...transferDate, ind: this.transfers.length}
             this.transfers.push(transferDate)
+            let existingArray = JSON.parse(localStorage.getItem('transfers')) || [];            
+            console.log(existingArray);
+            existingArray.push(transferDate);
+            localStorage.setItem('transfers', JSON.stringify(existingArray));
+        },
+        removeFromCart(index) {
+            let existingArray = JSON.parse(localStorage.getItem('transfers')) || [];            
+            existingArray.splice(index, 1)
+            localStorage.setItem('transfers', JSON.stringify(existingArray));
             console.log(this.transfers);
+            // localStorage.setItem("transfers", JSON.stringify(this.transfers))
         }
     }
 })

@@ -20,7 +20,7 @@
                     </svg>
                 </div>
                 <div class="absolute bottom-8 left-8">
-                    <div class=" rounded-full bg-[#088C53] text-white p-2 w-6 h-6 flex items-center">{{ myCart.transfers.length }}</div>
+                    <div class=" rounded-full bg-[#088C53] text-white p-2 w-6 h-6 flex items-center">{{ transfers.length }}</div>
                 </div>
             </div>
             <div class="cursor-pointer">
@@ -66,23 +66,29 @@
 </template>
 
 <script setup>
-import { useMyCart } from "~/stores/store";
-const myCart = useMyCart();
-
 let menu = ref(false);
+const overlay = ref(false);
+const overlay1 = ref(false);
+const overlayPass = ref(false);
+const openCart = ref(false);
+const transfers = ref([]); // Initialize the transfers array
 
 function toggleMenu() {
-    menu.value = !menu.value
+    menu.value = !menu.value;
 }
 
 function closeMenu() {
     menu.value = false;
 }
 
-const overlay = ref(false);
-const overlay1 = ref(false);
-const overlayPass = ref(false);
-const openCart = ref(false);
+onMounted(() => {
+    const transfersData = JSON.parse(localStorage.getItem("transfers"));
+    if (transfersData === null) {
+        transfers.value = [];
+    } else {
+        transfers.value = transfersData;
+    }
+});
 </script>
 
 <style>

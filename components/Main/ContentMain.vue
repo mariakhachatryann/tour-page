@@ -1,5 +1,5 @@
 <template>
-    <div class="flex py-20  justify-center items-center xl1:px-8 lg:flex-col lg:justify-center lg:items-center lg:px-8">
+    <div class="flex py-20 px-8 justify-center items-center lg:flex-col lg:justify-center lg:items-center lg:px-8">
         <div class="w-[558px] mr-[150px] lg:m-0 lg:w-full lg:flex lg:flex-col lg:text-center lg:mb-8 md:p-0 sm:p-0">
             <h1 class="font-extrabold text-[48px] lg:text-[32px]">{{ $t("mainText") }}</h1>
             <p class="text-primaryGrey font-normal text-base lg:my-4">{{ $t("mainBottom") }}</p>
