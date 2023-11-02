@@ -85,6 +85,7 @@ function closeMenu() {
 onMounted(() => {
     const transfersData = JSON.parse(localStorage.getItem("transfers"));
     const toursData = JSON.parse(localStorage.getItem("tours"));
+    console.log(tours);
     if (transfersData === null) {
         transfers.value = [];
     } else {
@@ -94,7 +95,7 @@ onMounted(() => {
     if (toursData === null) {
         tours.value = [];
     } else {
-        tours.value = transfersData;
+        tours.value = toursData;
     }
 });
 </script>
