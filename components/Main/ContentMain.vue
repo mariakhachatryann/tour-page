@@ -50,7 +50,6 @@
 <script setup>
 import Splide from "@splidejs/splide";
 import '@splidejs/splide/css';
-import '@splidejs/splide/css/skyblue';
 
 const splideOptions = {
     type: "loop",

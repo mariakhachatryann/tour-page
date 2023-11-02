@@ -28,20 +28,16 @@
 </template>
 
 <script setup>
-// import '@splidejs/splide/css/skyblue';
 import Splide from "@splidejs/splide";
 import { useHotelsStore } from "../../stores/store.js"
 const { hotels } = useHotelsStore();
-console.log(hotels);
 const instances = [1, 2, 3, 4, 5];
-let selected = ref("tours");
 
 const splideOptions = {
     type: "loop",
     drag: "free",
     arrows: true,
-    perPage: 1,
-    theme: "skyblue"
+    perPage: 1
 };
 
 let splide;
@@ -59,7 +55,6 @@ const destroySplide = () => {
 }
 
 onMounted(initSplide);
-
 onUnmounted(destroySplide);
 </script>
 

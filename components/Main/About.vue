@@ -17,7 +17,6 @@
                 <div class="max-w-[392px] md:max-w-[184px] w-full rounded-lg mr-[68px]"> 
                     <img src="~/assets/img/tour/frame.png" alt="" class="rounded-3xl" /> 
                     <!-- <NuxtImg format="webp" src="tour/frame.png" class="rounded-3xl"></NuxtImg> -->
-
                 </div> 
                 <div class="max-w-[174px] w-full max-h-[174px] md:max-w-[84px] md:max-h-[84px] shadow-md bg-white rounded-lg"> 
                     <div class="flex flex-col justify-center items-center rounded-xl md:rounded-sm mt-5">

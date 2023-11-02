@@ -180,11 +180,10 @@ watch(() => transferDetails.date, (newDate) => {
 function returnCheck() {
     transferDetails.includeReturn = !transferDetails.includeReturn;
     transferDetails.return.state = !transferDetails.return.state
-    console.log(transferDetails.return.state);
 }
 
 watch(() => transferDetails.time, () => enableTime.value = true)
-watch(() => transferDetails.return.time, () => enableReturnTime.value = true, console.log('done'))
+watch(() => transferDetails.return.time, () => enableReturnTime.value = true)
 
 watch(transferDetails, () => {
     const formattedDate = dateFormat(new Date(transferDetails.date));
@@ -210,12 +209,9 @@ input::-webkit-calendar-picker-indicator {
     width: 24px;
     height: 24px;
     cursor: pointer;
-    /* position: absolute; 
-    left: 7%; */
 }
 
 .vuejs3-datepicker__inputvalue {
     min-width: 80px !important;
-    /* max-width: 110px !important; */
 }
 </style>

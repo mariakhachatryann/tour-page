@@ -99,22 +99,6 @@
                     </div>
                     <div class="w-1/2 mt-6 sm:w-full">
                         <div class="flex mt-1">
-                            <!-- <div class=" pl-4 py-4 mr-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 3.50049C7.80521 3.50049 4 7.3057 4 12.0005C4 16.6953 7.80521 20.5005 12.5 20.5005C17.1948 20.5005 21 16.6953 21 12.0005C21 7.3057 17.1948 3.50049 12.5 3.50049ZM2.5 12.0005C2.5 6.47727 6.97679 2.00049 12.5 2.00049C18.0232 2.00049 22.5 6.47727 22.5 12.0005C22.5 17.5237 18.0232 22.0005 12.5 22.0005C6.97679 22.0005 2.5 17.5237 2.5 12.0005Z" fill="#000A15"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1602 7.09717C12.5744 7.09717 12.9102 7.43295 12.9102 7.84717V12.2683L16.3144 14.2991C16.6701 14.5113 16.7865 14.9717 16.5743 15.3274C16.362 15.6831 15.9016 15.7995 15.5459 15.5873L11.7759 13.3383C11.5491 13.2029 11.4102 12.9583 11.4102 12.6942V7.84717C11.4102 7.43295 11.7459 7.09717 12.1602 7.09717Z" fill="#000A15"/>
-                                </svg>
-                            </div>
-                            <date-picker
-                                :full-month-name="true"
-                                placeholder="Choose time"
-                                wrapper-class="p-0 min-w-[120px]"
-                                input-class="bg-[#FFF] w-full pl-0 py-4  mr-0 border-none outline-none"
-                                :typeable="false"
-                                :hideInput="false"
-                                icon-width="0" icon-height="0"
-                            >
-                            </date-picker> -->
                             <input v-model="hotelOptions.time" name="hotelOptionsTime" class="bg-[#FFF] border-[1px] border-solid border-[#E6E6E7] w-full p-[13px] rounded-r-lg rounded-l-none  mr-0 outline-none" type="time"/>
                         </div>
                     </div>
@@ -143,22 +127,6 @@
                     </div>
                     <div class="w-1/2 mt-6 sm:w-full">
                         <div class="flex mt-1 bg-white">
-                            <!-- <div class=" pl-4 py-4 mr-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 3.50049C7.80521 3.50049 4 7.3057 4 12.0005C4 16.6953 7.80521 20.5005 12.5 20.5005C17.1948 20.5005 21 16.6953 21 12.0005C21 7.3057 17.1948 3.50049 12.5 3.50049ZM2.5 12.0005C2.5 6.47727 6.97679 2.00049 12.5 2.00049C18.0232 2.00049 22.5 6.47727 22.5 12.0005C22.5 17.5237 18.0232 22.0005 12.5 22.0005C6.97679 22.0005 2.5 17.5237 2.5 12.0005Z" fill="#000A15"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1602 7.09717C12.5744 7.09717 12.9102 7.43295 12.9102 7.84717V12.2683L16.3144 14.2991C16.6701 14.5113 16.7865 14.9717 16.5743 15.3274C16.362 15.6831 15.9016 15.7995 15.5459 15.5873L11.7759 13.3383C11.5491 13.2029 11.4102 12.9583 11.4102 12.6942V7.84717C11.4102 7.43295 11.7459 7.09717 12.1602 7.09717Z" fill="#000A15"/>
-                                </svg>
-                            </div>
-                            <date-picker
-                                :full-month-name="true"
-                                placeholder="Choose time"
-                                wrapper-class="p-0 min-w-[120px]"
-                                input-class="bg-[#FFF] w-full pl-0 py-4  mr-0 border-none outline-none"
-                                :typeable="false"
-                                :hideInput="false"
-                                icon-width="0" icon-height="0"
-                            >
-                            </date-picker> -->
                             <input v-model="hotelOptions.returnTime" name="hotelOptionsReturnTime" class="bg-[#FFF]  border-[1px] border-solid border-[#E6E6E7] w-full p-[13px] rounded-r-lg rounded-l-none  mr-0 outline-none" type="time"/>
                         </div>
                     </div>
@@ -236,8 +204,6 @@ input::-webkit-calendar-picker-indicator {
     width: 24px;
     height: 24px;
     cursor: pointer;
-    /* position: absolute; 
-    left: 7%; */
 }
 
 .v-slider.v-input--horizontal .v-slider-track  {

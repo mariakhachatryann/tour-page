@@ -70,20 +70,27 @@ export const useMyCart = defineStore("myCart", {
         }
     },
     actions: {
-        transferToCart(transferDate) {
-            // let data = {...transferDate, ind: this.transfers.length}
-            this.transfers.push(transferDate)
+        transferToCart(transferData) {
+            this.transfers.push(transferData)
             let existingArray = JSON.parse(localStorage.getItem('transfers')) || [];            
-            console.log(existingArray);
-            existingArray.push(transferDate);
+            existingArray.push(transferData);
             localStorage.setItem('transfers', JSON.stringify(existingArray));
         },
         removeFromCart(index) {
             let existingArray = JSON.parse(localStorage.getItem('transfers')) || [];            
             existingArray.splice(index, 1)
             localStorage.setItem('transfers', JSON.stringify(existingArray));
-            console.log(this.transfers);
-            // localStorage.setItem("transfers", JSON.stringify(this.transfers))
-        }
+        },
+        tourToCart(tourData) {
+            this.tours.push(tourData)
+            let existingArray = JSON.parse(localStorage.getItem('tours')) || [];            
+            existingArray.push(tourData);
+            localStorage.setItem('tours', JSON.stringify(existingArray));
+        },
+        removeTourFromCart(index) {
+            let existingArray = JSON.parse(localStorage.getItem('tours')) || [];            
+            existingArray.splice(index, 1)
+            localStorage.setItem('tours', JSON.stringify(existingArray));
+        },
     }
 })

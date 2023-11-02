@@ -28,14 +28,11 @@
 </template>
 
 <script setup>
-// import '@splidejs/splide/css/skyblue';
-
 import Splide from "@splidejs/splide";
 import { useOutgoingsStore } from "../../stores/store.js"
 const { outgoings } = useOutgoingsStore();
 
 const instances = [1, 2, 3, 4, 5];
-let selected = ref("tours");
 
 const splideOptions = {
     type: "loop",

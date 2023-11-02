@@ -20,7 +20,7 @@
                     </svg>
                 </div>
                 <div class="absolute bottom-8 left-8">
-                    <div class=" rounded-full bg-[#088C53] text-white p-2 w-6 h-6 flex items-center">{{ transfers.length }}</div>
+                    <div class=" rounded-full bg-[#088C53] text-white p-2 w-6 h-6 flex items-center">{{ transfers.length + tours.length }}</div>
                 </div>
             </div>
             <div class="cursor-pointer">
@@ -72,6 +72,7 @@ const overlay1 = ref(false);
 const overlayPass = ref(false);
 const openCart = ref(false);
 const transfers = ref([]); // Initialize the transfers array
+const tours = ref([]); // Initialize the transfers array
 
 function toggleMenu() {
     menu.value = !menu.value;
@@ -83,10 +84,17 @@ function closeMenu() {
 
 onMounted(() => {
     const transfersData = JSON.parse(localStorage.getItem("transfers"));
+    const toursData = JSON.parse(localStorage.getItem("tours"));
     if (transfersData === null) {
         transfers.value = [];
     } else {
         transfers.value = transfersData;
+    }
+
+    if (toursData === null) {
+        tours.value = [];
+    } else {
+        tours.value = toursData;
     }
 });
 </script>

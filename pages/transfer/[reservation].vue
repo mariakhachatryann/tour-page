@@ -77,26 +77,6 @@ const { dateFormat } = useUtils();
 
 let transferDetails = reactive({});
 
-const disabledDates = {
-    to: new Date()
-}
-
-const disabledDatesReturn = {
-    to: new Date(transferDetails.date)
-}
-
-let enableTime = ref(false);
-let enableReturnTime = ref(false)
-
-watch(() => transferDetails.date, (newDate) => {
-    if (newDate) {
-        disabledDatesReturn.to = new Date(newDate);
-    }
-});
-
-watch(() => transferDetails.time, () => enableTime.value = true)
-watch(() => transferDetails.returnTime, () => enableReturnTime.value = true)
-
 const selected = transfers.filter(transfer => transfer.id == route.params.reservation);
 const [selectedTransfer ] = selected
 
@@ -141,9 +121,6 @@ const transferGroups = [
     },
 ]
 
-function refreshPage() {
-    location.refresh()
-}
 </script>
 
 <style>
@@ -151,12 +128,9 @@ input::-webkit-calendar-picker-indicator {
     width: 24px;
     height: 24px;
     cursor: pointer;
-    /* position: absolute; 
-    left: 7%; */
 }
 
 .vuejs3-datepicker__inputvalue {
     min-width: 80px !important;
-    /* max-width: 110px !important; */
 }
 </style>

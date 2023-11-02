@@ -95,7 +95,7 @@ const elementHeight = ref("806px");
 function setElementHeight() {
     if (window.innerHeight < 860) {
         elementHeight.value = "600px";
-    }else {
+    } else {
         elementHeight.value = "906px";
     }
 }

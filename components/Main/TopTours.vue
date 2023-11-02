@@ -28,11 +28,10 @@
 </template>
 
 <script setup>
+import Splide from "@splidejs/splide";
 import { useToursStore } from "../../stores/store.js"
 const { tours } = useToursStore();
 
-import Splide from "@splidejs/splide";
-// import '@splidejs/splide/css/skyblue';
 const instances = [1, 2, 3, 4, 5];
 
 const splideOptions = {
@@ -75,15 +74,4 @@ onUnmounted(destroySplide);
     .top {
         top: 605px;
     }
-
-    /* @media (max-width: 768px) {
-        .top {
-            top: 710px;
-        }
-    } */
-    
-
-    /* .left {
-        left: 35%;
-    } */
 </style>

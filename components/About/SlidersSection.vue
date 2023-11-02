@@ -134,7 +134,6 @@ onUnmounted(destroySlider3);
 </script>
 
 <style>
-/* @import '@splidejs/splide/css/sea-green'; */
 .splide {
     padding: 0;
 } 

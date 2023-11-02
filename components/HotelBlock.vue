@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#E8F0F9] hover:bg-[#fff] hover:scale-95 hover:duration-300 hover:shadow-xl rounded-2xl">
+    <div class="bg-[#E8F0F9] border-[1px] border-[#D0E1F3] hover:bg-[#fff] hover:scale-95 hover:duration-300 hover:shadow-xl rounded-2xl">
         <div :style="{ backgroundImage: `url(${imgSrc})` }" class="relative p-[0.5px] rounded-t-2xl h-[278px] bg-cover bg-center bg-no-repeat">
             <div class="absolute py-2 px-4 rounded-t-2xl rounded-br-2xl bg-transparentCol">
                 <div class="flex gap-1">

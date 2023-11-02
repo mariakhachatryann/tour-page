@@ -1,5 +1,5 @@
 <template>
-    <div class="hover:scale-95 bg-[#E8F0F9] hover:duration-300 hover:shadow-xl rounded-2xl hover:bg-[#fff]">
+    <div class="hover:scale-95 border-[1px] border-[#D0E1F3] bg-[#E8F0F9] hover:duration-300 hover:shadow-xl rounded-2xl hover:bg-[#fff]">
         <div :style="{ backgroundImage: `url(${imgSrc})` }" class="p-[0.5px] rounded-t-2xl h-[278px] bg-cover bg-center bg-no-repeat">
             <svg class="rounded-t-2xl" width="99" height="34" viewBox="0 0 99 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0H83C91.8366 0 99 7.16344 99 16V18C99 26.8366 91.8366 34 83 34H0V0Z" fill="#000A15" fill-opacity="0.5" />
