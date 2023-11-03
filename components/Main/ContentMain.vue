@@ -1,9 +1,9 @@
 <template>
     <div class="flex py-20 px-8 justify-center items-center lg:flex-col lg:justify-center lg:items-center lg:px-8">
-        <div class="w-[558px] mr-[150px] lg:m-0 lg:w-full lg:flex lg:flex-col lg:text-center lg:mb-8 md:p-0 sm:p-0">
+        <div class="w-[558px] mr-[150px] lg:m-0 lg:w-full lg:flex lg:items-center lg:flex-col lg:text-center lg:mb-8 md:p-0 sm:p-0">
             <h1 class="font-extrabold text-[48px] lg:text-[32px]">{{ $t("mainText") }}</h1>
             <p class="text-primaryGrey font-normal text-base lg:my-4">{{ $t("mainBottom") }}</p>
-            <button class="px-8 py-3 lg:px-8 lg:py-3 text-base font-bold mt-7 rounded-lg bg-[#fff] border-solid text-primaryBlue border-[1px] border-primaryBlue hover:bg-primaryBlue hover:text-white hover:duration-300">
+            <button class="px-8 py-3 lg:px-4 max-w-[790px] w-full lg:py-3 text-base font-bold mt-7 rounded-lg bg-[#fff] border-solid text-primaryBlue border-[1px] border-primaryBlue hover:bg-primaryBlue hover:text-white hover:duration-300">
                 <NuxtLink to="/tours">Discover our tours</NuxtLink>
             </button>
         </div>
