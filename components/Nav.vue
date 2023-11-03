@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-evenly gap-14 h-[80px] bg-white pt-2 xl:justify-between px-8 sm:gap-2 sm:px-1 sm:justify-between">
+    <div class="flex justify-evenly gap-14 h-[80px] bg-white border-b-[1px] border-solid border-[#E6E7E8] pt-2 xl:justify-between px-8 sm:gap-2 sm:px-1 sm:justify-between">
         <NuxtLink to="/" class="w-[152px] h-[48px] bg-[#E8F0F9] mt-2 text-center items-center">
             <p class="text-2xl text-[#01000E] font-bold p-1">LOGO</p>
         </NuxtLink>
