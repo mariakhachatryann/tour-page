@@ -139,7 +139,7 @@
 
 <script setup>
 import DatePicker from "vuejs3-datepicker";
-const props = defineProps(["selectedTransfer", "notValid"]);
+const props = defineProps(["selectedTransfer"]);
 const emit = defineEmits(["provideOptions"]);
 const { dateFormat } = useUtils();
 

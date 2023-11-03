@@ -34,7 +34,6 @@
                     <TransferCart :font-size="'14px'" v-for="(transfer, index) in transfers" :key="transfer" :transfer="transfer" :id="index" />
                 </div>
             </div>
-
             <div v-if="tours.length" class="max-w-[1384px] w-full mx-4 p-4">
                 <div class="bg-white border-[1px] border-solid border-[#D0E1F3] rounded-t-2xl">
                     <p class="text-center text-primaryDark text-2xl font-bold bg-[#E8F0F9] rounded-t-2xl px-8 py-2 leading-8">Tours</p>

@@ -71,8 +71,8 @@ const overlay = ref(false);
 const overlay1 = ref(false);
 const overlayPass = ref(false);
 const openCart = ref(false);
-const transfers = ref([]); // Initialize the transfers array
-const tours = ref([]); // Initialize the transfers array
+const transfers = ref([]);
+const tours = ref([]);
 
 function toggleMenu() {
     menu.value = !menu.value;
@@ -85,7 +85,6 @@ function closeMenu() {
 onMounted(() => {
     const transfersData = JSON.parse(localStorage.getItem("transfers"));
     const toursData = JSON.parse(localStorage.getItem("tours"));
-    console.log(tours);
     if (transfersData === null) {
         transfers.value = [];
     } else {
