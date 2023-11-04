@@ -25,6 +25,7 @@
                         </div>
                         <date-picker
                             v-model="tourOptions.date"
+                            :disabled-dates="disabledDates"
                             :full-month-name="true"
                             placeholder="Choose date"
                             wrapper-class="sm:w-full p-0 min-w-[120px]"
@@ -66,6 +67,10 @@ const tourOptions = reactive({
     type: "",
     price: { "from": priceRange.value[0], "to": priceRange.value[1] }
 })
+
+const disabledDates = {
+    to: new Date()
+}
 
 function submitOptions() {
     console.log(tourOptions);
