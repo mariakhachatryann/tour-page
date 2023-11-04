@@ -52,6 +52,7 @@
                             </div>
                             <date-picker
                                 v-model="outgoingOptions.date"
+                                :disabled-dates="disabledDates"
                                 :full-month-name="true"
                                 placeholder="Choose day"
                                 wrapper-class="p-0 min-w-[80px]"
@@ -79,8 +80,9 @@
                                 </svg>
                             </div>
                             <date-picker
-                                :full-month-name="true"
                                 v-model="outgoingOptions.returnDate"
+                                :disabled-dates="disabledDatesReturn"
+                                :full-month-name="true"
                                 placeholder="Choose day"
                                 wrapper-class="p-0 min-w-[120px]"
                                 input-class="bg-[#FFF] w-full pl-0 py-4  mr-0 border-none outline-none"
@@ -212,6 +214,20 @@ const outgoingOptions = reactive({
     firstSeats: false,
     sportEquipment: false
 })
+
+const disabledDates = {
+    to: new Date()
+}
+
+const disabledDatesReturn = {
+    to: new Date(outgoingOptions.date)
+}
+
+watch(() => outgoingOptions.date, (newDate) => {
+    if (newDate) {
+        disabledDatesReturn.to = new Date(newDate);
+    }
+});
 
 </script>
 
