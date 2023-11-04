@@ -86,9 +86,10 @@
                             </div>
                             <date-picker
                                 v-model="hotelOptions.date"
+                                :disabled-dates="disabledDates"
                                 :full-month-name="true"
                                 placeholder="Choose day"
-                                wrapper-class="p-0 min-w-[80px]"
+                                wrapper-class="p-0"
                                 input-class="bg-[#FFF] w-full pl-0 py-4  mr-0 border-none outline-none"
                                 :typeable="false"
                                 :hideInput="false"
@@ -114,6 +115,7 @@
                             </div>
                             <date-picker
                                 v-model="hotelOptions.returnDate"
+                                :disabled-dates="disabledDatesReturn"
                                 :full-month-name="true"
                                 placeholder="Choose day"
                                 wrapper-class="p-0 min-w-[120px]"
@@ -197,6 +199,21 @@ const hotelOptions = reactive({
     childSeats: "unselect",
     price: { "from": priceRange.value[0], "to": priceRange.value[1] }
 })
+
+const disabledDates = {
+    to: new Date()
+}
+
+const disabledDatesReturn = {
+    to: new Date(hotelOptions.date)
+}
+
+
+watch(() => hotelOptions.date, (newDate) => {
+    if (newDate) {
+        disabledDatesReturn.to = new Date(newDate);
+    }
+});
 </script>
 
 <style>
