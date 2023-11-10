@@ -8,7 +8,7 @@
         </NuxtLoadingIndicator>
         <div class="h-[120px] w-full sm:h-[88px]">
             <Header v-if="!isHeaderHidden" />
-            <Nav />
+            <Nav :scrolled="isHeaderHidden" />
         </div>
         <NuxtPage/>
     </div>
@@ -20,7 +20,7 @@ const isLoaded = ref(false);
 
 const handleScroll = () => {
     const scrollY = window.scrollY;
-    isHeaderHidden.value = scrollY > 10;
+    isHeaderHidden.value = scrollY > 25;
 };
 
 onMounted(() => {

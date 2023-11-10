@@ -1,13 +1,13 @@
 <template>
     <div class="flex justify-center items-center w-full mb-20">
-        <form class="max-w-[1384px] w-full flex justify-center p-8 sm:p-4 rounded-3xl flex-col items-center mx-8 border-[1px] border-solid border-[#D0E1F3] bg-[#F1F7FE]">
+        <form class="max-w-[1384px] w-full flex justify-center p-8 sm1:p-4 rounded-3xl flex-col items-center mx-8 border-[1px] border-solid border-[#D0E1F3] bg-[#F1F7FE]">
             <div class="flex md:flex-wrap max-w-[1384px] w-full">
                 <div class="w-full">
                     <div class="mb-8">
                         <p class="text-[32px] font-extrabold leading-[48px] text-center">Calculation of transfers</p>
                         <p class="text-base text-[#4D545B] text-center">Select locations to view transfer options and make a booking in an instant.</p>
                     </div>
-                    <div class="flex w-full items-center gap-8 sm:flex-col md:gap-2">
+                    <div class="flex w-full items-center gap-8 sm1:flex-col md:gap-2">
                         <div class="max-w-[450px] w-full">
                             <p class="text-[#333B44] mb-1">From</p>
                             <div class="relative bg-white rounded-lg mt-1">
