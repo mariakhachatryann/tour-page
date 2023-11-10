@@ -8,7 +8,7 @@
                     </OutgoingBlock>
                 </div>
             </div>
-            <div class="splide__arrows mt-10">
+            <div class="splide__arrows mt-10 md:hidden">
                 <button class="splide__arrow top splide__arrow--prev">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                         <path d="M19.9995 -0.000366211C31.0295 -0.000366211 39.9995 8.97163 39.9995 19.9996C39.9995 31.0276 31.0295 39.9996 19.9995 39.9996C8.97151 39.9996 -0.000488281 31.0276 -0.000488281 19.9996C-0.000488281 8.97163 8.97151 -0.000366211 19.9995 -0.000366211Z" fill="white"/>

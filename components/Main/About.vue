@@ -12,9 +12,9 @@
                 </svg>
             </div>
         </div>
-        <div class="max-w-[676px] md:max-w-[320px] flex flex-col w-full mt-16 md:mt-20 xl1min:m-0"> 
+        <div class="max-w-[676px] flex flex-col w-full mt-16 md:mt-20 xl1min:m-0"> 
             <div class="flex"> 
-                <div class="max-w-[392px] md:max-w-[184px] w-full rounded-lg mr-[68px]"> 
+                <div class="max-w-[392px] md:max-w-[350px] min-w-[184px] w-full rounded-lg mr-[68px]"> 
                     <img src="~/assets/img/tour/frame.png" alt="" class="rounded-3xl" /> 
                     <!-- <NuxtImg format="webp" src="tour/frame.png" class="rounded-3xl"></NuxtImg> -->
                 </div> 
@@ -49,7 +49,7 @@
                     </div>
                 </div> 
             </div> 
-            <div class="rounded-3xl max-w-[392px] md:max-w-[184px] border-[16px] md:border-[7.5px] border-white p-[0.5px] ml-auto -mt-12 md:-mt-5 w-full sm:mt-5" > 
+            <div class="rounded-3xl max-w-[392px] md:max-w-[350px] min-w-[184px] border-[16px] md:border-[7.5px] border-white p-[0.5px] ml-auto -mt-12 md:-mt-5 w-full sm:mt-5" > 
                 <img src="~/assets/img/tour/frame.png" alt="" class="rounded-3xl md:rounded-xl" /> 
                 <!-- <NuxtImg format="webp" src="tour/frame.png" class="rounded-3xl md:rounded-xl"></NuxtImg> -->
             </div> 

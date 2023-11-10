@@ -99,6 +99,6 @@ function submitOptions() {
 }
 
 .vuejs3-datepicker__inputvalue {
-    min-width: 120px;
+    min-width: 50px !important;
 }
 </style>

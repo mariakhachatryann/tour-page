@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[472px] md:w-[320px] bg-white pt-6 px-8 pb-6 rounded-2xl overflow-y-scroll" :style="{ height: elementHeight }">
+    <div class="w-[472px] md:w-[320px] bg-white pt-6 px-8 pb-6 rounded-2xl">
         <div class="flex w-full justify-between mb-8">
             <p class="text-2xl font-bold text-[#000A15]">Register</p>
             <div @click="closeJ" class="cursor-pointer">

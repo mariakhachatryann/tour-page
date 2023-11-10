@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white h-screen md:w-[312px] w-[512px] md:overflow-y-scroll" :class="{'overflow-y-scroll': [tours, transfers].length > 1 }">
+    <div class="bg-white h-screen md:w-[312px] w-[512px]" :class="{'overflow-y-scroll': [...tours, ...transfers].length > 1 }">
         <div class="flex">
             <div class="w-full py-3 px-4 flex justify-between bg-[#E8F0F9]">
                 <p class="text-[#000A15] text-[28px] font-extrabold leading-10">My Cart</p>

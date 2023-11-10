@@ -21,7 +21,7 @@
 .script { 
     display: block; 
     position: relative; 
-    padding-left: 45px; 
+    padding-left: 35px; 
     margin-bottom: 15px; 
     cursor: pointer; 
     font-size: 20px; 

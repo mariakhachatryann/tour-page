@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex h-[392px] xl:h-[320px] md:flex-col sm:mt-20 md:mb-80 sm:mb-40">       
+    <div class="w-full flex h-[392px] xl:h-[320px] md:flex-col sm1:mt-20 md:mb-80 sm:mb-40">       
         <div class="w-full max-w-[1212px] md:max-w-[769px] py-24 px-64 xl:px-8 lg:py-[50px] bg-gradient-to-r from-blue-500 to-blue-900">
             <p class="text-[40px] xl:text-[32px] lg:text-[28px] leading-[56px] font-extrabold text-[#FDFFFE]">{{ $t(props.title) }}</p>
             <p class="text-base xl:text-sm text-[#FDFFFE] line-clamp-[7]">{{ $t(props.text) }}</p>

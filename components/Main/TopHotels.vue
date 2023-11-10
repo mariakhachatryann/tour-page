@@ -1,5 +1,5 @@
 <template>
-    <div id="splide2"  class="splide splide2 flex gap-8 w-full xl:max-w-[1266px] lg:max-w-[1024px] overflow-hidden">
+    <div id="splide2" class="splide splide2 flex gap-8 w-full xl:max-w-[1266px] lg:max-w-[1024px] overflow-hidden">
         <div class="splide__track h-[590px]">
             <div class="splide__list h-[590px] flex gap-8">
                 <div v-for="instance in instances" :key="instance" class="splide__slide min-w-[416px] min-h-[602px] max-w-[430px] rounded-b-2xl sm:min-w-[320px]">
@@ -8,7 +8,7 @@
                     </HotelBlock>
                 </div>
             </div>
-            <div class="splide__arrows mt-10">
+            <div class="splide__arrows mt-10 md:hidden">
                 <button class="splide__arrow top splide__arrow--prev">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                         <path d="M19.9995 -0.000366211C31.0295 -0.000366211 39.9995 8.97163 39.9995 19.9996C39.9995 31.0276 31.0295 39.9996 19.9995 39.9996C8.97151 39.9996 -0.000488281 31.0276 -0.000488281 19.9996C-0.000488281 8.97163 8.97151 -0.000366211 19.9995 -0.000366211Z" fill="white"/>

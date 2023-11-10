@@ -94,8 +94,8 @@ function addTour() {
     if (adults.qnt) {
         let toData = { adults, children, infants, ...selectedTour}
         tourToCart(toData)
+        window.location.reload()
     }
-    window.location.reload()
 }
 
 function addQnt(param) {

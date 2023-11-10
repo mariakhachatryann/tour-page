@@ -57,7 +57,7 @@ const splideOptions = {
     arrows: true,
     pagination: false,
     autoplay: true,
-    drag: false
+    drag: true
 };
 
 let splide;

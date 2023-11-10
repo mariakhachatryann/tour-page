@@ -1,7 +1,8 @@
 <template>
     <div class="bg-[#E8F0F9] border-[1px] border-[#D0E1F3] hover:bg-[#fff] hover:scale-95 hover:duration-300 hover:shadow-xl rounded-2xl">
-        <div :style="{ backgroundImage: `url(${imgSrc})` }" class="relative p-[0.5px] rounded-t-2xl h-[278px] bg-cover bg-center bg-no-repeat">
-            <div class="absolute py-2 px-4 rounded-t-2xl rounded-br-2xl bg-transparentCol">
+        <div class="relative overflow-hidden rounded-t-2xl">            
+            <div :style="{ backgroundImage: `url(${imgSrc})` }" class="hover:scale-110 transition-all duration-300 p-[0.5px] rounded-t-2xl h-[278px] bg-cover bg-center bg-no-repeat"></div>
+            <div class="absolute top-0 py-2 px-4 rounded-t-2xl rounded-br-2xl bg-transparentCol">
                 <div class="flex gap-1">
                     <img src="~/assets/img/loc.svg" alt="">
                     <p class="text-xs font-medium text-[#FDFFFE]">Yerevan</p>

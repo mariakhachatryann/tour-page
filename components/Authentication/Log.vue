@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[472px] bg-white pt-6 px-8 pb-6 rounded-2xl md:w-[320px] overflow-y-scroll" :style="{ height: elementHeight }">
+    <div class="w-[472px] bg-white pt-6 px-8 pb-6 rounded-2xl md:w-[320px] ">
         <div class="flex w-full justify-between mb-8">
             <p class="text-2xl font-bold text-[#000A15] ">Log into account</p>
             <div @click="close" class="cursor-pointer">
@@ -18,7 +18,7 @@
             <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter your password" />
         </div>
         <div class="flex justify-between mb-6 md:flex-col md:gap-4">
-            <div class="flex items-cente gap-2 w-full">
+            <div class="flex items-center gap-2 w-full">
                 <CheckInp :forId="'rememberMe'">
                     <p class="text-base">Remember me</p>
                 </CheckInp>
