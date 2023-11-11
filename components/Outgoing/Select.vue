@@ -9,16 +9,19 @@
                 <div class="max-w-[604] w-full">
                     <p class="text-[#333B44] mb-1">From</p>
                     <div class="rounded-lg mt-1 relative bg-white flex justify-center items-center gap-2 w-full border-[1px] border-solid border-[#E6E6E7]">
-                        <svg class="absolute left-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M21.953 4.52654C21.9074 4.3696 21.8435 4.21808 21.7633 4.07625C21.3819 3.40231 20.6787 3 19.8821 3C19.4715 3 19.0622 3.1119 18.6982 3.3236L18.6883 3.32938L14.8192 5.78778L7.59608 3.34269C6.53088 2.98211 5.36256 3.10366 4.39072 3.67609C4.16462 3.8092 4.02431 4.05736 4.02447 4.32365C4.02466 4.58998 4.16533 4.83794 4.39158 4.97073L10.4794 8.54392L6.526 11.0966L3.1288 10.8502C2.91821 10.835 2.71032 10.8837 2.52735 10.9914C2.21223 11.1768 2.01544 11.5089 2.00087 11.8797C1.9863 12.2504 2.15637 12.5975 2.45587 12.8081L3.94911 13.8582L4.6454 15.0845C4.77517 15.3405 5.00279 15.5346 5.27357 15.6191C5.37392 15.6504 5.47759 15.6658 5.58092 15.6658C5.76494 15.6658 5.94803 15.6168 6.10971 15.5214L6.11783 15.5166L21.4807 5.7598C21.8972 5.5079 22.0913 5.00249 21.953 4.52654Z" fill="#666C73"/>
-                            <path d="M21.4137 19.5814H2.58959C2.26576 19.5814 2.00326 19.8493 2.00326 20.1796C2.00326 20.51 2.2658 20.7778 2.58959 20.7778H21.4137C21.7375 20.7778 22 20.5099 22 20.1796C22 19.8492 21.7375 19.5814 21.4137 19.5814Z" fill="#666C73"/>
-                        </svg>
-                        <select class="py-3 px-12 w-full bg-white text-[#80858A] rounded-lg cursor-pointer border-0 outline-none ">
-                            <option selected disabled value="unselect" class="border-t-0 text-[#80858A] font-light">Select</option>
-                            <option class="cursor-pointer" value="fr">France</option>
-                            <option class="cursor-pointer" value="gr">Greece</option>
-                            <option class="cursor-pointer" value="usa">USA</option>
-                        </select>
+                        <v-select bg-color="white" base-color="white" v-model="outgoingOptions.from"
+                            :active="true"
+                            center-affix
+                            :items="['Dubai', 'Egypt', 'Abu Dabi', 'Qatar']"
+                            variant="solo-filled"
+                        >
+                            <template v-slot:prepend-inner>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21.953 4.52654C21.9074 4.3696 21.8435 4.21808 21.7633 4.07625C21.3819 3.40231 20.6787 3 19.8821 3C19.4715 3 19.0622 3.1119 18.6982 3.3236L18.6883 3.32938L14.8192 5.78778L7.59608 3.34269C6.53088 2.98211 5.36256 3.10366 4.39072 3.67609C4.16462 3.8092 4.02431 4.05736 4.02447 4.32365C4.02466 4.58998 4.16533 4.83794 4.39158 4.97073L10.4794 8.54392L6.526 11.0966L3.1288 10.8502C2.91821 10.835 2.71032 10.8837 2.52735 10.9914C2.21223 11.1768 2.01544 11.5089 2.00087 11.8797C1.9863 12.2504 2.15637 12.5975 2.45587 12.8081L3.94911 13.8582L4.6454 15.0845C4.77517 15.3405 5.00279 15.5346 5.27357 15.6191C5.37392 15.6504 5.47759 15.6658 5.58092 15.6658C5.76494 15.6658 5.94803 15.6168 6.10971 15.5214L6.11783 15.5166L21.4807 5.7598C21.8972 5.5079 22.0913 5.00249 21.953 4.52654Z" fill="#666C73"/>
+                                    <path d="M21.4137 19.5814H2.58959C2.26576 19.5814 2.00326 19.8493 2.00326 20.1796C2.00326 20.51 2.2658 20.7778 2.58959 20.7778H21.4137C21.7375 20.7778 22 20.5099 22 20.1796C22 19.8492 21.7375 19.5814 21.4137 19.5814Z" fill="#666C73"/>
+                                </svg>
+                            </template>
+                        </v-select>
                     </div>
                 </div>
                 <div class="mt-8 ">
@@ -29,16 +32,20 @@
                 <div class="max-w-[604] w-full">
                     <p class="text-[#333B44] mb-1">To</p>
                     <div class="rounded-lg mt-1 relative bg-white flex justify-center items-center gap-2 w-full border-[1px] border-solid border-[#E6E6E7]">
-                        <svg class="absolute left-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M21.953 4.52654C21.9074 4.3696 21.8435 4.21808 21.7633 4.07625C21.3819 3.40231 20.6787 3 19.8821 3C19.4715 3 19.0622 3.1119 18.6982 3.3236L18.6883 3.32938L14.8192 5.78778L7.59608 3.34269C6.53088 2.98211 5.36256 3.10366 4.39072 3.67609C4.16462 3.8092 4.02431 4.05736 4.02447 4.32365C4.02466 4.58998 4.16533 4.83794 4.39158 4.97073L10.4794 8.54392L6.526 11.0966L3.1288 10.8502C2.91821 10.835 2.71032 10.8837 2.52735 10.9914C2.21223 11.1768 2.01544 11.5089 2.00087 11.8797C1.9863 12.2504 2.15637 12.5975 2.45587 12.8081L3.94911 13.8582L4.6454 15.0845C4.77517 15.3405 5.00279 15.5346 5.27357 15.6191C5.37392 15.6504 5.47759 15.6658 5.58092 15.6658C5.76494 15.6658 5.94803 15.6168 6.10971 15.5214L6.11783 15.5166L21.4807 5.7598C21.8972 5.5079 22.0913 5.00249 21.953 4.52654Z" fill="#666C73"/>
-                            <path d="M21.4137 19.5814H2.58959C2.26576 19.5814 2.00326 19.8493 2.00326 20.1796C2.00326 20.51 2.2658 20.7778 2.58959 20.7778H21.4137C21.7375 20.7778 22 20.5099 22 20.1796C22 19.8492 21.7375 19.5814 21.4137 19.5814Z" fill="#666C73"/>
-                        </svg>
-                        <select class="py-3 px-12 w-full bg-white text-[#80858A] rounded-lg cursor-pointer border-0 outline-none ">
-                            <option selected disabled value="unselect" class="border-t-0 text-[#80858A] font-light">Select</option>
-                            <option class="cursor-pointer" value="fr">France</option>
-                            <option class="cursor-pointer" value="gr">Greece</option>
-                            <option class="cursor-pointer" value="usa">USA</option>
-                        </select>
+                        <v-select bg-color="white" base-color="white" v-model="outgoingOptions.to"
+                            :active="true"
+                            center-affix
+                            :items="['USA', 'Armenia', 'Canada', 'France']"
+                            variant="solo-filled"
+                        >
+                            <template v-slot:prepend-inner>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21.2624 12.7775C20.962 12.5062 20.5885 12.3142 20.1822 12.2224L20.1712 12.2199L15.7145 11.389L12.0485 4.90101C11.5079 3.94425 10.5729 3.25764 9.48309 3.01731C9.22954 2.96149 8.96283 3.04289 8.78681 3.22993C8.6108 3.41693 8.54967 3.68388 8.62732 3.92651L10.7166 10.4562L6.13584 9.63578L3.81385 7.2184C3.66991 7.06853 3.48546 6.96533 3.2805 6.9201C2.9273 6.84218 2.56364 6.94507 2.30763 7.19565C2.05162 7.44628 1.94638 7.80223 2.02615 8.14791L2.42368 9.87137L2.12177 11.192C2.04736 11.4574 2.08544 11.7441 2.22759 11.9822C2.37407 12.2275 2.62055 12.4039 2.90383 12.4662L2.91297 12.4682L20.6058 15.7704C20.6795 15.7858 20.7532 15.7932 20.8261 15.7932C21.2196 15.7932 21.5869 15.5759 21.7673 15.2169C21.8378 15.0766 21.8914 14.9281 21.9264 14.7756C22.0932 14.0507 21.8451 13.3037 21.2624 12.7775Z" fill="#666C73"/>
+                                    <path d="M21.4165 19.8576H2.68033C2.35803 19.8576 2.09674 20.1133 2.09674 20.4288C2.09674 20.7443 2.35803 21 2.68033 21H21.4164C21.7387 21 22 20.7443 22 20.4288C22 20.1133 21.7388 19.8576 21.4165 19.8576Z" fill="#666C73"/>
+                                </svg>
+
+                            </template>
+                        </v-select>
                     </div>
                 </div>
             </div>
@@ -105,34 +112,40 @@
             <div class="flex w-full gap-8 my-8 md:flex-col">
                 <div class="w-1/2 md:w-full">
                     <p class="text-[#333B44]">Resorts</p>
-                    <div class="relative bg-white rounded-lg mt-1 md:w-full">
-                        <select class="bg-white w-full rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
-                            <option value="1">select</option>
-                            <option value="2">select</option>
-                            <option value="3">select</option>
-                        </select>
+                    <div class="relative bg-white rounded-lg mt-1 md:w-full border-[1px] border-solid border-[#E6E6E7]">
+                        <v-select bg-color="white" base-color="white" v-model="outgoingOptions.resort"
+                            :active="true"
+                            center-affix
+                            :items="['resort', 'resort', 'resort']"
+                            variant="solo-filled"
+                        >
+                        </v-select>
                     </div>
                 </div>
                 <div class="w-1/2 md:w-full">
                     <p class="text-[#333B44]">Hotel name</p>
-                    <div class="bg-white rounded-lg mt-1">
-                        <select class="bg-white w-full rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
-                            <option value="1">select</option>
-                            <option value="2">select</option>
-                            <option value="3">select</option>
-                        </select>
+                    <div class="bg-white rounded-lg mt-1 border-[1px] border-solid border-[#E6E6E7]">
+                        <v-select bg-color="white" base-color="white" v-model="outgoingOptions.hotel"
+                            :active="true"
+                            center-affix
+                            :items="['hotel', 'hotel', 'hotel']"
+                            variant="solo-filled"
+                        >
+                        </v-select>
                     </div>
                 </div>
             </div>
             <div class="flex w-full gap-8 mb-8 md:flex-col">
-                <div class="w-1/4 md:w-full">
+                <div class="w-1/4 md:w-full ">
                     <p class="text-[#333B44]">Citizenship</p>
-                    <div class="bg-white rounded-lg mt-1">
-                        <select class="bg-white w-full rounded-lg cursor-pointer py-3 px-4 border-none outline-none ">
-                            <option value="1">select</option>
-                            <option value="1">Yes</option>
-                            <option value="1">No</option>
-                        </select>
+                    <div class="bg-white rounded-lg mt-1 border-[1px] border-solid border-[#E6E6E7]">
+                        <v-select bg-color="white" base-color="white" v-model="outgoingOptions.citizenship"
+                            :active="true"
+                            center-affix
+                            :items="['yes', 'no']"
+                            variant="solo-filled"
+                        >
+                        </v-select>
                     </div>
                 </div>
                 <div class="w-1/4 md:w-full">
@@ -150,12 +163,13 @@
                 <div class="w-1/4 md:w-full">
                     <p class="text-[#333B44]">Child seats</p>
                     <div class="bg-white rounded-lg mt-1">
-                        <select class="bg-white  rounded-lg cursor-pointer py-3 px-4 border-none outline-none">
-                            <option selected disabled value="1" class="text-[#80858A] font-light">Select</option>
-                            <option value="1">select</option>
-                            <option value="2">select</option>
-                            <option value="3"><select name="" id=""></select></option>
-                        </select>
+                        <v-select bg-color="white" base-color="white" v-model="outgoingOptions.childSeats"
+                            :active="true"
+                            center-affix
+                            :items="['yes', 'no']"
+                            variant="solo-filled"
+                        >
+                        </v-select>
                     </div>
                 </div>
             </div>
@@ -168,11 +182,11 @@
                     </div>
                     <v-range-slider v-model="priceRange" :max="100000" :min="0" :step="1000" class="align-center"></v-range-slider>
                 </div>
-                <div>
+                <div class="mt-6">
                     <p class="text-[#333B44] mb-1">Choose rate</p>
                     <Rating :max-rating="5" :initial-rating="0"></Rating>
                 </div>
-                <div class="flex mt-7">
+                <div class="flex mt-12">
                     <CheckInp :forId="'hotOffer'" :inpVal="outgoingOptions.hotOffer" @changeInp="outgoingOptions.hotOffer = !outgoingOptions.hotOffer;">Hot offer</CheckInp>
                 </div>
             </div>
@@ -200,6 +214,11 @@ const priceRange = ref([0, 100000]);
 const rating = ref("")
 
 const outgoingOptions = reactive({
+    from: "unselected",
+    to: "unselected",
+    resort: "unselected",
+    hotel: "unselected",
+    citizenship: "unselected",
     direaction: "",
     date: "",
     type: "",
@@ -214,7 +233,8 @@ const outgoingOptions = reactive({
     insurance: false,
     individualTransfer: false,
     firstSeats: false,
-    sportEquipment: false
+    sportEquipment: false,
+    childSeats: "no"
 })
 
 const disabledDates = {
