@@ -3,9 +3,7 @@
         <Loader />
     </div>
     <div v-else>
-        <NuxtLoadingIndicator >
-            <div :height="20" color="#ff0000" :throttle="1000" :duration="4000"></div>
-        </NuxtLoadingIndicator>
+        <NuxtLoadingIndicator :height="20" color="#ff0000" :throttle="300" :duration="4000"></NuxtLoadingIndicator>
         <div class="h-[120px] w-full sm:h-[88px]">
             <Header v-if="!isHeaderHidden" />
             <Nav :scrolled="isHeaderHidden" />
@@ -15,6 +13,19 @@
 </template>
 
 <script setup>
+
+// const nuxtApp = useNuxtApp();
+// const show = ref(false);
+
+// addRouteMiddleware('global-loader', () => {
+//   show.value = true;
+// }, {
+//   global: true
+// });
+
+// nuxtApp.hook('page:finish', () => {
+//   show.value = false;
+// });
 const isHeaderHidden = ref(false);
 const isLoaded = ref(false);
 

@@ -150,7 +150,7 @@
                     </div>
                     <v-range-slider v-model="priceRange" :max="100000" :min="0" :step="1000" class="align-center"></v-range-slider>
                 </div>
-                <div class="flex gap-8 mt-5 lg:mt-0">
+                <div class="flex gap-8 mt-5 lg:mt-0 sm:flex-col">
                     <div>
                         <p class="text-[#333B44] mb-1">Choose rate</p>
                         <Rating v-model="rating" :max-rating="5" :initial-rating="0"></Rating>
@@ -168,7 +168,7 @@
             </div>
             <div class="gap-8 mb-8 sm:flex-col w-full">
                 <p class="text-base font-medium text-[#19222C]">Child seats</p>
-                <v-select bg-color="white" base-color="white" class="w-[250px] mt-1" v-model="hotelOptions.childSeats"
+                <v-select bg-color="white" base-color="white" class="max-w-[250px] mt-1" v-model="hotelOptions.childSeats"
                     :active="true"
                     center-affix
                     :items="['Yes', 'No']"

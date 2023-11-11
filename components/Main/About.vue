@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center items-center py-20 px-8 xl1:mb-10 xl1:flex-col xl1:justify-center xl1:items-center md:px-10">
+    <div class="flex justify-center items-center py-20 px-8 xl1:mb-10 xl1:flex-col xl1:justify-center xl1:items-center md:px-5">
         <div class="w-full mr-8 xl1min:max-w-[676px]">
             <p class="mt-4 text-[40px] font-extrabold text-[#000A15]">Who <span class="text-primaryBlue">We</span> Are</p>
             <p class="text-base text-primaryGrey">Lorem ipsum dolor sit amet consectetur. Mus sed augue fames tristique mi elementum volutpat magna. Ut non enim dui vitae egestas justo aliquet sed suspendisse. Iaculis pharetra commodo cras fringilla facilisis ullamco. Lorem ipsum dolor sit amet consectetur. Mus sed augue fames tristique mi elementum volutpat magna. Ut non enim dui vitae egestLorem ipsum dolor sit amet consectetur. </p>
@@ -12,15 +12,15 @@
                 </svg>
             </div>
         </div>
-        <div class="max-w-[676px] flex flex-col w-full mt-16 md:mt-20 xl1min:m-0"> 
-            <div class="flex"> 
-                <div class="max-w-[392px] md:max-w-[350px] min-w-[184px] w-full rounded-lg mr-[68px]"> 
+        <div class="max-w-[676px] w-full flex flex-col sm:w-[320px] mt-16 md:mt-20 xl1min:m-0"> 
+            <div class="flex justify-between gap-10 sm:gap-8"> 
+                <div class="max-w-[410px] min-w-[184px] w-full rounded-lg"> 
                     <img src="~/assets/img/tour/frame.png" alt="" class="rounded-3xl" /> 
                     <!-- <NuxtImg format="webp" src="tour/frame.png" class="rounded-3xl"></NuxtImg> -->
                 </div> 
-                <div class="max-w-[174px] w-full max-h-[174px] md:max-w-[84px] md:max-h-[84px] shadow-md bg-white rounded-lg"> 
-                    <div class="flex flex-col justify-center items-center rounded-xl md:rounded-sm mt-5">
-                        <svg class="w-[60px] h-[60px] md:w-[30px] md:h-[30px]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="max-w-[174px] max-h-[174px] md:max-w-[100px] md:max-h-[90px] w-full shadow-md bg-white rounded-lg"> 
+                    <div class="flex flex-col justify-center items-center rounded-xl mt-3">
+                        <svg class="w-[60px] h-[60px] md:w-[40px] md:h-[40px]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1085_34284)">
                                 <path d="M39.8517 35.1809C39.5451 34.9925 39.1628 34.9774 38.842 35.1405C33.2802 37.9414 26.7202 37.9414 21.1589 35.1405C20.8381 34.9774 20.4557 34.9925 20.1491 35.1809C19.8425 35.3688 19.6556 35.7022 19.6556 36.0619V58.9654C19.6556 59.3154 19.8324 59.6423 20.1264 59.8327C20.4199 60.0236 20.7901 60.0529 21.1099 59.911L30.0004 55.9655L38.8905 59.916C39.0234 59.9731 39.1663 60.0019 39.3108 59.9999C39.8821 59.9999 40.3452 59.5367 40.3452 58.9654V36.0619C40.3452 35.7027 40.1584 35.3688 39.8517 35.1809Z" fill="#00A6FF"/>
                                 <path d="M30.0004 55.8619C29.4291 55.8619 28.9659 55.3987 28.9659 54.8274V38.2757C28.9659 37.7044 29.4291 37.2412 30.0004 37.2412C30.5717 37.2412 31.0349 37.7044 31.0349 38.2757V54.8274C31.0349 55.3987 30.5717 55.8619 30.0004 55.8619Z" fill="#0088FF"/>
@@ -44,15 +44,18 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="text-xs tracking-[0.24px] md:text-[5.6px]">Service Quality</p>
+                        <p class="text-xs tracking-[0.24px] md:text-[7px]">Service Quality</p>
                         <p class="text-[#72B26A] text-3xl leading-[42px] tracking-[0.6px] font-extrabold md:text-sm">100 %</p>
                     </div>
                 </div> 
             </div> 
-            <div class="rounded-3xl max-w-[392px] md:max-w-[350px] min-w-[184px] border-[16px] md:border-[7.5px] border-white p-[0.5px] ml-auto -mt-12 md:-mt-5 w-full sm:mt-5" > 
-                <img src="~/assets/img/tour/frame.png" alt="" class="rounded-3xl md:rounded-xl" /> 
-                <!-- <NuxtImg format="webp" src="tour/frame.png" class="rounded-3xl md:rounded-xl"></NuxtImg> -->
-            </div> 
+            <div class="w-full flex md:mt-5">
+                <div class="w-80 h-40"></div>
+                <div class="rounded-3xl max-w-[410px] min-w-[184px] border-[16px] border-white md:border-[9px] p-[0.5px] -mt-12 w-full " > 
+                    <img src="~/assets/img/tour/frame.png" alt="" class="w-full rounded-3xl " /> 
+                    <!-- <NuxtImg format="webp" src="tour/frame.png" class="rounded-3xl md:rounded-xl"></NuxtImg> -->
+                </div> 
+            </div>
         </div> 
     </div> 
 </template>

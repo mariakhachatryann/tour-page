@@ -19,7 +19,7 @@ module.exports = {
         },
         screens: {
             "sm": { "max": "360px" },
-            "sm1": { "max": "450px" }, 
+            "sm1": { "max": "450px" },
             "md": { "max": "768px" },
             "lg": { "max": "1024px" },
             "lgmax": { "max": "1260px" },
