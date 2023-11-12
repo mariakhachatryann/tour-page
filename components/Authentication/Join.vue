@@ -1,6 +1,6 @@
 <template>
-    <div class="w-[472px] md:w-[320px] bg-white pt-6 px-8 pb-6 rounded-2xl">
-        <div class="flex w-full justify-between mb-8">
+    <div class="w-[472px] md:w-[330px] bg-white pt-6 px-8 pb-6 rounded-2xl my-5">
+        <div class="flex w-full justify-between mb-6">
             <p class="text-2xl font-bold text-[#000A15]">Register</p>
             <div @click="closeJ" class="cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -9,25 +9,29 @@
                 </svg>
             </div>
         </div>
-        <div class="w-full mb-4">
-            <p class="text-[#333B44] mb-1">First name</p>
-            <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter here" />
+        <div class="flex w-full gap-2">
+            <div class="w-1/2 mb-3">
+                <p class="text-[#333B44] mb-1">First name</p>
+                <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter here" />
+            </div>
+            <div class="w-1/2 mb-3">
+                <p class="text-[#333B44] mb-1">Last name</p>
+                <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter here" />
+            </div>
         </div>
-        <div class="w-full mb-6">
-            <p class="text-[#333B44] mb-1">Last name</p>
-            <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter your password" />
-        </div>
-        <div class="w-full mb-6">
-            <p class="text-[#333B44] mb-1">Email address</p>
-            <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter your password" />
-        </div>
-        <div class="w-full mb-6">
-            <p class="text-[#333B44] mb-1">Create password</p>
-            <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter your password" />
+        <div class="flex w-full gap-2">
+            <div class="w-1/2 mb-3">
+                <p class="text-[#333B44] mb-1">Email address</p>
+                <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter here" />
+            </div>
+            <div class="w-1/2 mb-3">
+                <p class="text-[#333B44] mb-1">Create password</p>
+                <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter here" />
+            </div>
         </div>
         <div class="w-full mb-6">
             <p class="text-[#333B44] mb-1">Confirm Password</p>
-            <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter your password" />
+            <input class="bg-[#FFF] w-full mt-1 py-4 px-4 rounded-lg border-[1px] border-solid border-[#E6E6E7] outline-none" type="text" placeholder="Enter here" />
         </div>
         <div class="flex mb-6 flex-col md:gap-4">
             <div class="w-full">
@@ -48,8 +52,8 @@
             <div class="mx-4 text-xs font-medium text-[#999DA1]">OR</div>
             <div class="w-[44%] h-[1px] bg-[#D0E1F3]"></div>
         </div>
-        <div class="flex gap-4 md:flex-col">
-            <div class="w-1/2 md:w-full flex justify-center items-center gap-2 bg-primaryBlue py-3 rounded-lg cursor-pointer">
+        <div class="flex gap-4">
+            <div class="w-1/2 flex justify-center items-center gap-2 bg-primaryBlue py-3 rounded-lg cursor-pointer">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M18.2987 9.23077H13.8658V5.53846C13.8658 4.51938 14.6602 4.61538 15.639 4.61538H17.4121V0H13.8658C10.9277 0 8.54632 2.47938 8.54632 5.53846V9.23077H5V13.8462H8.54632V24H13.8658V13.8462H16.5255L18.2987 9.23077Z" fill="#FAFAFA"/>
@@ -57,7 +61,7 @@
                 </div>
                 <p class="text-base font-bold text-white">Facebook</p>
             </div>
-            <div class="w-1/2 md:w-full flex justify-center items-center gap-2 bg-white py-3 rounded-lg border-[1px] border-solid border-[#D0E1F3] cursor-pointer">
+            <div class="w-1/2 flex justify-center items-center gap-2 bg-white py-3 rounded-lg border-[1px] border-solid border-[#D0E1F3] cursor-pointer">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <g clip-path="url(#clip0_609_6724)">

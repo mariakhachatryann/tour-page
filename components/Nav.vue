@@ -49,8 +49,8 @@
                         <NuxtLink @click="closeMenu" to="/outgoings" class="hover:text-primaryBlue w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Outgoing tours</NuxtLink>
                         <NuxtLink @click="closeMenu" to="/contact" class="hover:text-primaryBlue w-full text-center mb-4 py-2 text-xl font-medium leading-7 text-primaryGrey cursor-pointer">Contact Us</NuxtLink>
                         <div class="flex w-full">
-                            <button @click="overlay = !overlay" class="m-2 w-1/2 h-[48px] bg-[#fff] text-primaryBlue border-solid border-[1px] rounded-lg border-primaryBlue font-bold hover:bg-primaryBlue hover:text-white hover:duration-300">Log in</button>
-                            <button @click="overlay1 = !overlay1" class="m-2 w-1/2 h-[48px] bg-primaryBlue text-white border-solid border-[1px] rounded-lg border-primaryBlue font-bold hover:bg-[#4385CE] hover:duration-300 hover:text-[#FDFFFE]">Join us</button>
+                            <button @click="() => { overlay = !overlay, closeMenu() }" class="m-2 w-1/2 h-[48px] bg-[#fff] text-primaryBlue border-solid border-[1px] rounded-lg border-primaryBlue font-bold hover:bg-primaryBlue hover:text-white hover:duration-300">Log in</button>
+                            <button @click="() => { overlay1 = !overlay1, closeMenu() }" class="m-2 w-1/2 h-[48px] bg-primaryBlue text-white border-solid border-[1px] rounded-lg border-primaryBlue font-bold hover:bg-[#4385CE] hover:duration-300 hover:text-[#FDFFFE]">Join us</button>
                         </div>
                     </ul>
                 </div>
@@ -60,10 +60,10 @@
     <v-overlay transition="scroll-y-transition" scroll-strategy="close" class="flex w-full h-full justify-center items-center" v-model="overlay">
         <AuthenticationLog @createAccount="() => { overlay = false; overlay1 = true }" @showRecPass="() => { overlay = false; overlayPass = true}" @closeLog="overlay = !overlay" />
     </v-overlay>
-    <v-overlay transition="scroll-y-transition" scroll-strategy="close" class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlay1">
+    <v-overlay transition="scroll-y-transition" scroll-strategy="close" class="flex justify-center h-[1100px]" v-model="overlay1">
         <AuthenticationJoin @showRecPass="() => { overlay1 = false; overlayPass = true}" @closeJoin="overlay1 = !overlay1" />
     </v-overlay>
-    <v-overlay transition="scroll-y-transition" class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlayPass">
+    <v-overlay transition="scroll-y-transition" scroll-strategy="close" class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlayPass">
         <AuthenticationRecoverPass @closeLog="overlayPass = false" />
     </v-overlay>
     <v-overlay transition="slide-x-reverse-transition" v-model="openCart" class="h-full w-[512px] md:w-[312px] ml-auto absolute">
@@ -80,9 +80,6 @@ const overlayPass = ref(false);
 const openCart = ref(false);
 const transfers = ref([]);
 const tours = ref([]);
-
-
-let drawer = ref(false)
 
 function toggleMenu() {
     menu.value = !menu.value;
