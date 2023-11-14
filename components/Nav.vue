@@ -63,7 +63,7 @@
     <v-overlay transition="scroll-y-transition" scroll-strategy="close" class="flex justify-center h-[1100px]" v-model="overlay1">
         <AuthenticationJoin @showRecPass="() => { overlay1 = false; overlayPass = true}" @closeJoin="overlay1 = !overlay1" />
     </v-overlay>
-    <v-overlay transition="scroll-y-transition" scroll-strategy="close" class="flex w-full justify-center items-center overflow-scroll h-full" v-model="overlayPass">
+    <v-overlay transition="scroll-y-transition" scroll-strategy="close" class="flex justify-center items-center overflow-scroll h-full" v-model="overlayPass">
         <AuthenticationRecoverPass @closeLog="overlayPass = false" />
     </v-overlay>
     <v-overlay transition="slide-x-reverse-transition" v-model="openCart" class="h-full w-[512px] md:w-[312px] ml-auto absolute">
@@ -120,17 +120,17 @@ onMounted(() => {
 }
 
 .slide-fade-enter-active, .slide-fade-leave-active {
-    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
 .slide-fade-enter, .slide-fade-leave-to {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
 }
 
-.slide-fade-enter-to, .slide-fade-leave {
-    opacity: 1;
-    transform: translateY(0);
+.slide-fade-enter-from, .slide-fade-leave {
+    opacity: 0.7;
+    transform: translateY(-10px);
 }
 
 .router-link-active {
