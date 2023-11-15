@@ -1,8 +1,8 @@
 <template>
-    <div v-if="!isLoaded" class="w-full h-screen flex justify-center items-center">
+    <div :class="{ 'hidden': isLoaded }" class="w-full h-screen flex justify-center items-center">
         <Loader />
     </div>
-    <div v-else>
+    <div :class="{ 'block': isLoaded }">
         <NuxtLoadingIndicator :height="20" color="#ff0000" :throttle="300" :duration="4000"></NuxtLoadingIndicator>
         <div class="h-[120px] w-full sm:h-[88px]">
             <Header v-if="!isHeaderHidden" />
@@ -38,10 +38,12 @@ onMounted(() => {
     }
 });
 nuxtApp.hook('app:mounted', () => {
-//   show.value = false;
-console.log("hook started");
+    //   show.value = false;
+    console.log("hook started");
+    setTimeout(() => {
 
-isLoaded.value = true
+        isLoaded.value = true
+    }, 2000)
 });
 
 onBeforeUnmount(() => {
