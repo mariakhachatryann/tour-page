@@ -14,7 +14,8 @@
 
 <script setup>
 
-// const nuxtApp = useNuxtApp();
+const nuxtApp = useNuxtApp();
+console.log(nuxtApp);
 // const show = ref(false);
 
 // addRouteMiddleware('global-loader', () => {
@@ -23,9 +24,6 @@
 //   global: true
 // });
 
-// nuxtApp.hook('page:finish', () => {
-//   show.value = false;
-// });
 const isHeaderHidden = ref(false);
 const isLoaded = ref(false);
 
@@ -37,10 +35,13 @@ const handleScroll = () => {
 onMounted(() => {
     if (process.client) {
         window.addEventListener("scroll", handleScroll);
-        setTimeout(() => {
-            isLoaded.value = true
-        }, 500)
     }
+});
+nuxtApp.hook('app:mounted', () => {
+//   show.value = false;
+console.log("hook started");
+
+isLoaded.value = true
 });
 
 onBeforeUnmount(() => {

@@ -17,6 +17,9 @@ module.exports = {
             transparentCol: "rgba(0, 10, 21, 0.50)",
             primaryGrey: "#4D545B"
         },
+        fontFamily: {
+
+        },
         screens: {
             "sm": { "max": "360px" },
             "sm1": { "max": "450px" },
