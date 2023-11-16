@@ -3,7 +3,7 @@
         <Loader />
     </div>
     <div :class="{ 'block': isLoaded, 'hidden': !isLoaded }">
-        <NuxtLoadingIndicator :class="{ 'opacity': changed, 'opacity0': !changed }" :height="3" color="#df6838" :throttle="600" :duration="10000"></NuxtLoadingIndicator>
+        <NuxtLoadingIndicator :class="{ 'opacity': changed }" :height="3" color="#df6838" :throttle="600" :duration="10000"></NuxtLoadingIndicator>
         <div class="h-[120px] w-full sm:h-[88px]">
             <Header v-if="!isHeaderHidden" />
             <Nav :scrolled="isHeaderHidden" />
