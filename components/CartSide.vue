@@ -66,6 +66,4 @@ onMounted(() => {
         tours = []
     }
 });
-
-console.log(tours);
 </script>

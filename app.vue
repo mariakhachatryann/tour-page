@@ -2,30 +2,21 @@
     <div :class="{ 'hidden': isLoaded }" class="w-full h-screen flex justify-center items-center">
         <Loader />
     </div>
-    <div :class="{ 'block': isLoaded }">
-        <NuxtLoadingIndicator :height="20" color="#ff0000" :throttle="300" :duration="4000"></NuxtLoadingIndicator>
+    <div :class="{ 'block': isLoaded, 'hidden': !isLoaded }">
+        <NuxtLoadingIndicator :class="{ 'opacity': changed, 'opacity0': !changed }" :height="3" color="#df6838" :throttle="600" :duration="10000"></NuxtLoadingIndicator>
         <div class="h-[120px] w-full sm:h-[88px]">
             <Header v-if="!isHeaderHidden" />
             <Nav :scrolled="isHeaderHidden" />
         </div>
-        <NuxtPage/>
+        <NuxtPage v-if="!changed"/>
     </div>
 </template>
 
 <script setup>
-
 const nuxtApp = useNuxtApp();
-console.log(nuxtApp);
-// const show = ref(false);
-
-// addRouteMiddleware('global-loader', () => {
-//   show.value = true;
-// }, {
-//   global: true
-// });
-
 const isHeaderHidden = ref(false);
 const isLoaded = ref(false);
+const route = useRoute();
 
 const handleScroll = () => {
     const scrollY = window.scrollY;
@@ -38,12 +29,7 @@ onMounted(() => {
     }
 });
 nuxtApp.hook('app:mounted', () => {
-    //   show.value = false;
-    console.log("hook started");
-    setTimeout(() => {
-
-        isLoaded.value = true
-    }, 2000)
+    isLoaded.value = true
 });
 
 onBeforeUnmount(() => {
@@ -51,4 +37,27 @@ onBeforeUnmount(() => {
         window.removeEventListener("scroll", handleScroll);
     }
 });
+
+const changed = ref(false)
+
+watch(() => route.fullPath, () => {
+    changed.value = true;
+    setTimeout(() => {
+        changed.value = false
+    }, 300)
+})
 </script>
+
+<style>
+.nuxt-loading-indicator {
+    transform: none !important;
+}
+
+.opacity {
+    opacity: 1 !important;
+}
+
+.opacity0 {
+    opacity: 0 !important;
+}
+</style>
