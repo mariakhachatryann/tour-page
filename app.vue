@@ -26,10 +26,10 @@ const handleScroll = () => {
 onMounted(() => {
     if (process.client) {
         window.addEventListener("scroll", handleScroll);
+        isLoaded.value = true
     }
 });
 nuxtApp.hook('app:mounted', () => {
-    isLoaded.value = true
 });
 
 onBeforeUnmount(() => {
