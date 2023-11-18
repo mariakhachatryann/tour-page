@@ -63,12 +63,13 @@
                     <div class="w-full">
                         <p class="text-[#333B44]">Subject</p>
                         <div class="bg-white rounded-lg mt-1">
-                            <select v-model="userForm.subject" class="bg-white w-full rounded-lg cursor-pointer py-3 px-4 border-none outline-none">
-                                <option selected disabled value="unselect" class="text-[#80858A] font-light">Select</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
+                            <v-select bg-color="white" base-color="white" class="bg-white w-full rounded-lg cursor-pointer " v-model="userForm.subject"
+                                :active="true"
+                                center-affix
+                                :items="['Yes', 'No']"
+                                variant="solo-filled"
+                            >
+                            </v-select>
                         </div>
                     </div>
                 </div>

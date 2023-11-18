@@ -8,7 +8,7 @@
             </button>
         </div>
         <div class="h-[530px] sm:px-1" >
-            <div  id="splider" class="splide h-[354px]">
+            <div id="splider" class="splide h-[354px]">
                 <div class="splide__track h-[354px]">
                     <ul class="splide__list h-[354px]">
                         <div data-splide-interval="3500" class="splide__slide relative rounded-t-2xl sm:max-w-[310px] sm:w-full max-w-[794px] lg:max-w-[960px] h-[354px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/tour/frame.png')]"> </div>

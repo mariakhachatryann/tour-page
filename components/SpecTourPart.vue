@@ -1,10 +1,10 @@
 <template>
-    <div class="max-w-[984px] xl:w-full">
+    <div class="relative max-w-[984px] xl:w-full">
         <img class="rounded-lg w-full h-[560px] sm:w-[320px] sm:h-[208px]" src="~/assets/img/tour/frame.png" alt="">
         <div class="mt-4 flex gap-2">
             <img class="w-6 h-6" src="~/assets/img/owl.png" alt="">
             <p class="text-[#666C73]">Comments</p>
-            <p class="text=[#333B44] font-medium">(14)</p>
+            <p class="text-[#333B44] font-medium">(14)</p>
         </div>
         <div class="mt-4">
             <p class="text-[#000A15] text-[32px] leading-[48px] font-extrabold">{{ props.selectedTour.title }}</p>
@@ -49,13 +49,75 @@
             <p class="text-[#333B44]">This tour visits Khor Virap monastery, a great place to embrace the most picturesque views of Mount Ararat. Then comes Noravank monastery complex, magnificent in its construction, as the church of Holy Mother of God is 2-storied monastery. The last stop is in Tatev monastery, a spiritual center, that had an outstanding scientific and political significance. The monastery is surrounded by beautiful nature. It is here, where one can take the World's longest ropeway without stops – "Tatever".</p>
         </div>
         <div class="mt-8 flex gap-8 flex-wrap">
-            <img v-for="instane in instances" :key="instane" class="h-40 w-40 rounded-lg" src="~/assets/img/tour/specTour.jpg" alt="">
+            <div @click="openGallery" v-for="instane in instances" :key="instane">
+                <img class="h-40 w-40 rounded-lg cursor-pointer" src="~/assets/img/tour/specTour.jpg" alt="">
+            </div>
+            <div class="w-full flex justify-center items-center px-5" v-if="galleryState">
+                <v-overlay v-model="galleryState" class="flex w-full justify-center items-center">
+                    <v-carousel class="rounded-lg max-w-[900px] h-[700px] md:max-w-[500px] md:max-h-[300px] w-full" progress color="#739EDA" continuous :touch="true" interval="5000" cycle show-arrows="hover">
+                        <v-carousel-item class="max-w-[900px] h-[700px] md:max-w-[500px] md:max-h-[300px] w-full" v-for="item in [1, 2, 3, 4, 5, 6]" :key="item" transition="slide-x-transition">
+                            <v-sheet class="w-full">
+                                <div class="max-w-[900px] h-[700px] md:max-w-[500px] md:max-h-[300px] w-full">
+                                    <img class="w-[900px] h-[700px] md:w-[500px] md:h-[300px] bg-cover bg-center" src="~/assets/img/hotel/hotel.jpg" />
+                                    <!-- <div class="bg-[#eb7434] w-[900px] h-[700px] md:w-[500px] md:h-[300px] text-center">{{ item }}</div> -->
+                                </div>
+                            </v-sheet>
+                        </v-carousel-item>
+                    </v-carousel>
+                </v-overlay>
+                    <!-- <div class="w-full absolute z-50 flex justify-center items-center">
+                        <div id="spliderGallery" class="splide w-full h-[500px] mt-10">
+                            <div class="splide__track h-[500px] w-full">
+                                <ul class="splide__list h-[500px] w-full gap-6">
+                                    <div data-splide-interval="3500" class="splide__slide ml-20 w-[400px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/tour/frame.png')]"> </div>
+                                    <div data-splide-interval="3500" class="splide__slide ml-20 w-[400px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/hotel/hotel.jpg')]" ></div>
+                                    <div data-splide-interval="3500" class="splide__slide ml-20 w-[400px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/tour/frame9.png')]" ></div>
+                                    <div data-splide-interval="3500" class="splide__slide ml-20 w-[400px] bg-cover bg-center bg-no-repeat bg-[url('~/assets/img/tour/specTour.jpg')]" ></div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+            </div>
         </div>
         <ShareComp />
     </div>
 </template>
 
 <script setup>
+import Splide from "@splidejs/splide";
+// import '@splidejs/splide/css';
 const props = defineProps(["selectedTour"])
-const instances = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+const instances = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const galleryState = ref(false);
+
+function openGallery() {
+    galleryState.value = !galleryState.value
+    console.log("opened");
+}
+
+
+const splideOptions = {
+    type   : 'loop',
+  perPage: 3,
+  perMove: 1,
+  focus  : 'center',
+};
+
+let splide;
+
+// const initSplide = 
+
+const destroySplide = () => {
+    if (splide) {
+        splide.destroy();
+    }
+}
+
+
+// onMounted(() => {
+//     splide = new Splide("#spliderGallery", splideOptions);
+//     splide.mount();    
+// });
+// onUnmounted(destroySplide);
 </script>

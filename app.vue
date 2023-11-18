@@ -26,7 +26,7 @@ const handleScroll = () => {
 onMounted(() => {
     if (process.client) {
         window.addEventListener("scroll", handleScroll);
-        isLoaded.value = true
+        // isLoaded.value = true
     }
 });
 nuxtApp.hook('app:mounted', () => {
@@ -46,6 +46,8 @@ watch(() => route.fullPath, () => {
         changed.value = false
     }, 300)
 })
+
+onNuxtReady(() => isLoaded.value = true)
 </script>
 
 <style>
