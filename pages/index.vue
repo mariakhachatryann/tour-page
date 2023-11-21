@@ -10,7 +10,13 @@
 </template>
 
 <script setup>
+
 useHead({
     title: "Home"
 })
+
+// onBeforeRouteUpdate(() => {
+//     changed.value = true;
+//     console.log("geledfv");
+// })
 </script>

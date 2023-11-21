@@ -1,8 +1,8 @@
 <template>
     <div :class="{ 'fixed z-10': props.scrolled}" class="w-full bg-white border-b-[1px] border-solid border-[#E6E7E8]">
-        <div class="w-full flex justify-evenly gap-14 h-[80px] pt-2 xl:justify-between px-8 sm:gap-2 sm:px-1 sm:justify-between">
+        <div class="w-full flex justify-evenly gap-14 lgmax:gap-10 h-[80px] pt-2 xl:justify-between px-8 sm:gap-2 sm:px-1 sm:justify-between">
             <NuxtLink to="/" class="w-[152px] h-[48px] bg-[#E8F0F9] mt-2 text-center items-center">
-                <p class="text-2xl text-[#01000E] font-bold p-1">LOGO</p>
+                <p class="text-2xl text-[#01000E] font-bold p-1" @click="manageScroll">LOGO</p>
             </NuxtLink>
             <div class="mt-2 w-[470px] sm:hidden lg:hidden flex items-center" :class="{ ' lg:hidden': !menu}">
                 <ul class="menu flex gap-2 justify-start sm:hidden items-center">
@@ -72,7 +72,9 @@
 </template>
 
 <script setup>
-const props = defineProps(["scrolled"])
+const props = defineProps(["scrolled"]);
+const { manageScroll } = useUtils();
+
 let menu = ref(false);
 const overlay = ref(false);
 const overlay1 = ref(false);

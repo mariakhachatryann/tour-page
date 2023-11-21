@@ -34,6 +34,9 @@ module.exports = {
             "2xl": { "max": "1920px" }
         }
     },
+    image: {
+        dir: 'assets/img/'
+      }
     },
     plugins: [],
 }

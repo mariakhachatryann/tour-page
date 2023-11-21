@@ -9,7 +9,7 @@
             <img v-else-if="routeName === 'hotels'" src="~/assets/img/hotel/banner.png" class="w-full h-full" />
             <img v-else-if="routeName === 'transfer'" src="~/assets/img/transfer/banner.png" class="w-full h-full" />
             <img v-else src="~/assets/img/outgoing/banner.png" class="w-full h-full" />
-            <!-- <nuxt-img :src="props.src" class="w-full h-full" /> -->
+            <!-- <nuxt-img :src="'hotel/banner.png'" class="w-full h-full" loading="lazy" /> -->
         </div>
     </div>
     <RoutePath />

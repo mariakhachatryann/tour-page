@@ -6,6 +6,12 @@ export const useUtils = () => {
     
         return formattedDate
     }
+    const manageScroll = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
 
-    return { dateFormat }
+    return { dateFormat, manageScroll }
 }
