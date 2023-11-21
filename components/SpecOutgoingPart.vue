@@ -70,9 +70,7 @@
                 </NuxtLink>
             </div>
         </div>
-        <div class="mt-8 flex gap-8 flex-wrap">
-            <img v-for="instane in instances" :key="instane" class="h-40 w-40 rounded-lg" src="~/assets/img/tour/specTour.jpg" alt="">
-        </div>
+        <GalleryBlock />
         <div class="roundend-lg border-[1px] border-solid border-[#D0E1F3] my-8">
             <div class="py-4 px-2 bg-[#E8F0F9] flex justify-center items-center">
                 <p class="text-2xl font-medium text-[#000A15]">Facilities</p>
@@ -87,5 +85,4 @@
 
 <script setup>
 const props = defineProps(["selectedOutgoing"])
-const instances = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 </script>
