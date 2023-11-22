@@ -24,9 +24,7 @@ const handleScroll = () => {
 
 onMounted(() => {
     if (process.client) {
-        setTimeout(() => {
-            isLoaded.value = true
-        }, 500)
+        isLoaded.value = true
         window.addEventListener("scroll", handleScroll);
     }
 });
