@@ -13,7 +13,7 @@ export default defineNuxtConfig({
             "Rubik": [400]
         },
         display: 'block',
-        download: true
+        base64: true
     },
     image: {
         format: ['webp'],
