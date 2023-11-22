@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center items-center w-full mb-20">
+    <div class="flex justify-center items-center w-full mb-20 sm:px-4">
         <form class="max-w-[1384px] w-full flex justify-center p-8 sm:p-4 rounded-3xl flex-col items-center mx-8 border-[1px] border-solid border-[#D0E1F3] bg-[#F1F7FE]">
             <div class="">
                 <p class="text-[32px] font-extrabold leading-[48px] text-center">Our Tours in Armenia</p>

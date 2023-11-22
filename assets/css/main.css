@@ -13,3 +13,12 @@
     min-width: 100px;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    background: #5e5e5e;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 8px;
+    background: #918f8f;
+}

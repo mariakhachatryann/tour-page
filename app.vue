@@ -2,7 +2,6 @@
     <div v-if="!isLoaded" class="w-full h-screen flex justify-center items-center">
         <Loader />
     </div>
-    <!-- <div > -->
     <div :class="{ 'block': isLoaded, 'hidden': !isLoaded }">
         <NuxtLoadingIndicator :class="{ 'opacity': changed }" :height="3" color="#df6838" :throttle="600" :duration="10000"></NuxtLoadingIndicator>
         <div class="h-[120px] w-full sm:h-[88px]">
@@ -14,7 +13,6 @@
 </template>
 
 <script setup>
-const nuxtApp = useNuxtApp();
 const isHeaderHidden = ref(false);
 const isLoaded = ref(false);
 const route = useRoute();
@@ -45,19 +43,8 @@ watch(() => route.fullPath, () => {
     changed.value = true;
     setTimeout(() => {
         changed.value = false
-    }, 500)
+    }, 1000)
 })
-
-// nuxtApp.hook("page:start", () => {
-//     isLoaded.value = true;
-//   });
-//   nuxtApp.hook("page:finish", () => {
-//     isLoaded.value = false;
-//   });
-
-// onNuxtReady(() => isLoaded.value = true)
-// onBeforeRouteUpdate(() => changed.value = false)
-
 </script>
 
 <style>
