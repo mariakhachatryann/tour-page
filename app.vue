@@ -13,6 +13,10 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  description: 'This is an amazing Travel Agency website.',
+})
+
 const isHeaderHidden = ref(false);
 const isLoaded = ref(false);
 const route = useRoute();
